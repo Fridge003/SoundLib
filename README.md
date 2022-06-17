@@ -4,6 +4,26 @@ SoundLib (abbreviation of sound library), provides a site for users to upload th
 
 ## Project Introduction
 
+### Wechat Authentication
+
+Scan QR Code:
+
+https://developers.weixin.qq.com/doc/oplatform/Website_App/WeChat_Login/Wechat_Login.html
+
+Mobile Wechat Authenticate:
+
+https://developers.weixin.qq.com/doc/offiaccount/OA_Web_Apps/Wechat_webpage_authorization.html
+
+### Upload Recordings
+
+Django supports upload files, so this is not a big deal.
+
+### Searching
+
+Django also supports advanced searching, considering similar vocabulary, weighted words and so on:
+
+https://docs.djangoproject.com/en/4.0/topics/db/search/
+
 ## User Guide
 
 ### Login
