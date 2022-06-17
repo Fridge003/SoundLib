@@ -137,7 +137,7 @@
                 <h1 class="ui inverted header">
                     {{ hello }}
                 </h1>
-                <h2> Here need to have a background. </h2>
+                <h2> Need to have a background. </h2>
             </div>
 
             <div class="ui inverted segment">
@@ -151,6 +151,20 @@
                     <a class="item">
                         作曲家
                     </a>
+                    <a class="item">
+                        上传
+                    </a>
+                    <div class="right item">
+                        <div class="ui icon input">
+                            <input class="prompt" type="text" placeholder="搜索任何东西...">
+                            <button class="ui inverted button">
+                                <i class="search icon"></i>
+                            </button>
+                        </div>
+                        <button class="ui inverted button">
+                            <i class="user outline icon"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -194,5 +208,112 @@
                 2021
             </div>
         </div>
+
+        <div class="ui link cards">
+            <div class="card">
+                <div class="image">
+                    <img src="{% static '/images/avatar2/matthew.png' %}">
+                </div>
+                <div class="content">
+                    <div class="header">Matt Giampietro</div>
+                    <div class="description">
+                        Matthew is an interior designer living in New York.
+                    </div>
+                </div>
+                <div class="extra content">
+                    <span class="right floated">
+                        Joined in 2013
+                    </span>
+                    <span>
+                        <i class="file audio outline icon"></i>
+                        33 Recordings
+                    </span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="image">
+                    <img src="{% static '/images/avatar2/molly.png' %}">
+                </div>
+                <div class="content">
+                    <div class="header">Molly</div>
+                    <div class="description">
+                        Molly is a personal assistant living in Paris.
+                    </div>
+                </div>
+                <div class="extra content">
+                    <span class="right floated">
+                        Joined in 2011
+                    </span>
+                    <span>
+                        <i class="file audio outline icon"></i>
+                        35 Recordings
+                    </span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="image">
+                    <img src="{% static '/images/avatar2/elyse.png' %}">
+                </div>
+                <div class="content">
+                    <div class="header">Elyse</div>
+                    <div class="description">
+                        Elyse is a copywriter working in New York.
+                    </div>
+                </div>
+                <div class="extra content">
+                    <span class="right floated">
+                        Joined in 2014
+                    </span>
+                    <span>
+                        <i class="file audio outline icon"></i>
+                        2 Recordings
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="ui link cards">
+            <div class="ui raised link card">
+                <div class="content">
+                    <div class="header">Rachmaninoff</div>
+                    <div class="meta">
+                        <span class="category">Russian</span>
+                    </div>
+                    <div class="description">
+                        Rachmaninoff was born on 1 April 1873 into a family of the Russian aristocracy in the Russian Empire.
+                    </div>
+                </div>
+                <div class="extra content">
+                    <span class="right floated">
+                        1873-1943
+                    </span>
+                    <span>
+                        <i class="file audio outline icon"></i>
+                        2 Recordings
+                    </span>
+                </div>
+            </div>
+            <div class="ui raised link card">
+                <div class="content">
+                    <div class="header">Chopin</div>
+                    <div class="meta">
+                        <span class="category">Polish</span>
+                    </div>
+                    <div class="description">
+                        Frédéric François Chopin was a Polish composer and virtuoso pianist of the Romantic period who wrote primarily for solo piano. 
+                    </div>
+                </div>
+                <div class="extra content">
+                    <span class="right floated">
+                        1810-1849
+                    </span>
+                    <span>
+                        <i class="file audio outline icon"></i>
+                        10 Recordings
+                    </span>
+                </div>
+            </div>
+        </div>
+
     </div>
 </body>
