@@ -141,17 +141,17 @@
             </div>
 
             <div class="ui inverted segment">
-                <div class="ui massive inverted secondary pointing menu">
-                    <a class="active item">
+                <div class="ui massive inverted tabs menu">
+                    <a class="active item" data-tab="timeline">
                         时间线
                     </a>
-                    <a class="item">
+                    <a class="item" data-tab="members">
                         社员
                     </a>
-                    <a class="item">
+                    <a class="item" data-tab="composers">
                         作曲家
                     </a>
-                    <a class="item">
+                    <a class="item" data-tab="upload">
                         上传
                     </a>
                     <div class="right item">
@@ -170,150 +170,164 @@
         </div>
 
         <!-- Body -->
-        <div class="ui segment">
-            <div class="ui two column very relaxed grid">
-                <div class="column">
-                    <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                    <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                    <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                    <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                </div>
-                <div class="column">
-                    <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                    <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                    <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                    <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                </div>
-            </div>
-            <div class="ui vertical divider">
-                2022
-            </div>
-        </div>
-        <div class="ui segment">
-            <div class="ui two column very relaxed grid">
-                <div class="column">
-                    <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                    <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                    <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                    <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                </div>
-                <div class="column">
-                    <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                    <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                    <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                    <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                </div>
-            </div>
-            <div class="ui vertical divider">
-                2021
-            </div>
-        </div>
 
-        <div class="ui link cards">
-            <div class="card">
-                <div class="image">
-                    <img src="{% static '/images/avatar2/matthew.png' %}">
-                </div>
-                <div class="content">
-                    <div class="header">Matt Giampietro</div>
-                    <div class="description">
-                        Matthew is an interior designer living in New York.
+        <div class="ui divider"></div>
+        <div class="ui container">
+            <div class="ui tab active" data-tab="timeline">
+                <div class="ui segment">
+                    <div class="ui two column very relaxed grid">
+                        <div class="column">
+                            <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
+                            <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
+                            <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
+                            <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
+                        </div>
+                        <div class="column">
+                            <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
+                            <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
+                            <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
+                            <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
+                        </div>
+                    </div>
+                    <div class="ui vertical divider">
+                        2022
                     </div>
                 </div>
-                <div class="extra content">
-                    <span class="right floated">
-                        Joined in 2013
-                    </span>
-                    <span>
-                        <i class="file audio outline icon"></i>
-                        33 Recordings
-                    </span>
+                <div class="ui segment">
+                    <div class="ui two column very relaxed grid">
+                        <div class="column">
+                            <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
+                            <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
+                            <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
+                            <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
+                        </div>
+                        <div class="column">
+                            <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
+                            <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
+                            <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
+                            <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
+                        </div>
+                    </div>
+                    <div class="ui vertical divider">
+                        2021
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="image">
-                    <img src="{% static '/images/avatar2/molly.png' %}">
-                </div>
-                <div class="content">
-                    <div class="header">Molly</div>
-                    <div class="description">
-                        Molly is a personal assistant living in Paris.
+    
+            <div class="ui tab" data-tab="members">
+                <div class="ui link cards">
+                    <div class="card">
+                        <div class="image">
+                            <img src="{% static '/images/avatar2/matthew.png' %}">
+                        </div>
+                        <div class="content">
+                            <div class="header">Matt Giampietro</div>
+                            <div class="description">
+                                Matthew is an interior designer living in New York.
+                            </div>
+                        </div>
+                        <div class="extra content">
+                            <span class="right floated">
+                                Joined in 2013
+                            </span>
+                            <span>
+                                <i class="file audio outline icon"></i>
+                                33 Recordings
+                            </span>
+                        </div>
                     </div>
-                </div>
-                <div class="extra content">
-                    <span class="right floated">
-                        Joined in 2011
-                    </span>
-                    <span>
-                        <i class="file audio outline icon"></i>
-                        35 Recordings
-                    </span>
+                    <div class="card">
+                        <div class="image">
+                            <img src="{% static '/images/avatar2/molly.png' %}">
+                        </div>
+                        <div class="content">
+                            <div class="header">Molly</div>
+                            <div class="description">
+                                Molly is a personal assistant living in Paris.
+                            </div>
+                        </div>
+                        <div class="extra content">
+                            <span class="right floated">
+                                Joined in 2011
+                            </span>
+                            <span>
+                                <i class="file audio outline icon"></i>
+                                35 Recordings
+                            </span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="image">
+                            <img src="{% static '/images/avatar2/elyse.png' %}">
+                        </div>
+                        <div class="content">
+                            <div class="header">Elyse</div>
+                            <div class="description">
+                                Elyse is a copywriter working in New York.
+                            </div>
+                        </div>
+                        <div class="extra content">
+                            <span class="right floated">
+                                Joined in 2014
+                            </span>
+                            <span>
+                                <i class="file audio outline icon"></i>
+                                2 Recordings
+                            </span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="image">
-                    <img src="{% static '/images/avatar2/elyse.png' %}">
-                </div>
-                <div class="content">
-                    <div class="header">Elyse</div>
-                    <div class="description">
-                        Elyse is a copywriter working in New York.
+    
+            <div class="ui tab" data-tab="composers">
+                <div class="ui link cards">
+                    <div class="ui raised link card">
+                        <div class="content">
+                            <div class="header">Rachmaninoff</div>
+                            <div class="meta">
+                                <span class="category">Russian</span>
+                            </div>
+                            <div class="description">
+                                Rachmaninoff was born on 1 April 1873 into a family of the Russian aristocracy in the Russian Empire.
+                            </div>
+                        </div>
+                        <div class="extra content">
+                            <span class="right floated">
+                                1873-1943
+                            </span>
+                            <span>
+                                <i class="file audio outline icon"></i>
+                                2 Recordings
+                            </span>
+                        </div>
                     </div>
-                </div>
-                <div class="extra content">
-                    <span class="right floated">
-                        Joined in 2014
-                    </span>
-                    <span>
-                        <i class="file audio outline icon"></i>
-                        2 Recordings
-                    </span>
-                </div>
-            </div>
-        </div>
-
-        <div class="ui link cards">
-            <div class="ui raised link card">
-                <div class="content">
-                    <div class="header">Rachmaninoff</div>
-                    <div class="meta">
-                        <span class="category">Russian</span>
+                    <div class="ui raised link card">
+                        <div class="content">
+                            <div class="header">Chopin</div>
+                            <div class="meta">
+                                <span class="category">Polish</span>
+                            </div>
+                            <div class="description">
+                                Frédéric François Chopin was a Polish composer and virtuoso pianist of the Romantic period who wrote primarily for solo piano. 
+                            </div>
+                        </div>
+                        <div class="extra content">
+                            <span class="right floated">
+                                1810-1849
+                            </span>
+                            <span>
+                                <i class="file audio outline icon"></i>
+                                10 Recordings
+                            </span>
+                        </div>
                     </div>
-                    <div class="description">
-                        Rachmaninoff was born on 1 April 1873 into a family of the Russian aristocracy in the Russian Empire.
-                    </div>
-                </div>
-                <div class="extra content">
-                    <span class="right floated">
-                        1873-1943
-                    </span>
-                    <span>
-                        <i class="file audio outline icon"></i>
-                        2 Recordings
-                    </span>
-                </div>
-            </div>
-            <div class="ui raised link card">
-                <div class="content">
-                    <div class="header">Chopin</div>
-                    <div class="meta">
-                        <span class="category">Polish</span>
-                    </div>
-                    <div class="description">
-                        Frédéric François Chopin was a Polish composer and virtuoso pianist of the Romantic period who wrote primarily for solo piano. 
-                    </div>
-                </div>
-                <div class="extra content">
-                    <span class="right floated">
-                        1810-1849
-                    </span>
-                    <span>
-                        <i class="file audio outline icon"></i>
-                        10 Recordings
-                    </span>
                 </div>
             </div>
         </div>
 
     </div>
+
+    <script>
+        $('.menu .item').tab();
+    </script>
 </body>
