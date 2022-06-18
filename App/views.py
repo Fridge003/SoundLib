@@ -1,5 +1,3 @@
-from curses.ascii import EM
-from re import U
 from django.shortcuts import render
 from django import forms
 from django.core.files.storage import FileSystemStorage
@@ -8,10 +6,10 @@ from django.contrib.auth import logout as logout_user
 
 import datetime
 
-from SoundLib.app.index import render_index
-from SoundLib.app.login import render_login, process_login_form, process_register_form
-from SoundLib.app.upload import process_upload
-from SoundLib.app.user import render_user
+from App.utils.index import render_index
+from App.utils.login import render_login, process_login_form, process_register_form
+from App.utils.upload import process_upload
+from App.utils.user import render_user
 
 class UploadFileForm(forms.Form):
     title = forms.CharField(max_length=50)
@@ -64,10 +62,7 @@ def register_form(request):
     Password = request.POST['Password']
     Password2 = request.POST['Password2']
 
-    if Password!=Password2 :
-        return render_login(request, register_failed=True, register_nonconsistency=True)
-
-    return process_register_form(request, UserName, Email, Password)
+    return process_register_form(request, UserName, Email, Password, Password2)
 
 def logout(request) :
 
