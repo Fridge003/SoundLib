@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+<p>Authenticated user</p>
+{% else %}
+<div class="pusher">
+    <div class="ui container">
+        <div class="ui divider"></div>
+        <div class="ui placeholder segment">
+            <div class="ui two column stackable center aligned grid">
+                <div class="ui vertical divider">Or</div>
+                <div class="middle aligned row">
+                    <div class="column">
+                        <div class="ui icon header">
+                            Login
+                            <i class="User icon"></i>
+                        </div>
+                        <form class="ui form" method="post" enctype="multipart/form-data" action="/login/login">
+                            {% csrf_token %}
+                            <div class="field">
+                                <label>User Name</label>
+                                <div class="field">
+                                    <input type="text" name="UserName" placeholder="User Name" required="required">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label>Password</label>
+                                <div class="field">
+                                    <input type="password" name="Password" placeholder="Password" required="required">
+                                </div>
+                            </div>
+                            <button class="ui primary positive button" type="submit">Login</button>
+                        </form>
+                        <button class="ui button" type="submit">Forget?</button>
+                    </div>
+                    <div class="column">
+                        <div class="ui icon header">
+                            Register
+                            <i class="world icon"></i>
+                        </div>
+                        <form class="ui form" method="post" enctype="multipart/form-data" action="/login/register">
+                            {% csrf_token %}
+                            <div class="field">
+                                <label>User Name</label>
+                                <div class="field">
+                                    <input type="text" name="UserName" placeholder="User Name" required="required">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label>Email</label>
+                                <div class="field">
+                                    <input type="text" name="Email" placeholder="example@gmail.com" required="required">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label>Password</label>
+                                <div class="field">
+                                    <input type="password" name="Password" placeholder="Password" required="required">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label>Password Again</label>
+                                <div class="field">
+                                    <input type="password" name="Password2" placeholder="Password" required="required">
+                                </div>
+                            </div>
+                            <button class="ui positive button" type="submit">Register</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endblock %}

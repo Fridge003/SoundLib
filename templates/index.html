@@ -1,419 +1,249 @@
+{% extends 'base.html' %}
 {% load static %}
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>PKU Piano</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'semantic/dist/semantic.min.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'user_theme/theme.css' %}">
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
-        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-    <script src="{% static 'semantic/dist/semantic.min.js' %}"></script>
-    <script>
-        $(document)
-            .ready(function () {
-
-                // fix menu when passed
-                $('.masthead')
-                    .visibility({
-                        once: false,
-                        onBottomPassed: function () {
-                            $('.fixed.menu').transition('fade in');
-                        },
-                        onBottomPassedReverse: function () {
-                            $('.fixed.menu').transition('fade out');
-                        }
-                    })
-                    ;
-
-                // create sidebar and attach to menu open
-                $('.ui.sidebar')
-                    .sidebar('attach events', '.toc.item')
-                    ;
-
-            })
-            ;
-    </script>
-    <style type="text/css">
-        .hidden.menu {
-            display: none;
-        }
-
-        .masthead .logo.item img {
-            margin-right: 1em;
-        }
-
-        .masthead .ui.menu .ui.button {
-            margin-left: 0.5em;
-        }
-
-        .masthead h1.ui.header {
-            margin-top: 3em;
-            margin-bottom: 0em;
-            font-size: 4em;
-            font-weight: normal;
-        }
-
-        .masthead h2 {
-            font-size: 1.7em;
-            font-weight: normal;
-        }
-
-        .ui.vertical.stripe {
-            padding: 8em 0em;
-        }
-
-        .ui.vertical.stripe h3 {
-            font-size: 2em;
-        }
-
-        .ui.vertical.stripe .button+h3,
-        .ui.vertical.stripe p+h3 {
-            margin-top: 3em;
-        }
-
-        .ui.vertical.stripe .floated.image {
-            clear: both;
-        }
-
-        .ui.vertical.stripe p {
-            font-size: 1.33em;
-        }
-
-        .ui.vertical.stripe .horizontal.divider {
-            margin: 3em 0em;
-        }
-
-        .quote.stripe.segment {
-            padding: 0em;
-        }
-
-        .quote.stripe.segment .grid .column {
-            padding-top: 5em;
-            padding-bottom: 5em;
-        }
-
-        .footer.segment {
-            padding: 5em 0em;
-        }
-
-        .secondary.pointing.menu .toc.item {
-            display: none;
-        }
-
-        @media only screen and (max-width: 700px) {
-            .ui.fixed.menu {
-                display: none !important;
-            }
-
-            .secondary.pointing.menu .item,
-            .secondary.pointing.menu .menu {
-                display: none;
-            }
-
-            .secondary.pointing.menu .toc.item {
-                display: block;
-            }
-
-            .masthead h1.ui.header {
-                font-size: 2em;
-                margin-top: 1.5em;
-            }
-
-            .masthead h2 {
-                margin-top: 0.5em;
-                font-size: 1.5em;
-            }
-        }
-    </style>
-</head>
-
-<body class="pushable">
-    <div class="pusher">
-
-        <!-- Headings -->
-        <div class="ui inverted vertical masthead center aligned segment">
-            <div class="ui text container">
-                <h1 class="ui inverted header">
-                    {{ hello }}
-                </h1>
-                <h2> Need to have a background. </h2>
-            </div>
-
-            <div class="ui inverted segment">
-                <div class="ui massive inverted tabs menu">
-                    <a class="active item" data-tab="timeline">
-                        Timeline
-                    </a>
-                    <a class="item" data-tab="members">
-                        Members
-                    </a>
-                    <a class="item" data-tab="composers">
-                        Composers
-                    </a>
-                    <a class="item" data-tab="upload">
-                        Upload
-                    </a>
-                    <div class="right item">
-                        <div class="ui icon input">
-                            <input class="prompt" type="text" placeholder="Search Anything...">
-                            <button class="ui inverted button">
-                                <i class="search icon"></i>
-                            </button>
-                        </div>
-                        <button class="ui inverted button">
-                            <i class="user outline icon"></i>
+{% block content %}
+<div class="pusher">
+    <!-- Menu bar -->
+    <div class="ui inverted vertical masthead center aligned segment">
+        <div class="ui massive inverted tabs menu">
+            <a class="active item" data-tab="timeline">
+                Timeline
+            </a>
+            <a class="item" data-tab="members">
+                Members
+            </a>
+            <a class="item" data-tab="composers">
+                Composers
+            </a>
+            <a class="item" data-tab="upload">
+                Upload
+            </a>
+            <a class="item" data-tab="search">
+                Search
+            </a>
+            <div class="right menu">
+                <div class="item">
+                    <div class="ui action input">
+                        <input type="text" placeholder="Anything">
+                        <button class="ui inverted right labeled icon button">
+                            <i class="search icon"></i>
+                            Search
                         </button>
                     </div>
                 </div>
-            </div>
-        </div>
-
-        <!-- Body -->
-
-        <div class="ui divider"></div>
-        <div class="ui container">
-            <div class="ui tab active" data-tab="timeline">
-                <div class="ui segment">
-                    <div class="ui two column very relaxed grid">
-                        <div class="column">
-                            <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                            <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                            <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                            <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                        </div>
-                        <div class="column">
-                            <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                            <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                            <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                            <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                        </div>
-                    </div>
-                    <div class="ui vertical divider">
-                        2022
-                    </div>
+                <div class="item">
+                    <a href="/login/" class="ui inverted button">
+                        <i class="user outline icon"></i>
+                    </a>
                 </div>
-                <div class="ui segment">
-                    <div class="ui two column very relaxed grid">
-                        <div class="column">
-                            <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                            <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                            <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                            <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                        </div>
-                        <div class="column">
-                            <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                            <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                            <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                            <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                        </div>
-                    </div>
-                    <div class="ui vertical divider">
-                        2021
-                    </div>
-                </div>
-            </div>
-
-            <div class="ui tab" data-tab="members">
-                <div class="ui link cards">
-                    <div class="card">
-                        <div class="image">
-                            <img src="{% static '/images/avatar2/matthew.png' %}">
-                        </div>
-                        <div class="content">
-                            <div class="header">Matt Giampietro</div>
-                            <div class="description">
-                                Matthew is an interior designer living in New York.
-                            </div>
-                        </div>
-                        <div class="extra content">
-                            <span class="right floated">
-                                Joined in 2013
-                            </span>
-                            <span>
-                                <i class="file audio outline icon"></i>
-                                33 Recordings
-                            </span>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="image">
-                            <img src="{% static '/images/avatar2/molly.png' %}">
-                        </div>
-                        <div class="content">
-                            <div class="header">Molly</div>
-                            <div class="description">
-                                Molly is a personal assistant living in Paris.
-                            </div>
-                        </div>
-                        <div class="extra content">
-                            <span class="right floated">
-                                Joined in 2011
-                            </span>
-                            <span>
-                                <i class="file audio outline icon"></i>
-                                35 Recordings
-                            </span>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="image">
-                            <img src="{% static '/images/avatar2/elyse.png' %}">
-                        </div>
-                        <div class="content">
-                            <div class="header">Elyse</div>
-                            <div class="description">
-                                Elyse is a copywriter working in New York.
-                            </div>
-                        </div>
-                        <div class="extra content">
-                            <span class="right floated">
-                                Joined in 2014
-                            </span>
-                            <span>
-                                <i class="file audio outline icon"></i>
-                                2 Recordings
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="ui tab" data-tab="composers">
-                <div class="ui link cards">
-                    <div class="ui raised link card">
-                        <div class="content">
-                            <div class="header">Rachmaninoff</div>
-                            <div class="meta">
-                                <span class="category">Russian</span>
-                            </div>
-                            <div class="description">
-                                Rachmaninoff was born on 1 April 1873 into a family of the Russian aristocracy in the
-                                Russian Empire.
-                            </div>
-                        </div>
-                        <div class="extra content">
-                            <span class="right floated">
-                                1873-1943
-                            </span>
-                            <span>
-                                <i class="file audio outline icon"></i>
-                                2 Recordings
-                            </span>
-                        </div>
-                    </div>
-                    <div class="ui raised link card">
-                        <div class="content">
-                            <div class="header">Chopin</div>
-                            <div class="meta">
-                                <span class="category">Polish</span>
-                            </div>
-                            <div class="description">
-                                Frédéric François Chopin was a Polish composer and virtuoso pianist of the Romantic
-                                period who wrote primarily for solo piano.
-                            </div>
-                        </div>
-                        <div class="extra content">
-                            <span class="right floated">
-                                1810-1849
-                            </span>
-                            <span>
-                                <i class="file audio outline icon"></i>
-                                10 Recordings
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="ui tab" data-tab="upload">
-                <form class="ui form" method="post" enctype="multipart/form-data" action="/upload/">
-                    {% csrf_token %}
-                    <h3 class="ui dividing header">Recording Information</h3>
-                    <div class="two fields">
-                        <div class="field">
-                            <label>Recording Name</label>
-                            <div class="field">
-                                <input type="text" name="RecordingName" placeholder="Recording Name" required="required">
-                            </div>
-                        </div>
-                        <div class="field">
-                            <label>Composer Name</label>
-                            <div class="ui fluid search selection dropdown">
-                                <input type="hidden" name="ComposerName" required="required">
-                                <i class="dropdown icon"></i>
-                                <div class="default text">Select Composer</div>
-                                <div class="menu">
-                                    <div class="item">Chopin</div>
-                                    <div class="item">Beethoven</div>
-                                    <div class="item">Mozart</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label>Description</label>
-                        <textarea type="input" name="Description" placeholder="Enter details here..."></textarea>
-                    </div>
-                    <div class="field">
-                        <label>Recording File</label>
-                        <input type="file" name="File"/>
-                    </div>
-                    <button class="massive ui primary button" type="submit">
-                        Submit
-                    </button>
-                </form>
-                <script>
-                    $('.ui.dropdown').dropdown();
-                </script>
-            </div>
-        </div>
-
-        <div class="ui divider"></div>
-    </div>
-
-
-    <script>
-        $('.menu .item').tab();
-    </script>
-
-    <div class="ui vertical footer segment">
-        <div class="ui center aligned container">
-            <div class="ui stackable grid">
-                <div class="three wide column">
-                    <h4 class="ui header">Community</h4>
-                    <div class="ui link list">
-                        <a class="item" href="https://space.bilibili.com/431443026/" target="_blank">
-                            Bilibili Link
-                        </a>
-                        <a class="item" href="https://space.bilibili.com/431443026/" target="_blank">
-                            Wechat（Todo）
-                        </a>
-                    </div>
-                </div>
-                <div class="three wide column">
-                    <h4 class="ui header">Project</h4>
-                    <div class="ui link list">
-                        <a class="item" href="https://github.com/totorato/SoundLib" target="_blank">
-                            Site GitHub Project
-                        </a>
-                        <a class="item" href="https://github.com/totorato/klavx" target="_blank">
-                            Wechat Server GitHub Project
-                        </a>
-                    </div>
-                </div>
-                <div class="seven wide right floated column">
-                    <h4 class="ui header">Help Preserve This Project</h4>
-                    <p> Support for the continued development of PKU piano club.</p>
-                </div>
-            </div>
-            <div class="ui section divider"></div>
-            <img src="{% static '/images/logo/pkupiano.webp' %}" class="ui centered mini image">
-            <div class="ui horizontal small divided link list">
-                <a class="item" href="http://semantic-ui.mit-license.org/" target="_blank">Free &amp; Open Source
-                    (MIT)</a>
             </div>
         </div>
     </div>
 
-</body>
+    <!-- Body -->
+
+    <div class="ui divider"></div>
+    <div class="ui container">
+        <div class="ui tab active" data-tab="timeline">
+            <div class="ui segment">
+                <div class="ui two column very relaxed grid">
+                    <div class="column">
+                        <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
+                        <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
+                        <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
+                        <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
+                    </div>
+                    <div class="column">
+                        <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
+                        <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
+                        <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
+                        <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
+                    </div>
+                </div>
+                <div class="ui vertical divider">
+                    2022
+                </div>
+            </div>
+            <div class="ui segment">
+                <div class="ui two column very relaxed grid">
+                    <div class="column">
+                        <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
+                        <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
+                        <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
+                        <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
+                    </div>
+                    <div class="column">
+                        <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
+                        <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
+                        <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
+                        <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
+                    </div>
+                </div>
+                <div class="ui vertical divider">
+                    2021
+                </div>
+            </div>
+        </div>
+
+        <div class="ui tab" data-tab="members">
+            <div class="ui link cards">
+                <div class="card">
+                    <div class="image">
+                        <img src="{% static '/images/avatar2/matthew.png' %}">
+                    </div>
+                    <div class="content">
+                        <div class="header">Matt Giampietro</div>
+                        <div class="description">
+                            Matthew is an interior designer living in New York.
+                        </div>
+                    </div>
+                    <div class="extra content">
+                        <span class="right floated">
+                            Joined in 2013
+                        </span>
+                        <span>
+                            <i class="file audio outline icon"></i>
+                            33 Recordings
+                        </span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <img src="{% static '/images/avatar2/molly.png' %}">
+                    </div>
+                    <div class="content">
+                        <div class="header">Molly</div>
+                        <div class="description">
+                            Molly is a personal assistant living in Paris.
+                        </div>
+                    </div>
+                    <div class="extra content">
+                        <span class="right floated">
+                            Joined in 2011
+                        </span>
+                        <span>
+                            <i class="file audio outline icon"></i>
+                            35 Recordings
+                        </span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <img src="{% static '/images/avatar2/elyse.png' %}">
+                    </div>
+                    <div class="content">
+                        <div class="header">Elyse</div>
+                        <div class="description">
+                            Elyse is a copywriter working in New York.
+                        </div>
+                    </div>
+                    <div class="extra content">
+                        <span class="right floated">
+                            Joined in 2014
+                        </span>
+                        <span>
+                            <i class="file audio outline icon"></i>
+                            2 Recordings
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ui tab" data-tab="composers">
+            <div class="ui link cards">
+                <div class="ui raised link card">
+                    <div class="content">
+                        <div class="header">Rachmaninoff</div>
+                        <div class="meta">
+                            <span class="category">Russian</span>
+                        </div>
+                        <div class="description">
+                            Rachmaninoff was born on 1 April 1873 into a family of the Russian aristocracy in the
+                            Russian Empire.
+                        </div>
+                    </div>
+                    <div class="extra content">
+                        <span class="right floated">
+                            1873-1943
+                        </span>
+                        <span>
+                            <i class="file audio outline icon"></i>
+                            2 Recordings
+                        </span>
+                    </div>
+                </div>
+                <div class="ui raised link card">
+                    <div class="content">
+                        <div class="header">Chopin</div>
+                        <div class="meta">
+                            <span class="category">Polish</span>
+                        </div>
+                        <div class="description">
+                            Frédéric François Chopin was a Polish composer and virtuoso pianist of the Romantic
+                            period who wrote primarily for solo piano.
+                        </div>
+                    </div>
+                    <div class="extra content">
+                        <span class="right floated">
+                            1810-1849
+                        </span>
+                        <span>
+                            <i class="file audio outline icon"></i>
+                            10 Recordings
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ui tab" data-tab="upload">
+            <form class="ui form" method="post" enctype="multipart/form-data" action="/upload/">
+                {% csrf_token %}
+                <h3 class="ui dividing header">Recording Information</h3>
+                <div class="two fields">
+                    <div class="field">
+                        <label>Recording Name</label>
+                        <div class="field">
+                            <input type="text" name="RecordingName" placeholder="Recording Name" required="required">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label>Composer Name</label>
+                        <div class="ui fluid search selection dropdown">
+                            <input type="hidden" name="ComposerName" required="required">
+                            <i class="dropdown icon"></i>
+                            <div class="default text">Select Composer</div>
+                            <div class="menu">
+                                <div class="item">Chopin</div>
+                                <div class="item">Beethoven</div>
+                                <div class="item">Mozart</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <label>Description</label>
+                    <textarea type="input" name="Description" placeholder="Enter details here..."></textarea>
+                </div>
+                <div class="field">
+                    <label>Recording File</label>
+                    <input type="file" name="File" />
+                </div>
+                <button class="massive ui primary button" type="submit">
+                    Submit
+                </button>
+            </form>
+            <script>
+                $('.ui.dropdown').dropdown();
+            </script>
+        </div>
+    </div>
+
+    <div class="ui divider"></div>
+</div>
+
+
+<script>
+    $('.menu .item').tab();
+</script>
+{% endblock %}
