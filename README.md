@@ -14,6 +14,8 @@ SoundLib (abbreviation of sound library), provides a site for users to upload th
 
 ## Project Introduction
 
+Clone the project, install all dependencies (django) manually, and run the server using command `python manage.py runserver` to start.
+
 ### Upload Recordings
 
 Django supports upload files, so this is not a big deal.
