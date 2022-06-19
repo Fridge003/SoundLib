@@ -46,5 +46,13 @@ class MyUserManager(BaseUserManager):
 
 class User(AbstractUser):
     
-    introduction = models.CharField(max_length=65535, default="This person is mysterious")
+    Introduction = models.CharField(max_length=65535, default="This person is mysterious")
     objects = MyUserManager()
+
+    def get_email(self):
+        """Return the email for this User."""
+        return getattr(self, self.EMAIL_FIELD)
+    
+    def get_introduction(self):
+        """Return the introduction for this User."""
+        return self.Introduction

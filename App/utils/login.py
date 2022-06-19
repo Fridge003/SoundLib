@@ -27,10 +27,10 @@ def process_login_form(request, name, password) :
     if user is not None:
         # login success
         login(request, user)
-        return render_index(request)
+        return True
     else :
         # login failed
-        return render_login(request, login_failed=True)
+        return {"login_failed": True}
 
 def process_register_form(request, name, email, password, password2, introduction="Empty") :
 
@@ -38,13 +38,17 @@ def process_register_form(request, name, email, password, password2, introductio
         user = User.objects.create_user(name, email, password, introduction)
     except IntegrityError as e:
         print("Some error occured!", e)
-        return render_login(request, register_failed=True, register_used_name=True)
+        return {"register_failed":True, "register_used_name":True, "register_nonconsistency":False}
     
     if password != password2 :
-        return render_login(request, register_failed=True, register_nonconsistency=True)
+        return {"register_failed":True, "register_used_name":False, "register_nonconsistency":True}
 
     if user is not None:
         user.save()
-        return process_login_form(request, name, password)
+        res = process_login_form(request, name, password)
+        if res == True :
+            return {"register_failed":False, "register_used_name":False, "register_nonconsistency":False}
+        else :
+            return {"register_failed":True, "register_used_name":False, "register_nonconsistency":False}
     else :
-        return render_login(request, register_failed=True)
+        return {"register_failed":True, "register_used_name":False, "register_nonconsistency":False}

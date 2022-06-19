@@ -9,6 +9,42 @@
 <div class="pusher">
     <div class="ui container">
         <div class="ui divider"></div>
+        <div class="segment">
+            <a href="/" class="ui left labeled icon button">
+                <i class="left arrow icon"></i>
+                Back
+            </a>
+        </div>
+        <!-- When error occurs -->
+        {% if register_nonconsistency %}
+        <div class="ui error message">
+            <i class="close icon"></i>
+            <div class="header">
+                Passwords should be the same!
+            </div>
+        </div>
+        {% elif register_used_name %}
+        <div class="ui error message">
+            <i class="close icon"></i>
+            <div class="header">
+                Your name is conflict with others!
+            </div>
+        </div>
+        {% elif register_failed %}
+        <div class="ui error message">
+            <i class="close icon"></i>
+            <div class="header">
+                Registration failed due to some unkonwn reason!
+            </div>
+        </div>
+        {% elif login_failed %}
+        <div class="ui error message">
+            <i class="close icon"></i>
+            <div class="header">
+                Login failed!
+            </div>
+        </div>
+        {% endif %}
         <div class="ui placeholder segment">
             <div class="ui two column stackable center aligned grid">
                 <div class="ui vertical divider">Or</div>
@@ -73,36 +109,6 @@
                 </div>
             </div>
         </div>
-        <!-- When error occurs -->
-        {% if register_nonconsistency %}
-        <div class="ui error message">
-            <i class="close icon"></i>
-            <div class="header">
-                Passwords should be the same!
-            </div>
-        </div>
-        {% elif register_used_name %}
-        <div class="ui error message">
-            <i class="close icon"></i>
-            <div class="header">
-                Your name is conflict with others!
-            </div>
-        </div>
-        {% elif register_failed %}
-        <div class="ui error message">
-            <i class="close icon"></i>
-            <div class="header">
-                Registration failed due to some unkonwn reason!
-            </div>
-        </div>
-        {% elif login_failed %}
-        <div class="ui error message">
-            <i class="close icon"></i>
-            <div class="header">
-                Login failed!
-            </div>
-        </div>
-        {% endif %}
     </div>
 </div>
 
