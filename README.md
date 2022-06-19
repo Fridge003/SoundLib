@@ -4,7 +4,7 @@ SoundLib (abbreviation of sound library), provides a site for users to upload th
 
 ## Todo List
 
-- [ ] Better "User" view: need to added ways to modify user information.
+- [x] Better "User" view: need to added ways to modify user information.
 - [ ] Forget password: send email to reset password.
 - [ ] Database: need to add Recording and Composer database.
 - [ ] Search: search entries from databases and show the result.
