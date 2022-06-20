@@ -5,6 +5,12 @@
 
 {% if user.is_authenticated %}
 <p>Authenticated user</p>
+<div class="segment">
+    <a href="/" class="ui left labeled icon button">
+        <i class="left arrow icon"></i>
+        Back
+    </a>
+</div>
 {% else %}
 <div class="pusher">
     <div class="ui container">
@@ -70,7 +76,7 @@
                             </div>
                             <button class="ui primary positive button" type="submit">Login</button>
                         </form>
-                        <button class="ui button" type="submit">Forget?</button>
+                        <a href="/password_reset/" class="ui button" type="submit">Forget?</a>
                     </div>
                     <div class="column">
                         <div class="ui icon header">

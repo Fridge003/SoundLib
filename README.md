@@ -2,10 +2,12 @@
 
 SoundLib (abbreviation of sound library), provides a site for users to upload their own music recordings.
 
+![](Static\screenshot\1.png)
+
 ## Todo List
 
 - [x] Better "User" view: need to added ways to modify user information.
-- [ ] Forget password: send email to reset password.
+- [x] Forget password: send email to reset password.
 - [ ] Database: need to add Recording and Composer database.
 - [ ] Search: search entries from databases and show the result.
 - [ ] Detailed view: detailed view of recordings, composers and users when clicking on entries.

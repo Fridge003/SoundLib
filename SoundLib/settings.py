@@ -129,3 +129,15 @@ STATICFILES_DIRS = [
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_URL = '/login/'
+
+# Email settings
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+# Host for sending e-mail.
+EMAIL_HOST = 'smtp.126.com'
+EMAIL_HOST_USER = 'pkupiano_public@126.com'
+EMAIL_HOST_PASSWORD = 'IETRNNVNMELDIQDJ'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 25
+DEFAULT_FROM_EMAIL = 'pkupiano_public@126.com'
