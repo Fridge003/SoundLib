@@ -141,3 +141,6 @@ EMAIL_HOST_PASSWORD = 'IETRNNVNMELDIQDJ'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 25
 DEFAULT_FROM_EMAIL = 'pkupiano_public@126.com'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'Media')
+MEDIA_URL = '/media/'

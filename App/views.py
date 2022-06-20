@@ -29,17 +29,15 @@ def upload(Request):
     UploadTime = datetime.datetime.now()
     MyFile = Request.FILES['File']
     if Request.method == 'POST' and MyFile:
-
-        save_url = process_upload(MyFile, {
-            "RecordingName": RecordingName,
-            "ComposerName": ComposerName,
-            "Description": Description,
-            "UploadTime": UploadTime
-        })
-
-        print("file {0} saved as {1}".format(MyFile.name, save_url))
-
+        process_upload(MyFile, 
+            RecordingName=RecordingName,
+            ComposerName=ComposerName,
+            Description=Description,
+            UploadTime=UploadTime,
+            UploadUser=Request.user
+        )
         return render_index(Request)
+
     return render_index(Request)
 
 def login(Request):

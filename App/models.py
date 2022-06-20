@@ -1,3 +1,4 @@
+from tkinter import CASCADE
 from django.db import models
 
 # Create your models here.
@@ -56,3 +57,20 @@ class User(AbstractUser):
     def get_introduction(self):
         """Return the introduction for this User."""
         return self.Introduction
+
+
+class Composer(models.Model) :
+
+    Name = models.CharField(max_length=255, unique=True, primary_key=True)
+    Introduction = models.CharField(max_length=65535, default="Empty")
+
+class Recording(models.Model) :
+
+    Id = models.AutoField(primary_key=True)
+    Name = models.CharField(max_length=255, default="Mysterious Recording")
+    File = models.FileField(upload_to='Recordings')
+    Composer = models.ForeignKey(Composer, on_delete=models.CASCADE)            # One composer to many recordings
+    UploadUser = models.ForeignKey(User, on_delete=models.CASCADE)              # for searching
+    UploadUserName = models.CharField(max_length=255, default="Anonymous")      # to show
+    Description = models.CharField(max_length=65535, default="Empty")
+    UploadTime = models.DateTimeField(auto_now=True, editable=True)
