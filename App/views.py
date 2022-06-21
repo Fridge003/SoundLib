@@ -11,7 +11,7 @@ from App.models import User
 from App.utils.index import render_index
 from App.utils.login import render_login, process_login_form, process_register_form
 from App.utils.upload import process_upload
-from App.utils.user import render_user, process_change_form
+from App.utils.user import render_user_change, render_user_info, process_change_form
  
  # Index page
 def hello(Request):
@@ -44,7 +44,7 @@ def login(Request):
 
     if Request.user.is_authenticated:
 
-        return render_user(Request)
+        return redirect('/user/'+Request.user.username+'/')
 
     return render_login(Request)
 
@@ -89,10 +89,18 @@ def logout(Request) :
 
     return render_index(Request)
 
-# Process a change user info request
-def change_user_info(Request) :
+# Accesing user info page
+def user_info(Request, **kwards) :
 
-    print(Request.user.get_introduction())
+    return render_user_info(Request, UserName=kwards["username"])
+
+# Accesing change page
+def user_info_change(Request, **kwards) :
+
+    return render_user_change(Request)
+
+# Comminting a change form
+def user_info_change_commit(Request, **kwards) :
 
     UserName = Request.POST['UserName']
     Email = Request.POST['Email']
@@ -108,7 +116,7 @@ def change_user_info(Request) :
         logout_user(Request)
         res = process_login_form(Request, UserName, Password)
         if res == True :    # success
-            return render_user(Request)
+            return redirect('/user/'+Request.user.username+'/')
         else : # failure
             return render_login(Request, login_failed=True)
 
@@ -116,10 +124,10 @@ def change_user_info(Request) :
 
         print("change failed")
         if "inconsistent_password" in res :
-            return render_user(Request, ChangeFailed=True, Inconsistency=True)
+            return render_user_change(Request, ChangeFailed=True, Inconsistency=True)
         elif "conflict_username" in res :
-            return render_user(Request, ChangeFailed=True, UsedName=True)
+            return render_user_change(Request, ChangeFailed=True, UsedName=True)
         else :
             raise NotImplementedError("Error not handled in views.change")
-
+    
     return render_user(Request)

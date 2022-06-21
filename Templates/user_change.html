@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% load App_extras %}
+{% load static %}
+{% block content %}
+
+<div class="pusher">
+    <div class="ui container">
+        <div class="ui divider"></div>
+        <div class="segment">
+            <a href="/" class="ui left labeled icon button">
+                <i class="left arrow icon"></i>
+                Back
+            </a>
+        </div>
+        {% csrf_token %}
+        <h3 class="ui dividing header">User Information</h3>
+        <!-- When error occurs -->
+        {% if Inconsistency %}
+        <div class="ui error message">
+            <i class="close icon"></i>
+            <div class="header">
+                Passwords should be the same!
+            </div>
+        </div>
+        {% elif UsedName %}
+        <div class="ui error message">
+            <i class="close icon"></i>
+            <div class="header">
+                Your name is conflict with others!
+            </div>
+        </div>
+        {% elif ChangeFailed %}
+        <div class="ui error message">
+            <i class="close icon"></i>
+            <div class="header">
+                Registration failed due to some unkonwn reason!
+            </div>
+        </div>
+        {% endif %}
+        <form class="ui form" method="post" enctype="multipart/form-data" action="{{ "/user/"|addstr:user.get_username|addstr:"/change/commit/" }}">
+            {% csrf_token %}
+            <div class="two fields">
+                <div class="field">
+                    <div class="field">
+                        <label>User Name</label>
+                        <div class="field">
+                            <input type="text" name="UserName" value="{{ user.get_username }}" required="required">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label>Email</label>
+                        <div class="field">
+                            <input type="text" name="Email" value="{{ user.get_email }}" required="required">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label>Password</label>
+                        <div class="field">
+                            <input type="password" name="Password" placeholder="Password" required="required">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label>Password Again</label>
+                        <div class="field">
+                            <input type="password" name="Password2" placeholder="Password" required="required">
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <label>Introduction</label>
+                    <div class="field">
+                        <textarea type="input" name="Introduction" required="required">{{ user.get_introduction }}</textarea>
+                    </div>
+                </div>
+            </div>
+            <button class="ui positive button" type="submit">Update</button>
+        </form>
+        <a href="/logout/" class="ui right labeled icon button">
+            <i class="user outline icon"></i>
+            Logout
+        </a>
+    </div>
+</div>
+
+<script>
+    $('.message .close')
+        .on('click', function () {
+            $(this)
+                .closest('.message')
+                .transition('fade')
+                ;
+        })
+        ;
+</script>
+{% endblock %}

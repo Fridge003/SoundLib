@@ -5,14 +5,20 @@ from django.contrib.auth import logout as logout_user
 
 # Render the "user" page,
 # Parameters include error messages when user tries to change info
-def render_user(Request,
+def render_user_change(Request,
                 ChangeFailed=False,
                 Inconsistency=False,
-                UsedName=False,) :
+                UsedName=False) :
     Context          = {}
     Context["ChangeFailed"] = ChangeFailed
     Context["Inconsistency"] = Inconsistency
     Context["UsedName"] = UsedName
+    return render(Request, 'user_change.html', Context)
+
+def render_user_info(Request, UserName) :
+    Context          = {}
+    Context["UserName"] = UserName
+    Context["RegisterTime"] = Request.user.date_joined
     return render(Request, 'user.html', Context)
 
 # Process a submitted change-user-info form
