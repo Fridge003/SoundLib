@@ -2,7 +2,7 @@
 
 SoundLib (abbreviation of sound library), provides a site for users to upload their own music recordings.
 
-![](Static\screenshot\1.png)
+![image](https://github.com/totorato/SoundLib/blob/main/Static/screenshot/1.png)
 
 ## Todo List
 
