@@ -4,6 +4,7 @@ from django.core.files.storage import FileSystemStorage
 from django.conf import settings
 from App.models import Recording, Composer
 
+# Save a uploaded file to disk and maintain databases
 def process_upload(
     MyFile, 
     RecordingName,

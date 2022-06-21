@@ -12,15 +12,14 @@ from App.utils.index import render_index
 from App.utils.login import render_login, process_login_form, process_register_form
 from App.utils.upload import process_upload
 from App.utils.user import render_user, process_change_form
-
-class UploadFileForm(forms.Form):
-    title = forms.CharField(max_length=50)
-    file = forms.FileField()
  
+ # Index page
 def hello(Request):
     
     return render_index(Request)
 
+# User is accesing upload page
+# This page needs auth
 @login_required
 def upload(Request):
     RecordingName = Request.POST['RecordingName']
@@ -40,6 +39,7 @@ def upload(Request):
 
     return render_index(Request)
 
+# User is accessing "login" page,
 def login(Request):
 
     if Request.user.is_authenticated:
@@ -48,6 +48,8 @@ def login(Request):
 
     return render_login(Request)
 
+# When user submitted a login form in the "login" page,
+# process that form and redirect to main page if successed
 def login_form(Request):
 
     UserName = Request.POST['UserName']
@@ -60,6 +62,8 @@ def login_form(Request):
     else : # failure
         return render_login(Request, login_failed=True)
 
+# When user submitted a registration form in the "login" page,
+# process that from and auto-login if successed
 def register_form(Request):
 
     UserName = Request.POST['UserName']
@@ -78,12 +82,14 @@ def register_form(Request):
     else :
         return redirect('/')
 
+# Logout a user
 def logout(Request) :
 
     logout_user(Request)
 
     return render_index(Request)
 
+# Process a change user info request
 def change_user_info(Request) :
 
     print(Request.user.get_introduction())
@@ -96,7 +102,7 @@ def change_user_info(Request) :
 
     res = process_change_form(Request, UserName, Email, Password, Password2, Introduction)
 
-    if res == True :
+    if res == True :    # the user info changed successfully
 
         print("changed successfully, refreshing...")
         logout_user(Request)
@@ -106,7 +112,7 @@ def change_user_info(Request) :
         else : # failure
             return render_login(Request, login_failed=True)
 
-    else :
+    else :  # failed, error info are presented in a dict
 
         print("change failed")
         if "inconsistent_password" in res :
