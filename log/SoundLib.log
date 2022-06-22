@@ -1,0 +1,48 @@
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 13526)
+spawned uWSGI worker 1 (pid: 13527, cores: 1)
+spawned uWSGI worker 2 (pid: 13528, cores: 1)
+spawned uWSGI http 1 (pid: 13529)
+--- no python application found, check your startup logs for errors ---
+SIGINT/SIGTERM received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 13529)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 14716)
+spawned uWSGI worker 1 (pid: 14717, cores: 1)
+spawned uWSGI worker 2 (pid: 14718, cores: 1)
+spawned uWSGI http 1 (pid: 14719)
+SIGINT/SIGTERM received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 14719)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 14955)
+spawned uWSGI worker 1 (pid: 14956, cores: 1)
+spawned uWSGI worker 2 (pid: 14957, cores: 1)
+spawned uWSGI http 1 (pid: 14958)
+Not Found: /favicon.ico
+Not Found: /Static/semantic/dist/semantic.min.css
+Not Found: /Static/user_theme/theme.css
+Not Found: /Static/semantic/dist/semantic.min.js
+Not Found: /Static/images/ui/short-paragraph.png
+Not Found: /Static/images/avatar2/matthew.png
+Not Found: /Static/images/avatar2/molly.png
+Not Found: /Static/images/avatar2/elyse.png
+Not Found: /Static/images/logo/108x108.png
+Not Found: /Static/semantic/dist/semantic.min.js
+Not Found: /Static/images/ui/short-paragraph.png
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /Static/semantic/dist/semantic.min.css
+Not Found: /Static/user_theme/theme.css
+Not Found: /Static/semantic/dist/semantic.min.js
+Not Found: /Static/images/ui/short-paragraph.png
+Not Found: /Static/images/avatar2/molly.png
+Not Found: /Static/images/avatar2/matthew.png
+Not Found: /Static/images/avatar2/elyse.png
+Not Found: /Static/images/logo/108x108.png
