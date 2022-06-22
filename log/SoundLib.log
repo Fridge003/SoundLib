@@ -46,3 +46,13 @@ Not Found: /Static/images/avatar2/molly.png
 Not Found: /Static/images/avatar2/matthew.png
 Not Found: /Static/images/avatar2/elyse.png
 Not Found: /Static/images/logo/108x108.png
+SIGINT/SIGTERM received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 14958)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 19234)
+spawned uWSGI worker 1 (pid: 19235, cores: 1)
+spawned uWSGI worker 2 (pid: 19236, cores: 1)
+spawned uWSGI http 1 (pid: 19237)
