@@ -15,10 +15,9 @@ def render_user_change(Request,
     Context["UsedName"] = UsedName
     return render(Request, 'user_change.html', Context)
 
-def render_user_info(Request, UserName) :
+def render_user_info(Request, Users) :
     Context          = {}
-    Context["UserName"] = UserName
-    Context["RegisterTime"] = Request.user.date_joined
+    Context["UserList"] = Users
     return render(Request, 'user.html', Context)
 
 # Process a submitted change-user-info form

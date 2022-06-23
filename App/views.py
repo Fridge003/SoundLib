@@ -90,9 +90,11 @@ def logout(Request) :
     return render_index(Request)
 
 # Accesing user info page
-def user_info(Request, **kwards) :
+def user_info(Request, **kwargs) :
 
-    return render_user_info(Request, UserName=kwards["username"])
+    SelectedUsers = User.objects.filter(username=kwargs["username"])
+
+    return render_user_info(Request, Users=SelectedUsers)
 
 # Accesing change page
 def user_info_change(Request, **kwards) :
