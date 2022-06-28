@@ -14,9 +14,12 @@ from App.utils.upload import process_upload
 from App.utils.user import render_user_change, render_user_info, process_change_form
  
  # Index page
-def hello(Request):
+def hello(Request, **kwargs):
+
+    if len(kwargs) == 0 :
+        return redirect('index/timeline')
     
-    return render_index(Request)
+    return render_index(Request, kwargs["tag"])
 
 # User is accesing upload page
 # This page needs auth
