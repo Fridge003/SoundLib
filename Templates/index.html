@@ -90,33 +90,39 @@
         </div>
 
         <div class="ui tab" data-tab="members">
-            <div class="ui link cards">
-                <div class="ui raised link card">
-                    <div class="image">
-                        <img src="{% static '/images/avatar2/matthew.png' %}">
-                    </div>
+            <div class="ui three doubling stackable link cards">
+                {% for show_user in UserList %}
+                <div class="ui fluid raised link card">
                     <div class="content">
-                        <div class="header">Matt Giampietro</div>
+                        <img class="ui left floated tiny image" src="{% static '/images/avatar2/matthew.png' %}">
+                        <div class="header">{{ show_user.get_username }}</div>
+                        <div class="meta">
+                            Last login: {{ show_user.get_last_login}}
+                        </div>
                         <div class="description">
-                            Matthew is an interior designer living in New York.
+                            {{ show_user.get_introduction }}
                         </div>
                     </div>
                     <div class="extra content">
                         <span class="right floated">
-                            Joined in 2013
+                            Joined in {{ show_user.get_join_date }}
                         </span>
                         <span>
                             <i class="file audio outline icon"></i>
-                            33 Recordings
+                            {{ show_user.NumRecordings }} Recordings
                         </span>
                     </div>
                 </div>
-                <div class="ui raised link card">
-                    <div class="image">
-                        <img src="{% static '/images/avatar2/molly.png' %}">
-                    </div>
+                {% endfor %}
+                <div class="ui fluid raised link card">
                     <div class="content">
+                        <div class="image">
+                            <img class="left floated tiny ui image" src="{% static '/images/avatar2/molly.png' %}">
+                        </div>
                         <div class="header">Molly</div>
+                        <div class="meta">
+                            Friends of Veronika
+                          </div>
                         <div class="description">
                             Molly is a personal assistant living in Paris.
                         </div>
@@ -131,12 +137,15 @@
                         </span>
                     </div>
                 </div>
-                <div class="ui raised link card">
-                    <div class="image">
-                        <img src="{% static '/images/avatar2/elyse.png' %}">
-                    </div>
+                <div class="ui fluid raised link card">
                     <div class="content">
+                        <div class="image">
+                            <img class="left floated tiny ui image" src="{% static '/images/avatar2/molly.png' %}">
+                        </div>
                         <div class="header">Elyse</div>
+                        <div class="meta">
+                            Friends of Veronika
+                          </div>
                         <div class="description">
                             Elyse is a copywriter working in New York.
                         </div>
