@@ -97,6 +97,9 @@ class Composer(models.Model) :
     Name = models.CharField(max_length=255, unique=True, primary_key=True)
     Introduction = models.CharField(max_length=65535, default="Empty")
 
+    def get_name(self) :
+        return self.Name
+
 class Recording(models.Model) :
 
     Id = models.AutoField(primary_key=True)
@@ -117,5 +120,14 @@ class Recording(models.Model) :
     def get_username(self) :
         return self.UploadUserName
     
+    def get_user(self) :
+        return self.UploadUser.get_username()   # in case the user is deleted
+    
     def get_upload_date(self) :
         return self.UploadTime
+    
+    def get_composer(self) :
+        return self.Composer.get_name()
+    
+    def get_id(self) :
+        return self.Id

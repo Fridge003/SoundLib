@@ -6,12 +6,13 @@ from django.contrib.auth import logout as logout_user
 from django.contrib.auth import authenticate, login
 
 import datetime
-from App.models import User
+from App.models import Recording, User
 
 from App.utils.index import render_index
 from App.utils.login import render_login, process_login_form, process_register_form
 from App.utils.upload import process_upload
 from App.utils.user import render_user_change, render_user_info, process_change_form
+from App.utils.recording import render_recording_info, render_recording_change
  
  # Index page
 def hello(Request, **kwargs):
@@ -136,3 +137,15 @@ def user_info_change_commit(Request, **kwards) :
             raise NotImplementedError("Error not handled in views.change")
     
     return render_user(Request)
+
+def recording_info(request, **kwargs) :
+
+    SelectedRecordings = Recording.objects.filter(Id=kwargs["id"])
+
+    return render_recording_info(request, SelectedRecordings)
+
+def recording_change(request, **kwargs) :
+
+    SelectedRecordings = Recording.objects.filter(Id=kwargs["id"])
+
+    return render_recording_change(request, SelectedRecordings)

@@ -68,21 +68,20 @@
         {% if SelectedTag == "timeline" %}
         <div class="ui three doubling stackable link cards">
             {% for show_recording in RecordingList %}
-            <a class="ui fluid raised link card">
+            <a class="ui fluid raised link card" href="{{ " /recording/"|addstr:show_recording.get_id|addstr:"/" }}" >
                 <div class="content">
                     <div class="header">{{ show_recording.get_title }}</div>
                     <div class="meta">
-                        Uploaded by: {{ show_recording.get_username}}
-                        ; Composer : aaa
+                        Uploaded by: {{ show_recording.get_username }}
+                    </br>
+                        Composer : {{ show_recording.get_composer }}
                     </div>
                     <div class="description">
                         {{ show_recording.get_description }}
                     </div>
                 </div>
                 <div class="extra content">
-                    <span class="right floated">
-                        Uploaded at {{ show_recording.get_upload_date }}
-                    </span>
+                    Uploaded at {{ show_recording.get_upload_date }}
                 </div>
             </a>
             {% endfor %}
