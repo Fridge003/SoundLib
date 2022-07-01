@@ -739,3 +739,198 @@ changed successfully, refreshing...
 Not Found: /index.php
 Not Found: /phpmyadmin/index.php
 Not Found: /favicon.ico
+SIGINT/SIGTERM received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 22135)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 26318)
+spawned uWSGI worker 1 (pid: 26319, cores: 1)
+spawned uWSGI worker 2 (pid: 26320, cores: 1)
+spawned uWSGI http 1 (pid: 26321)
+Not Found: /contact/
+SIGINT/SIGTERM received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 26321)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 28096)
+spawned uWSGI worker 1 (pid: 28097, cores: 1)
+spawned uWSGI worker 2 (pid: 28098, cores: 1)
+spawned uWSGI http 1 (pid: 28099)
+Internal Server Error: /index/timeline
+Traceback (most recent call last):
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'Recording' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'Recording' object has no attribute 'get_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'get_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./App/views.py", line 23, in hello
+    return render_index(Request, kwargs["tag"])
+  File "./App/utils/index.py", line 25, in render_index
+    return render(OriginalRequest, 'index.html', context)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/base.py", line 170, in render
+    return self._render(context)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/defaulttags.py", line 315, in render
+    return nodelist.render(context)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/defaulttags.py", line 214, in render
+    nodelist.append(node.render_annotated(context))
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/base.py", line 988, in render
+    output = self.filter_expression.resolve(context)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/base.py", line 692, in resolve
+    arg_vals.append(arg.resolve(context))
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/base.py", line 796, in resolve
+    value = self._resolve_lookup(context)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [get_id] in <Recording: Recording object (4)>
+Not Found: /favicon.ico
+Internal Server Error: /index/timeline
+Traceback (most recent call last):
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'Recording' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'Recording' object has no attribute 'get_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'get_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./App/views.py", line 22, in hello
+  File "./App/utils/index.py", line 25, in render_index
+    return render(OriginalRequest, 'index.html', context)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/base.py", line 170, in render
+    return self._render(context)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/defaulttags.py", line 315, in render
+    return nodelist.render(context)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/defaulttags.py", line 214, in render
+    nodelist.append(node.render_annotated(context))
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/base.py", line 988, in render
+    output = self.filter_expression.resolve(context)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/base.py", line 692, in resolve
+    arg_vals.append(arg.resolve(context))
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/base.py", line 796, in resolve
+    value = self._resolve_lookup(context)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [get_id] in <Recording: Recording object (4)>
+SIGINT/SIGTERM received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 28099)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 31367)
+spawned uWSGI worker 1 (pid: 31368, cores: 1)
+spawned uWSGI worker 2 (pid: 31369, cores: 1)
+spawned uWSGI http 1 (pid: 31370)
+Not Found: /favicon.ico
+Forbidden (CSRF token missing or incorrect.): /login/login/
+Not Found: /actuator/gateway/routes
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /cgi-bin/ViewLog.asp
+Not Found: /cgi-bin/ViewLog.asp
+Not Found: /owa/
