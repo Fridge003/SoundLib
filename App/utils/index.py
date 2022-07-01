@@ -4,7 +4,7 @@ from App.models import User
 from django.conf import settings
 from django.db.models import Count
 
-def render_index(OriginalRequest, SelectedTag) :
+def render_index(OriginalRequest, SelectedTag=None) :
 
     if SelectedTag is None :
         SelectedTag = "TimeLine"
