@@ -37,6 +37,7 @@ urlpatterns = [
     path('user/<str:username>/change/commit/', views.user_info_change_commit),
     path('recording/<int:id>/', views.recording_info),
     path('recording/<int:id>/change/', views.recording_change),
+    path('recording/<int:id>/change/commit/', views.recording_change_commit),
     path(
         "password_reset/",
         auth_views.PasswordResetView.as_view(template_name='password_reset.html'),
