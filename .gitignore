@@ -1,10 +1,3 @@
 Media
 ./db.sqlite3
-<<<<<<< HEAD
 venv
-log
-SoundLib/__pycache__
-App/__pycache__
-=======
-venv
->>>>>>> 2763ece31351bf3d9fa2cd7f7b0792e6900d9692

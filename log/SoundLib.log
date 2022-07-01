@@ -1,0 +1,741 @@
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 13526)
+spawned uWSGI worker 1 (pid: 13527, cores: 1)
+spawned uWSGI worker 2 (pid: 13528, cores: 1)
+spawned uWSGI http 1 (pid: 13529)
+--- no python application found, check your startup logs for errors ---
+SIGINT/SIGTERM received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 13529)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 14716)
+spawned uWSGI worker 1 (pid: 14717, cores: 1)
+spawned uWSGI worker 2 (pid: 14718, cores: 1)
+spawned uWSGI http 1 (pid: 14719)
+SIGINT/SIGTERM received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 14719)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 14955)
+spawned uWSGI worker 1 (pid: 14956, cores: 1)
+spawned uWSGI worker 2 (pid: 14957, cores: 1)
+spawned uWSGI http 1 (pid: 14958)
+Not Found: /favicon.ico
+Not Found: /Static/semantic/dist/semantic.min.css
+Not Found: /Static/user_theme/theme.css
+Not Found: /Static/semantic/dist/semantic.min.js
+Not Found: /Static/images/ui/short-paragraph.png
+Not Found: /Static/images/avatar2/matthew.png
+Not Found: /Static/images/avatar2/molly.png
+Not Found: /Static/images/avatar2/elyse.png
+Not Found: /Static/images/logo/108x108.png
+Not Found: /Static/semantic/dist/semantic.min.js
+Not Found: /Static/images/ui/short-paragraph.png
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /Static/semantic/dist/semantic.min.css
+Not Found: /Static/user_theme/theme.css
+Not Found: /Static/semantic/dist/semantic.min.js
+Not Found: /Static/images/ui/short-paragraph.png
+Not Found: /Static/images/avatar2/molly.png
+Not Found: /Static/images/avatar2/matthew.png
+Not Found: /Static/images/avatar2/elyse.png
+Not Found: /Static/images/logo/108x108.png
+SIGINT/SIGTERM received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 14958)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 19234)
+spawned uWSGI worker 1 (pid: 19235, cores: 1)
+spawned uWSGI worker 2 (pid: 19236, cores: 1)
+spawned uWSGI http 1 (pid: 19237)
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /actuator/gateway/routes
+Not Found: /favicon.ico
+Not Found: /.git/config
+Not Found: /shell
+Not Found: /_ignition/execute-solution
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /actuator/health
+Not Found: /phpmyadmin/index.php
+Not Found: /pmd/index.php
+Not Found: /phpmyadmin4.8.5/index.php
+Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /owa/auth/x.js
+Not Found: /ecp/Current/exporttool/microsoft.exchange.ediscovery.exporttool.application
+Not Found: /owa/auth/logon.aspx
+Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /.env
+Not Found: /index.php
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /.env
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /system_api.php
+Not Found: /system_api.php
+Not Found: /c/version.js
+Not Found: /c/version.js
+Not Found: /streaming/clients_live.php
+Not Found: /streaming/clients_live.php
+Not Found: /stalker_portal/c/version.js
+Not Found: /stalker_portal/c/version.js
+Not Found: /stream/live.php
+Not Found: /stream/live.php
+Not Found: /flu/403.html
+Not Found: /flu/403.html
+Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /solr/admin/info/system
+Not Found: /index.php
+Not Found: /phpmyadmin4.8.5/index.php
+Not Found: /favicon.ico
+Not Found: /robots.txt
+Not Found: /console/
+Not Found: /owa/auth/logon.aspx
+Not Found: /Autodiscover/Autodiscover.xml
+Not Found: /.env
+Not Found: /_ignition/execute-solution
+Not Found: /videohywb.tc.qq.com/b0034ph3u5w.p5.mp4
+Not Found: /videohywb.tc.qq.com/b0034ph3u5w.p5.mp4
+Not Found: /mysql/dbadmin/index.php
+Not Found: /program/index.php
+Not Found: /phpmy-admin/index.php
+Not Found: /myadmin/index.php
+Not Found: /MyAdmin/index.php
+Not Found: /shopdb/index.php
+Not Found: /database/index.php
+Not Found: /phpmyadmin2021/index.php
+Not Found: /phpMyAdmin_/index.php
+Not Found: /robots.txt
+Not Found: /sitemap.xml
+Not Found: /.well-known/security.txt
+Not Found: /favicon.ico
+Not Found: /jsFunction.jsp
+Not Found: /actuator/gateway/routes
+Not Found: /shopdb/index.php
+Not Found: /boaform/admin/formLogin
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /index.php
+Not Found: /owa/auth/x.js
+Not Found: /owa/auth/logon.aspx
+Not Found: /.aws/credentials
+Not Found: /ecp/Current/exporttool/microsoft.exchange.ediscovery.exporttool.application
+Not Found: /phpmy-admin/index.php
+Not Found: /streaming/clients_live.php
+Not Found: /flu/403.html
+Not Found: /myadmin/index.php
+Not Found: /database/index.php
+Not Found: /phpmyadmin2021/index.php
+Not Found: /solr/admin/info/system
+Not Found: /mifs/.;/services/LogService
+Not Found: /shell
+Not Found: /_ignition/execute-solution
+Not Found: /script
+Not Found: /jenkins/login
+Not Found: /manager/html
+Not Found: /favicon.ico
+Not Found: /ugcjdy.qq.com/gzc_1000102_0b53juaacaaayqaaygqsibrmatodafaqabka.f0.mp4
+Not Found: /ugcjdy.qq.com/gzc_1000102_0b53juaacaaayqaaygqsibrmatodafaqabka.f0.mp4
+Not Found: /console/
+Not Found: /setup.cgi
+Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /ugccsy.qq.com/gzc_1000102_0b53a4aaeaaaieamknm4o5q4ab6daiaqabsa.f0.mp4
+Not Found: /a2billing/customer/templates/default/footer.tpl
+Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /solr/admin/info/system
+Not Found: /.env
+Not Found: /.env
+Not Found: /index.php
+Not Found: /.env
+Not Found: /robots.txt
+Not Found: /sitemap.xml
+Not Found: /robots.txt
+Not Found: /sitemap.xml
+Not Found: /console/
+Not Found: /Autodiscover/Autodiscover.xml
+Not Found: /setup.cgi
+Not Found: /_ignition/execute-solution
+Not Found: /actuator/health
+Not Found: /favicon.ico
+Not Found: /robots.txt
+Not Found: /.well-known/security.txt
+Not Found: /robots.txt
+Not Found: /sitemap.xml
+Not Found: /.well-known/security.txt
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+SIGINT/SIGTERM received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 19237)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 28850)
+spawned uWSGI worker 1 (pid: 28851, cores: 1)
+spawned uWSGI worker 2 (pid: 28852, cores: 1)
+spawned uWSGI http 1 (pid: 28853)
+Not Found: /klav
+Not Found: /favicon.ico
+Not Found: /actuator/gateway/routes
+Not Found: /owa/auth/logon.aspx
+Not Found: /favicon.ico
+Not Found: /robots.txt
+Not Found: /.env
+Forbidden (CSRF cookie not set.): /
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /Telerik.Web.UI.WebResource.axd
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /cookieconv.php
+Not Found: /Telerik.Web.UI.WebResource.axd
+Not Found: /isadmin.htm
+Not Found: /favicon.ico
+Not Found: /boaform/admin/formLogin
+Not Found: /51028231
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+[uwsgi-http key: 127.0.0.1:6000 client_addr: 127.0.0.1 client_port: 7333] hr_read(): Connection reset by peer [plugins/http/http.c line 918]
+Not Found: /owa/auth/x.js
+Not Found: /ecp/Current/exporttool/microsoft.exchange.ediscovery.exporttool.application
+Not Found: /owa/auth/logon.aspx
+Not Found: /remote/login
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /actuator/gateway/routes
+Not Found: /favicon.ico
+Not Found: /Telerik.Web.UI.WebResource.axd
+Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /config/getuser
+Not Found: /shell
+Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /solr/admin/info/system
+Not Found: /.env
+Not Found: /update/v32/default
+Forbidden (CSRF cookie not set.): /
+Not Found: /.env
+Not Found: /index.php
+Not Found: /console/
+Not Found: /config/getuser
+Not Found: /Autodiscover/Autodiscover.xml
+Not Found: /.git/config
+Not Found: /_ignition/execute-solution
+Not Found: /.env
+Not Found: /api/client/rsa
+Not Found: /actuator/gateway/routes
+Not Found: /x/passport-login/web/key
+Not Found: /x/passport-login/web/key
+Not Found: /index.php
+Not Found: /owa/auth/logon.aspx
+Not Found: /favicon.ico
+Not Found: /x/passport-login/web/key
+Not Found: /GponForm/diag_Form
+Not Found: /config/getuser
+Not Found: /robots.txt
+Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /api/client/rsa
+Not Found: /.aws/credentials
+Not Found: /nice ports,/Trinity.txt.bak
+Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /robots.txt
+Not Found: /sitemap.xml
+Not Found: /_ignition/execute-solution
+Not Found: /index.php
+Not Found: /.env
+Forbidden (CSRF cookie not set.): /
+Not Found: /.env
+Not Found: /robots.txt
+Not Found: /humans.txt
+Not Found: /ads.txt
+Not Found: /config/getuser
+Not Found: /GponForm/diag_Form
+Not Found: /phpmyadmin/index.php
+Not Found: /owa/auth/x.js
+Not Found: /ecp/Current/exporttool/microsoft.exchange.ediscovery.exporttool.application
+Not Found: /owa/auth/logon.aspx
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /text4041656160217
+Not Found: /evox/about
+Not Found: /HNAP1
+Not Found: /sdk
+Not Found: /favicon.ico
+Not Found: /robots.txt
+Not Found: /robots.txt
+Not Found: /text4041656162370
+Not Found: /evox/about
+Not Found: /HNAP1
+Not Found: /sdk
+Not Found: /favicon.ico
+Not Found: /robots.txt
+Not Found: /favicon.ico
+Not Found: /echo.php
+Not Found: /favicon.ico
+Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /solr/admin/info/system
+Not Found: /index.php
+Not Found: /.env
+Not Found: /setup.cgi
+Not Found: /favicon.ico
+Not Found: /.env
+Forbidden (CSRF cookie not set.): /
+Not Found: /console/
+Not Found: /Autodiscover/Autodiscover.xml
+Not Found: /actuator/health
+Not Found: /evox/about
+Not Found: /text4041656162370
+Not Found: /api/client/rsa
+Not Found: /sdk
+Not Found: /index.cgi
+Not Found: /nmaplowercheck1656189642
+Forbidden (CSRF cookie not set.): /
+Not Found: /Portal/Portal.mwsl
+Not Found: /.git/HEAD
+Not Found: /Portal0000.htm
+Not Found: /qTAV
+Not Found: /CSS/Miniweb.css
+Not Found: /scripts/WPnBr.dll
+Not Found: /nmaplowercheck1656189643
+Not Found: /home.pl
+Not Found: /docs/cplugError.html/
+Not Found: /pools/default/buckets
+Not Found: /__Additional
+Not Found: /tomcatwar.jsp
+Not Found: /tomcatwar.jsp
+Not Found: /main.asp
+Not Found: /HNAP1
+Not Found: /ghksjdghdfksanitycheckqwerjlhfgjksdghlid
+Not Found: /pools
+Not Found: /favicon.ico
+Not Found: /default.jsa
+Not Found: /localstart.shtml
+Not Found: /start.cfm
+Not Found: /main.jhtml
+Not Found: /base.shtml
+Not Found: /main.aspx
+Not Found: /robots.txt
+Not Found: /readme.txt
+Not Found: /admin.shtml
+Not Found: /base.cgi
+Not Found: /admin.jsa
+Not Found: /_ignition/execute-solution
+Not Found: /favicon.ico
+Not Found: /owa/
+Not Found: /config/getuser
+Not Found: /HNAP1
+Not Found: /sdk
+Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /cgi-bin/ViewLog.asp
+Not Found: /admin.shtml
+Not Found: /start.cfm
+Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /main.asp
+Not Found: /scripts/WPnBr.dll
+Not Found: /index.php
+Not Found: /config/getuser
+Not Found: /btts.qq.com/gzc_1000102_0b53juaacaaayqaaygqsibrmatodafaqabka.f0.mp4
+Not Found: /btts.qq.com/gzc_1000102_0b53juaacaaayqaaygqsibrmatodafaqabka.f0.mp4
+Not Found: /webfig/
+Not Found: /main.aspx
+Not Found: /home.pl
+Not Found: /ghksjdghdfksanitycheckqwerjlhfgjksdghlid
+Not Found: /wp-login.php
+Not Found: /config/getuser
+Not Found: /phpmyadmin/index.php
+Not Found: /phpmyadmin/index.php
+Not Found: /favicon.ico
+Not Found: /robots.txt
+Not Found: /webfig/
+Not Found: /localstart.shtml
+Not Found: /ecp/Current/exporttool/microsoft.exchange.ediscovery.exporttool.application
+Not Found: /robots.txt
+Not Found: /nmaplowercheck1656189643
+Not Found: /cgi-bin/ViewLog.asp
+Not Found: /main.jhtml
+Not Found: /.env
+Not Found: /solr/
+Not Found: /solr/
+Not Found: /solr/
+Not Found: /.aws/credentials
+Not Found: /actuator/gateway/routes
+Not Found: /webfig/
+Not Found: /cityjson
+Not Found: /favicon.ico
+Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /index.php
+Not Found: /mifs/.;/services/LogService
+Not Found: /manager/text/list
+Not Found: /favicon.ico
+Not Found: /.env
+Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /.env
+Not Found: /robots.txt
+Not Found: /sitemap.xml
+Not Found: /.well-known/security.txt
+Not Found: /favicon.ico
+Not Found: /owa/auth/x.js
+Not Found: /ecp/Current/exporttool/microsoft.exchange.ediscovery.exporttool.application
+Not Found: /owa/auth/logon.aspx
+Not Found: /actuator/health
+Not Found: /hudson
+Not Found: /manager/text/list
+Not Found: /actuator/health
+Not Found: /wp-login.php
+Not Found: /config/getuser
+[uwsgi-http key: 127.0.0.1:6000 client_addr: 127.0.0.1 client_port: 63652] hr_read(): Connection reset by peer [plugins/http/http.c line 918]
+Not Found: /json/widgetdata.php
+Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /favicon.ico
+[uwsgi-http key: 127.0.0.1:6000 client_addr: 127.0.0.1 client_port: 60615] hr_read(): Connection reset by peer [plugins/http/http.c line 918]
+Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /favicon.ico
+Not Found: /robots.txt
+Not Found: /actuator/health
+Not Found: /GponForm/diag_Form
+Not Found: /favicon.ico
+Not Found: /404/search_children.js
+Not Found: /owa/auth/logon.aspx
+Not Found: /cgi-bin/ViewLog.asp
+Not Found: /.env
+Forbidden (CSRF cookie not set.): /
+Not Found: /HNAP1/
+Not Found: /ext-js/app/common/zyFunction.js
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /HNAP1/
+Not Found: /HNAP1/
+Not Found: /boaform/admin/formLogin
+Not Found: /HNAP1/
+Not Found: /favicon.ico
+Not Found: /ecp/Current/exporttool/microsoft.exchange.ediscovery.exporttool.application
+Not Found: /owa/auth/logon.aspx
+Not Found: /showLogin.cc
+Not Found: /showLogin.cc
+Not Found: /favicon.ico
+Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /index.php
+Not Found: /robots.txt
+Not Found: /mifs/.;/services/LogService
+Not Found: /boaform/admin/formLogin
+Not Found: /boaform/admin/formLogin
+Not Found: /.env
+Not Found: /owa/auth/logon.aspx
+Not Found: /boaform/admin/formLogin
+Not Found: /stalker_portal/server/tools/auth_simple.php
+Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /ReportServer
+Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /solr/admin/info/system
+Not Found: /index.php
+Not Found: /cgi-bin/ViewLog.asp
+Not Found: /favicon.ico
+Not Found: /console/
+Not Found: /Autodiscover/Autodiscover.xml
+Not Found: /_ignition/execute-solution
+Not Found: /.env
+Not Found: /solr/admin/info/system
+Not Found: /boaform/admin/formLogin
+Not Found: /actuator/health
+Not Found: /owa/auth/x.js
+Not Found: /owa/auth/logon.aspx
+Not Found: /ecp/Current/exporttool/microsoft.exchange.ediscovery.exporttool.application
+Not Found: /actuator/gateway/routes
+Not Found: /boaform/admin/formLogin
+Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /stalker_portal/server/tools/auth_simple.php
+Not Found: /.git/config
+Not Found: /portal/info.jsp
+Not Found: /c/
+Not Found: /shell
+Not Found: /boaform/admin/formLogin
+Not Found: /favicon.ico
+Not Found: /_ignition/execute-solution
+Not Found: /api/v1
+Not Found: /boaform/admin/formLogin
+Not Found: /boaform/admin/formLogin
+Not Found: /.aws/credentials
+Not Found: /favicon.ico
+Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /owa/auth/logon.aspx
+Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /index.php
+Not Found: /phpmyadmin/index.php
+Not Found: /solr/admin/info/system
+Not Found: /.env
+Not Found: /actuator/gateway/routes
+Not Found: /boaform/admin/formLogin
+Not Found: /index.php
+Not Found: /portal/info.jsp
+Not Found: /boaform/admin/formLogin
+Not Found: /console/
+Not Found: /Autodiscover/Autodiscover.xml
+Not Found: /_ignition/execute-solution
+Not Found: /portal/info.jsp
+Not Found: /GponForm/diag_Form
+Not Found: /actuator/gateway/routes
+Not Found: /owa/auth/x.js
+Not Found: /ecp/Current/exporttool/microsoft.exchange.ediscovery.exporttool.application
+Not Found: /owa/auth/logon.aspx
+Not Found: /portal/redlion
+Not Found: /boaform/admin/formLogin
+Not Found: /system_api.php
+Not Found: /system_api.php
+Not Found: /c/version.js
+Not Found: /c/version.js
+Not Found: /streaming/clients_live.php
+Not Found: /streaming/clients_live.php
+Not Found: /stalker_portal/c/version.js
+Not Found: /stalker_portal/c/version.js
+Not Found: /stream/live.php
+Not Found: /stream/live.php
+Not Found: /flu/403.html
+Not Found: /flu/403.html
+Not Found: /cgi-bin/ViewLog.asp
+Not Found: /favicon.ico
+Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /index.php
+Not Found: /mifs/.;/services/LogService
+Not Found: /cgi-bin/ViewLog.asp
+Not Found: /console/
+Not Found: /cgi-bin/ViewLog.asp
+Not Found: /streaming/clients_live.php
+Not Found: /system_api.php
+Not Found: /robots.txt
+Not Found: /favicon.ico
+Not Found: /robots.txt
+Not Found: /favicon.ico
+Not Found: /imgs/ms_check_license
+Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /imgs/ms_check_license
+Not Found: /.git/config
+Not Found: /.git/config
+Not Found: /cgi-bin/ViewLog.asp
+Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /solr/admin/info/system
+Not Found: /index.php
+Not Found: /.env
+Not Found: /HNAP1/
+Not Found: /cgi-bin/ViewLog.asp
+Not Found: /favicon.ico
+Not Found: /index/timeline
+SIGINT/SIGTERM received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 28853)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 15095)
+spawned uWSGI worker 1 (pid: 15096, cores: 1)
+spawned uWSGI worker 2 (pid: 15097, cores: 1)
+spawned uWSGI http 1 (pid: 15098)
+Not Found: /index
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Internal Server Error: /login/register
+Traceback (most recent call last):
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/utils/deprecation.py", line 116, in __call__
+    response = self.process_request(request)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/middleware/common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/middleware/common.py", line 95, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:6000/login/register/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+Internal Server Error: /login/register
+Traceback (most recent call last):
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/utils/deprecation.py", line 116, in __call__
+    response = self.process_request(request)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/middleware/common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/middleware/common.py", line 95, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:6000/login/register/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+Not Found: /boaform/admin/formLogin
+Not Found: /favicon.ico
+Internal Server Error: /login/register
+Traceback (most recent call last):
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/utils/deprecation.py", line 116, in __call__
+    response = self.process_request(request)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/middleware/common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/middleware/common.py", line 95, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:6000/login/register/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+Not Found: /favicon.ico
+SIGINT/SIGTERM received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 15098)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 21406)
+spawned uWSGI worker 1 (pid: 21407, cores: 1)
+spawned uWSGI worker 2 (pid: 21408, cores: 1)
+spawned uWSGI http 1 (pid: 21409)
+Internal Server Error: /login/register
+Traceback (most recent call last):
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/utils/deprecation.py", line 116, in __call__
+    response = self.process_request(request)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/middleware/common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/middleware/common.py", line 95, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:6000/login/register/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+Internal Server Error: /login/register
+Traceback (most recent call last):
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/utils/deprecation.py", line 116, in __call__
+    response = self.process_request(request)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/middleware/common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/middleware/common.py", line 95, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:6000/login/register/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+SIGINT/SIGTERM received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 21409)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 21592)
+spawned uWSGI worker 1 (pid: 21593, cores: 1)
+spawned uWSGI worker 2 (pid: 21594, cores: 1)
+spawned uWSGI http 1 (pid: 21595)
+Not Found: /favicon.ico
+Internal Server Error: /login/register/
+Traceback (most recent call last):
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./App/views.py", line 77, in register_form
+    res = process_register_form(Request, UserName, Email, Password, Password2)
+  File "./App/utils/login.py", line 42, in process_register_form
+    user = User.objects.create_user(name, email, password, introduction)
+  File "./App/models.py", line 23, in create_user
+    introduction=introduction
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/db/models/base.py", line 503, in __init__
+    raise TypeError("%s() got an unexpected keyword argument '%s'" % (cls.__name__, kwarg))
+TypeError: User() got an unexpected keyword argument 'introduction'
+Not Found: /favicon.ico
+Not Found: /index
+Internal Server Error: /login/register/
+Traceback (most recent call last):
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./App/views.py", line 77, in register_form
+    res = process_register_form(Request, UserName, Email, Password, Password2)
+  File "./App/utils/login.py", line 42, in process_register_form
+    user = User.objects.create_user(name, email, password, introduction)
+  File "./App/models.py", line 23, in create_user
+    introduction=introduction
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/db/models/base.py", line 503, in __init__
+    raise TypeError("%s() got an unexpected keyword argument '%s'" % (cls.__name__, kwarg))
+TypeError: User() got an unexpected keyword argument 'introduction'
+Internal Server Error: /login/register/
+Traceback (most recent call last):
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./App/views.py", line 77, in register_form
+    res = process_register_form(Request, UserName, Email, Password, Password2)
+  File "./App/utils/login.py", line 42, in process_register_form
+    user = User.objects.create_user(name, email, password, introduction)
+  File "./App/models.py", line 23, in create_user
+    introduction=introduction
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/db/models/base.py", line 503, in __init__
+    raise TypeError("%s() got an unexpected keyword argument '%s'" % (cls.__name__, kwarg))
+TypeError: User() got an unexpected keyword argument 'introduction'
+SIGINT/SIGTERM received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 21595)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 22132)
+spawned uWSGI worker 1 (pid: 22133, cores: 1)
+spawned uWSGI worker 2 (pid: 22134, cores: 1)
+spawned uWSGI http 1 (pid: 22135)
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+changing Ziyu Cai to Ziyu Cai caiziyu2010@163.com caiziyu caiziyu Pig Head
+changed successfully, refreshing...
+Forbidden (CSRF token missing or incorrect.): /login/login/
+Forbidden (CSRF token missing or incorrect.): /login/login/
+Created New Composer:  beethoven
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /owa/auth/logon.aspx
+Not Found: /favicon.ico
+Not Found: /console/
+Not Found: /actuator/health
+Not Found: /.git/config
+Not Found: /.git/config
+Not Found: /.env
+Forbidden (CSRF cookie not set.): /
+Not Found: /.env
+Forbidden (CSRF cookie not set.): /
+Not Found: /Autodiscover/Autodiscover.xml
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /boaform/admin/formLogin
+Not Found: /favicon.ico
+Not Found: /_ignition/execute-solution
+Not Found: /favicon.ico
+Forbidden (CSRF token missing or incorrect.): /login/register/
+changing BaizhouZhang to BaizhouZhang eddiezhang@pku.edu.cn Baizhou1pku Baizhou1pku Laji
+changed successfully, refreshing...
+changing BaizhouZhang to BaizhouZhang eddiezhang@pku.edu.cn sdf sdf laji
+changed successfully, refreshing...
+changing BaizhouZhang to BaizhouZhang eddiezhang@pku.edu.cn Baizhou1pku Baizhou1pku laji
+changed successfully, refreshing...
+Not Found: /index.php
+Not Found: /phpmyadmin/index.php
+Not Found: /favicon.ico
