@@ -6,16 +6,32 @@
     <!-- Menu bar -->
     <div class="ui inverted vertical masthead center aligned segment">
         <div class="ui massive inverted stackable tabs menu">
-            <a class="active item" data-tab="timeline">
+            {% if SelectedTag == "timeline" %}
+            <a class="active item" href="/index/timeline" >
+            {% else %}
+            <a class="item" href="/index/timeline">
+            {% endif %}
                 Timeline
             </a>
-            <a class="item" data-tab="members">
+            {% if SelectedTag == "members" %}
+            <a class="active item" href="/index/members">
+            {% else %}
+            <a class="item" href="/index/members">
+            {% endif %}
                 Members
             </a>
-            <a class="item" data-tab="composers">
+            {% if SelectedTag == "composers" %}
+            <a class="active item" href="/index/composers">
+            {% else %}
+            <a class="item"  href="/index/composers">
+            {% endif %}
                 Composers
             </a>
-            <a class="item" data-tab="upload">
+            {% if SelectedTag == "upload" %}
+            <a class="active item" href="/index/upload">
+            {% else %}
+            <a class="item" href="/index/upload">
+            {% endif %}
                 Upload
             </a>
             <div class="right menu">
@@ -48,207 +64,166 @@
 
     <div class="ui divider"></div>
     <div class="ui container">
-        <div class="ui tab active" data-tab="timeline">
-            <div class="ui segment">
-                <div class="ui two column very relaxed grid">
-                    <div class="column">
-                        <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                        <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                        <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                        <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                    </div>
-                    <div class="column">
-                        <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                        <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                        <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                        <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                    </div>
+        {% if SelectedTag == "timeline" %}
+        <div class="ui segment">
+            <div class="ui two column very relaxed grid">
+                <div class="column">
+                    <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
+                    <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
+                    <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
+                    <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
                 </div>
-                <div class="ui vertical divider">
-                    2022
+                <div class="column">
+                    <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
+                    <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
+                    <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
+                    <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
                 </div>
             </div>
-            <div class="ui segment">
-                <div class="ui two column very relaxed grid">
-                    <div class="column">
-                        <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                        <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                        <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                        <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
+            <div class="ui vertical divider">
+                2022
+            </div>
+        </div>
+        <div class="ui segment">
+            <div class="ui two column very relaxed grid">
+                <div class="column">
+                    <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
+                    <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
+                    <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
+                    <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
+                </div>
+                <div class="column">
+                    <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
+                    <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
+                    <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
+                    <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
+                </div>
+            </div>
+            <div class="ui vertical divider">
+                2021
+            </div>
+        </div>
+        {% endif %}
+
+        {% if SelectedTag == "members" %}
+        <div class="ui three doubling stackable link cards">
+            {% for show_user in UserList %}
+            <a class="ui fluid raised link card" href="{{ " /user/"|addstr:show_user.get_username|addstr:"/" }}">
+                <div class="content">
+                    <img class="ui left floated tiny image" src="{% static '/images/avatar2/matthew.png' %}">
+                    <div class="header">{{ show_user.get_username }}</div>
+                    <div class="meta">
+                        Last login: {{ show_user.get_last_login}}
                     </div>
-                    <div class="column">
-                        <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                        <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                        <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                        <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
+                    <div class="description">
+                        {{ show_user.get_introduction }}
                     </div>
                 </div>
-                <div class="ui vertical divider">
-                    2021
+                <div class="extra content">
+                    <span class="right floated">
+                        Joined in {{ show_user.get_join_date }}
+                    </span>
+                    <span>
+                        <i class="file audio outline icon"></i>
+                        {{ show_user.NumRecordings }} Recordings
+                    </span>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        {% if SelectedTag == "composers" %}
+        <div class="ui link cards">
+            <div class="ui raised link card">
+                <div class="content">
+                    <div class="header">Rachmaninoff</div>
+                    <div class="meta">
+                        <span class="category">Russian</span>
+                    </div>
+                    <div class="description">
+                        Rachmaninoff was born on 1 April 1873 into a family of the Russian aristocracy in the
+                        Russian Empire.
+                    </div>
+                </div>
+                <div class="extra content">
+                    <span class="right floated">
+                        1873-1943
+                    </span>
+                    <span>
+                        <i class="file audio outline icon"></i>
+                        2 Recordings
+                    </span>
+                </div>
+            </div>
+            <div class="ui raised link card">
+                <div class="content">
+                    <div class="header">Chopin</div>
+                    <div class="meta">
+                        <span class="category">Polish</span>
+                    </div>
+                    <div class="description">
+                        Frédéric François Chopin was a Polish composer and virtuoso pianist of the Romantic
+                        period who wrote primarily for solo piano.
+                    </div>
+                </div>
+                <div class="extra content">
+                    <span class="right floated">
+                        1810-1849
+                    </span>
+                    <span>
+                        <i class="file audio outline icon"></i>
+                        10 Recordings
+                    </span>
                 </div>
             </div>
         </div>
+        {% endif %}
 
-        <div class="ui tab" data-tab="members">
-            <div class="ui link cards">
-                <div class="ui raised link card">
-                    <div class="image">
-                        <img src="{% static '/images/avatar2/matthew.png' %}">
-                    </div>
-                    <div class="content">
-                        <div class="header">Matt Giampietro</div>
-                        <div class="description">
-                            Matthew is an interior designer living in New York.
-                        </div>
-                    </div>
-                    <div class="extra content">
-                        <span class="right floated">
-                            Joined in 2013
-                        </span>
-                        <span>
-                            <i class="file audio outline icon"></i>
-                            33 Recordings
-                        </span>
-                    </div>
-                </div>
-                <div class="ui raised link card">
-                    <div class="image">
-                        <img src="{% static '/images/avatar2/molly.png' %}">
-                    </div>
-                    <div class="content">
-                        <div class="header">Molly</div>
-                        <div class="description">
-                            Molly is a personal assistant living in Paris.
-                        </div>
-                    </div>
-                    <div class="extra content">
-                        <span class="right floated">
-                            Joined in 2011
-                        </span>
-                        <span>
-                            <i class="file audio outline icon"></i>
-                            35 Recordings
-                        </span>
-                    </div>
-                </div>
-                <div class="ui raised link card">
-                    <div class="image">
-                        <img src="{% static '/images/avatar2/elyse.png' %}">
-                    </div>
-                    <div class="content">
-                        <div class="header">Elyse</div>
-                        <div class="description">
-                            Elyse is a copywriter working in New York.
-                        </div>
-                    </div>
-                    <div class="extra content">
-                        <span class="right floated">
-                            Joined in 2014
-                        </span>
-                        <span>
-                            <i class="file audio outline icon"></i>
-                            2 Recordings
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="ui tab" data-tab="composers">
-            <div class="ui link cards">
-                <div class="ui raised link card">
-                    <div class="content">
-                        <div class="header">Rachmaninoff</div>
-                        <div class="meta">
-                            <span class="category">Russian</span>
-                        </div>
-                        <div class="description">
-                            Rachmaninoff was born on 1 April 1873 into a family of the Russian aristocracy in the
-                            Russian Empire.
-                        </div>
-                    </div>
-                    <div class="extra content">
-                        <span class="right floated">
-                            1873-1943
-                        </span>
-                        <span>
-                            <i class="file audio outline icon"></i>
-                            2 Recordings
-                        </span>
-                    </div>
-                </div>
-                <div class="ui raised link card">
-                    <div class="content">
-                        <div class="header">Chopin</div>
-                        <div class="meta">
-                            <span class="category">Polish</span>
-                        </div>
-                        <div class="description">
-                            Frédéric François Chopin was a Polish composer and virtuoso pianist of the Romantic
-                            period who wrote primarily for solo piano.
-                        </div>
-                    </div>
-                    <div class="extra content">
-                        <span class="right floated">
-                            1810-1849
-                        </span>
-                        <span>
-                            <i class="file audio outline icon"></i>
-                            10 Recordings
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="ui tab" data-tab="upload">
-            <form class="ui form" method="post" enctype="multipart/form-data" action="/upload/">
-                {% csrf_token %}
-                <h3 class="ui dividing header">Recording Information</h3>
-                <div class="two fields">
+        {% if SelectedTag == "upload" %}
+        <form class="ui form" method="post" enctype="multipart/form-data" action="/upload/">
+            {% csrf_token %}
+            <h3 class="ui dividing header">Recording Information</h3>
+            <div class="two fields">
+                <div class="field">
+                    <label>Recording Name</label>
                     <div class="field">
-                        <label>Recording Name</label>
-                        <div class="field">
-                            <input type="text" name="RecordingName" placeholder="Recording Name" required="required">
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label>Composer Name</label>
-                        <div class="ui fluid search selection dropdown">
-                            <input type="hidden" name="ComposerName" required="required">
-                            <i class="dropdown icon"></i>
-                            <div class="default text">Select Composer</div>
-                            <div class="menu">
-                                <div class="item">Chopin</div>
-                                <div class="item">Beethoven</div>
-                                <div class="item">Mozart</div>
-                            </div>
-                        </div>
+                        <input type="text" name="RecordingName" placeholder="Recording Name" required="required">
                     </div>
                 </div>
                 <div class="field">
-                    <label>Description</label>
-                    <textarea type="input" name="Description" placeholder="Enter details here..."></textarea>
+                    <label>Composer Name</label>
+                    <div class="ui fluid search selection dropdown">
+                        <input type="hidden" name="ComposerName" required="required">
+                        <i class="dropdown icon"></i>
+                        <div class="default text">Select Composer</div>
+                        <div class="menu">
+                            <div class="item">Chopin</div>
+                            <div class="item">Beethoven</div>
+                            <div class="item">Mozart</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="field">
-                    <label>Recording File</label>
-                    <input type="file" name="File" />
-                </div>
-                <button class="massive ui primary button" type="submit">
-                    Submit
-                </button>
-            </form>
-            <script>
-                $('.ui.dropdown').dropdown();
-            </script>
-        </div>
+            </div>
+            <div class="field">
+                <label>Description</label>
+                <textarea type="input" name="Description" placeholder="Enter details here..."></textarea>
+            </div>
+            <div class="field">
+                <label>Recording File</label>
+                <input type="file" name="File" />
+            </div>
+            <button class="massive ui primary button" type="submit">
+                Submit
+            </button>
+        </form>
+        {% endif %}
+        <script>
+            $('.ui.dropdown').dropdown();
+        </script>
     </div>
 
     <div class="ui divider"></div>
 </div>
 
-
-<script>
-    $('.menu .item').tab();
-</script>
 {% endblock %}

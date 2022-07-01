@@ -7,7 +7,7 @@
     <div class="ui container">
         <div class="ui divider"></div>
         <div class="segment">
-            <a href="/" class="ui left labeled icon button">
+            <a href="javascript:history.go(-1)" class="ui left labeled icon button">
                 <i class="left arrow icon"></i>
                 Back
             </a>
@@ -16,50 +16,37 @@
         <h3 class="ui dividing header">User Information</h3>
         <div class="ui raised segment">
             <div class="ui items">
+                {% for show_user in UserList %}
                 <div class="item">
                     <div class="image">
                         <img class="ui medium circular image" src="{% static 'images\avatar2\elyse.png' %}">
                     </div>
                     <div class="content">
-                        <a class="header">{{ UserName }}</a>
+                        <a class="header">{{ show_user.get_username }}</a>
                         <div class="meta">
                             <span>Description</span>
                         </div>
                         <div class="description">
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus, reprehenderit?
-                                Est iste repudiandae nulla mollitia voluptatibus accusamus quam minus aut!
-                                Harum porro fugiat tempore temporibus, consequuntur esse id ipsum iste.
-                                Officia libero modi labore enim, eaque velit cum quam quibusdam.
-                                Earum magni est labore dolore quibusdam. Vero, harum earum! Numquam?
-                                Vitae quam voluptatum beatae odit quidem. Neque vitae expedita officia.
-                                Est impedit vitae corporis praesentium, at iure dolor facere. Ratione?
-                                Dignissimos nulla dolor obcaecati error architecto consectetur deleniti incidunt quas.
-                                Numquam atque laboriosam saepe, sunt harum perspiciatis voluptatum accusamus! Dolores.
-                                Assumenda quis asperiores quo inventore laudantium consequuntur cum iure adipisci?
-                                Nam eum iure voluptate corrupti numquam impedit ducimus quo facilis!
-                                Dolores quaerat ipsa est quos necessitatibus libero beatae cupiditate dolorem.
-                                Esse nisi temporibus quia aperiam asperiores libero vero saepe. Voluptas.
-                                Dolores unde laborum assumenda, est reiciendis deserunt qui minima quos?
-                                Recusandae sed quaerat sint reiciendis voluptatibus molestiae alias quos sapiente.
-                                Autem dolorem quasi aliquid qui quos deserunt quidem deleniti laborum.
-                                Nobis, iste illo natus quis porro laudantium! Exercitationem, officia quidem.
-                                Dignissimos, assumenda vero. Ipsam, quo? Adipisci quos dolorum sint vitae?
-                                Dignissimos unde eos facilis debitis. Recusandae id laboriosam deserunt corporis.
-                                Obcaecati iste officia impedit consequuntur aspernatur, nihil officiis culpa distinctio.</p>
+                            <p>{{ show_user.get_introduction }}</p>
                         </div>
                         <div class="extra">
-                            Joined on {{ RegisterTime }}
-                            {% if user.get_username == UserName %}
+                            Joined on {{ show_user.date_joined }}
+                            {% if user.get_username == show_user.get_username %}
                             <div class="segment">
-                                <a href="{{ " /user/"|addstr:user.get_username|addstr:"/change/" }}" class="ui right floated left labeled icon button">
+                                <a href="{{ " /user/"|addstr:user.get_username|addstr:"/change/" }}" class="ui left floated left labeled icon button">
                                     <i class="pencil alternate icon"></i>
                                     Change Info
                                 </a>
                             </div>
+                            <a href="/logout/" class="ui right floated right labeled icon button">
+                                <i class="user outline icon"></i>
+                                Logout
+                            </a>
                             {% endif %}
                         </div>
                     </div>
                 </div>
+                {% endfor %}
             </div>
         </div>
     </div>

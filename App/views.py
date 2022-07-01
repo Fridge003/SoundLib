@@ -14,9 +14,12 @@ from App.utils.upload import process_upload
 from App.utils.user import render_user_change, render_user_info, process_change_form
  
  # Index page
-def hello(Request):
+def hello(Request, **kwargs):
+
+    if len(kwargs) == 0 :
+        return redirect('index/timeline')
     
-    return render_index(Request)
+    return render_index(Request, kwargs["tag"])
 
 # User is accesing upload page
 # This page needs auth
@@ -90,9 +93,11 @@ def logout(Request) :
     return render_index(Request)
 
 # Accesing user info page
-def user_info(Request, **kwards) :
+def user_info(Request, **kwargs) :
 
-    return render_user_info(Request, UserName=kwards["username"])
+    SelectedUsers = User.objects.filter(username=kwargs["username"])
+
+    return render_user_info(Request, Users=SelectedUsers)
 
 # Accesing change page
 def user_info_change(Request, **kwards) :

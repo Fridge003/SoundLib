@@ -143,3 +143,10 @@ DEFAULT_FROM_EMAIL = 'pkupiano_public@126.com'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'Media')
 MEDIA_URL = '/media/'
+
+
+###########################
+#### Private Settings #####
+###########################
+
+ITEMS_PER_PAGE = 12
