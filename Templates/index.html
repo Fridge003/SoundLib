@@ -7,56 +7,57 @@
     <div class="ui inverted vertical masthead center aligned segment">
         <div class="ui massive inverted stackable tabs menu">
             {% if SelectedTag == "timeline" %}
-            <a class="active item" href="/index/timeline" >
-            {% else %}
-            <a class="item" href="/index/timeline">
-            {% endif %}
-                Timeline
-            </a>
-            {% if SelectedTag == "members" %}
-            <a class="active item" href="/index/members">
-            {% else %}
-            <a class="item" href="/index/members">
-            {% endif %}
-                Members
-            </a>
-            {% if SelectedTag == "composers" %}
-            <a class="active item" href="/index/composers">
-            {% else %}
-            <a class="item"  href="/index/composers">
-            {% endif %}
-                Composers
-            </a>
-            {% if SelectedTag == "upload" %}
-            <a class="active item" href="/index/upload">
-            {% else %}
-            <a class="item" href="/index/upload">
-            {% endif %}
-                Upload
-            </a>
-            <div class="right menu">
-                <div class="item">
-                    <div class="ui action input">
-                        <input type="text" placeholder="Anything">
-                        <button class="ui inverted right labeled icon button">
-                            <i class="search icon"></i>
-                            Search
-                        </button>
-                    </div>
-                </div>
-                <div class="item">
-                    {% if user.is_authenticated %}
-                    <a href="{{ "/user/"|addstr:user.get_username|addstr:"/" }}" class="ui inverted right labeled icon button">
-                        <i class="user outline icon"></i>
-                        {{ user.get_username }}
-                    </a>
-                    {% else %}
-                    <a href="/login/" class="ui inverted button">
-                        <i class="user outline icon"></i>
-                    </a>
+            <a class="active item" href="/index/timeline">
+                {% else %}
+                <a class="item" href="/index/timeline">
                     {% endif %}
-                </div>
-            </div>
+                    Timeline
+                </a>
+                {% if SelectedTag == "members" %}
+                <a class="active item" href="/index/members">
+                    {% else %}
+                    <a class="item" href="/index/members">
+                        {% endif %}
+                        Members
+                    </a>
+                    {% if SelectedTag == "composers" %}
+                    <a class="active item" href="/index/composers">
+                        {% else %}
+                        <a class="item" href="/index/composers">
+                            {% endif %}
+                            Composers
+                        </a>
+                        {% if SelectedTag == "upload" %}
+                        <a class="active item" href="/index/upload">
+                            {% else %}
+                            <a class="item" href="/index/upload">
+                                {% endif %}
+                                Upload
+                            </a>
+                            <div class="right menu">
+                                <div class="item">
+                                    <div class="ui action input">
+                                        <input type="text" placeholder="Anything">
+                                        <button class="ui inverted right labeled icon button">
+                                            <i class="search icon"></i>
+                                            Search
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    {% if user.is_authenticated %}
+                                    <a href="{{ " /user/"|addstr:user.get_username|addstr:"/" }}"
+                                        class="ui inverted right labeled icon button">
+                                        <i class="user outline icon"></i>
+                                        {{ user.get_username }}
+                                    </a>
+                                    {% else %}
+                                    <a href="/login/" class="ui inverted button">
+                                        <i class="user outline icon"></i>
+                                    </a>
+                                    {% endif %}
+                                </div>
+                            </div>
         </div>
     </div>
 
@@ -65,43 +66,26 @@
     <div class="ui divider"></div>
     <div class="ui container">
         {% if SelectedTag == "timeline" %}
-        <div class="ui segment">
-            <div class="ui two column very relaxed grid">
-                <div class="column">
-                    <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                    <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                    <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                    <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
+        <div class="ui three doubling stackable link cards">
+            {% for show_recording in RecordingList %}
+            <a class="ui fluid raised link card">
+                <div class="content">
+                    <div class="header">{{ show_recording.get_title }}</div>
+                    <div class="meta">
+                        Uploaded by: {{ show_recording.get_username}}
+                        ; Composer : aaa
+                    </div>
+                    <div class="description">
+                        {{ show_recording.get_description }}
+                    </div>
                 </div>
-                <div class="column">
-                    <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                    <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                    <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                    <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
+                <div class="extra content">
+                    <span class="right floated">
+                        Uploaded at {{ show_recording.get_upload_date }}
+                    </span>
                 </div>
-            </div>
-            <div class="ui vertical divider">
-                2022
-            </div>
-        </div>
-        <div class="ui segment">
-            <div class="ui two column very relaxed grid">
-                <div class="column">
-                    <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                    <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                    <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                    <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                </div>
-                <div class="column">
-                    <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                    <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                    <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                    <img class="ui wireframe image" src="{% static '/images/ui/short-paragraph.png' %}">
-                </div>
-            </div>
-            <div class="ui vertical divider">
-                2021
-            </div>
+            </a>
+            {% endfor %}
         </div>
         {% endif %}
 
