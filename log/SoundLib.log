@@ -934,3 +934,33 @@ Not Found: /favicon.ico
 Not Found: /cgi-bin/ViewLog.asp
 Not Found: /cgi-bin/ViewLog.asp
 Not Found: /owa/
+SIGINT/SIGTERM received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 31370)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 12639)
+spawned uWSGI worker 1 (pid: 12640, cores: 1)
+spawned uWSGI worker 2 (pid: 12641, cores: 1)
+spawned uWSGI http 1 (pid: 12642)
+SIGINT/SIGTERM received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 12642)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 13368)
+spawned uWSGI worker 1 (pid: 13369, cores: 1)
+spawned uWSGI worker 2 (pid: 13370, cores: 1)
+spawned uWSGI http 1 (pid: 13371)
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /.env
+Forbidden (CSRF cookie not set.): /
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Forbidden (CSRF token missing or incorrect.): /login/login/
+changing HubertZhang to HubertZhang 1900015810@pku.edu.cn heroin1201 heroin1201 sadsad
+changed successfully, refreshing...
