@@ -969,3 +969,135 @@ gateway "uWSGI http 1" has been buried (pid: 13371)
 worker 1 buried after 1 seconds
 worker 2 buried after 1 seconds
 goodbye to uWSGI.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 21153)
+spawned uWSGI worker 1 (pid: 21154, cores: 1)
+spawned uWSGI worker 2 (pid: 21155, cores: 1)
+spawned uWSGI http 1 (pid: 21156)
+Internal Server Error: /index/timeline
+Traceback (most recent call last):
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/db/backends/sqlite3/base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such column: App_recording.LastEditTime
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./App/views.py", line 23, in hello
+    return render_index(Request, kwargs["tag"])
+  File "./App/utils/index.py", line 25, in render_index
+    return render(OriginalRequest, 'index.html', context)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/base.py", line 170, in render
+    return self._render(context)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/defaulttags.py", line 315, in render
+    return nodelist.render(context)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/template/defaulttags.py", line 171, in render
+    len_values = len(values)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/db/models/query.py", line 262, in __len__
+    self._fetch_all()
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/db/models/query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/db/models/query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1175, in execute_sql
+    cursor.execute(sql, params)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/db/backends/sqlite3/base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such column: App_recording.LastEditTime
+Not Found: /favicon.ico
+Not Found: /HNAP1/
+Not Found: /favicon.ico
+Not Found: /portal/info.jsp
+Not Found: /media/Recordings/Machine_Learning_Term_Project_8q0RHHR.pdf
+Not Found: /favicon.ico
+Not Found: /.env
+Not Found: /xmlrpc.php
+Not Found: /favicon.ico
+Not Found: /HNAP1/
+Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /owa/auth/x.js
+Not Found: /ecp/Current/exporttool/microsoft.exchange.ediscovery.exporttool.application
+Not Found: /owa/auth/logon.aspx
+Internal Server Error: /user/Ziyu Cai/change/commit/
+Traceback (most recent call last):
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/utils/datastructures.py", line 76, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'UserName'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./App/views.py", line 111, in user_info_change_commit
+    UserName = Request.POST['UserName']
+  File "/var/www/SoundLib/venv/lib/python3.6/site-packages/django/utils/datastructures.py", line 78, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'UserName'
+Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /media/Recordings/Machine_Learning_Term_Project_8q0RHHR.pdf
+Not Found: /index.php
+Not Found: /index.php
+Not Found: /favicon.ico
+SIGINT/SIGTERM received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 21156)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+goodbye to uWSGI.
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 20285)
+spawned uWSGI worker 1 (pid: 20286, cores: 1)
+spawned uWSGI worker 2 (pid: 20287, cores: 1)
+spawned uWSGI http 1 (pid: 20288)

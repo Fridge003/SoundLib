@@ -149,4 +149,4 @@ MEDIA_URL = '/media/'
 #### Private Settings #####
 ###########################
 
-ITEMS_PER_PAGE = 12
+ITEMS_PER_PAGE = 24
