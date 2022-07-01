@@ -1,2 +1,6 @@
 Media
 ./db.sqlite3
+venv
+log
+SoundLib/__pycache__
+App/__pycache__
