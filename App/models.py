@@ -131,3 +131,6 @@ class Recording(models.Model) :
     
     def get_id(self) :
         return self.Id
+    
+    def get_file_url(self) :
+        return self.File.url

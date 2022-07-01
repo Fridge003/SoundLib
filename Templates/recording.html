@@ -30,6 +30,11 @@
                         </div>
                         <div class="extra">
                             Uploaded at {{ show_recording.get_upload_date }}
+                            <div id="play">
+                                <audio src="{{ show_recording.get_file_url }}" controls="controls">
+                                    Your browser does not support the audio element.
+                                </audio>
+                            </div>
                             {% if user.get_username == show_recording.get_user %}
                             <div class="segment">
                                 <a href="{{ " /recording/"|addstr:show_recording.get_id|addstr:"/change/" }}" class="ui left floated left labeled icon button">
