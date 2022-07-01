@@ -12,7 +12,7 @@ from App.utils.index import render_index
 from App.utils.login import render_login, process_login_form, process_register_form
 from App.utils.upload import process_upload
 from App.utils.user import render_user_change, render_user_info, process_change_form
-from App.utils.recording import render_recording_info, render_recording_change
+from App.utils.recording import render_recording_info, render_recording_change, process_recording_change
  
  # Index page
 def hello(Request, **kwargs):
@@ -138,14 +138,45 @@ def user_info_change_commit(Request, **kwards) :
     
     return render_user(Request)
 
-def recording_info(request, **kwargs) :
+# Showing recording info page
+def recording_info(Request, **kwargs) :
 
     SelectedRecordings = Recording.objects.filter(Id=kwargs["id"])
 
-    return render_recording_info(request, SelectedRecordings)
+    return render_recording_info(Request, SelectedRecordings)
 
-def recording_change(request, **kwargs) :
+# Showing recording editing page
+def recording_change(Request, **kwargs) :
 
     SelectedRecordings = Recording.objects.filter(Id=kwargs["id"])
 
-    return render_recording_change(request, SelectedRecordings)
+    return render_recording_change(Request, SelectedRecordings)
+
+# Handling recording change forms
+def recording_change_commit(Request, **kwargs) :
+
+    RecordingName = Request.POST['RecordingName']
+    ComposerName = Request.POST['ComposerName']
+    Description = Request.POST['Description']
+    UploadTime = datetime.datetime.now()
+    if 'File' in Request.FILES :
+        MyFile = Request.FILES['File']
+    else :
+        MyFile = None
+
+    SelectedRecordings = Recording.objects.filter(Id=kwargs["id"])
+
+    assert(SelectedRecordings.count() == 1)
+
+    SelectedRecording = SelectedRecordings[0]
+
+    res = process_recording_change(
+        SelectedRecording,
+        MyFile,
+        RecordingName,
+        ComposerName,
+        Description,
+        UploadTime,
+        Request.user)
+    
+    return redirect('/recording/' + str(SelectedRecording.get_id()) + '/')

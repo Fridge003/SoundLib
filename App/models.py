@@ -110,6 +110,7 @@ class Recording(models.Model) :
     UploadUserName = models.CharField(max_length=255, default="Anonymous")      # to show
     Description = models.CharField(max_length=65535, default="Empty")
     UploadTime = models.DateTimeField(auto_now=True, editable=True)
+    LastEditTime = models.DateTimeField(auto_now=True, editable=True)
 
     def get_title(self) :
         return self.Name
