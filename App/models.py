@@ -107,10 +107,11 @@ class Recording(models.Model) :
     File = models.FileField(upload_to='Recordings')
     Composer = models.ForeignKey(Composer, on_delete=models.CASCADE)            # One composer to many recordings
     UploadUser = models.ForeignKey(User, on_delete=models.CASCADE, related_name="Recordings")              # for searching
-    UploadUserName = models.CharField(max_length=255, default="Anonymous")      # to show
+    UploadUserName = models.CharField(max_length=255, default="Anonymous")      # to show, in case the user is deleted
     Description = models.CharField(max_length=65535, default="Empty")
     UploadTime = models.DateTimeField(auto_now=True, editable=True)
     LastEditTime = models.DateTimeField(auto_now=True, editable=True)
+    Views = models.IntegerField(default=0)                                      # How many views
 
     def get_title(self) :
         return self.Name
@@ -135,3 +136,6 @@ class Recording(models.Model) :
     
     def get_file_url(self) :
         return self.File.url
+    
+    def get_views(self) :
+        return self.Views
