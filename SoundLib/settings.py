@@ -144,9 +144,12 @@ DEFAULT_FROM_EMAIL = 'pkupiano_public@126.com'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'Media')
 MEDIA_URL = '/media/'
 
+# Time Zone
+TIME_ZONE = 'Asia/Shanghai' 
+USE_TZ = True 
 
 ###########################
 #### Private Settings #####
 ###########################
 
-ITEMS_PER_PAGE = 24
+ITEMS_PER_PAGE = 12

@@ -7,57 +7,65 @@
     <div class="ui inverted vertical masthead center aligned segment">
         <div class="ui massive inverted stackable tabs menu">
             {% if SelectedTag == "timeline" %}
-            <a class="active item" href="/index/timeline">
-                {% else %}
-                <a class="item" href="/index/timeline">
-                    {% endif %}
-                    Timeline
-                </a>
-                {% if SelectedTag == "members" %}
-                <a class="active item" href="/index/members">
-                    {% else %}
-                    <a class="item" href="/index/members">
-                        {% endif %}
-                        Members
+            <a class="active item" href="/index/timeline/0/">
+                Timeline
+            </a>
+            {% else %}
+            <a class="item" href="/index/timeline/0/">
+                Timeline
+            </a>
+            {% endif %}
+            {% if SelectedTag == "members" %}
+            <a class="active item" href="/index/members/0/">
+                Members
+            </a>
+            {% else %}
+            <a class="item" href="/index/members/0/">
+                Members
+            </a>
+            {% endif %}
+            {% if SelectedTag == "composers" %}
+            <a class="active item" href="/index/composers/0/">
+                Composers
+            </a>
+            {% else %}
+            <a class="item" href="/index/composers/0/">
+                Composers
+            </a>
+            {% endif %}
+            {% if SelectedTag == "upload" %}
+            <a class="active item" href="/index/upload/0/">
+                Upload
+            </a>
+            {% else %}
+            <a class="item" href="/index/upload/0/">
+                Upload
+            </a>
+            {% endif %}
+            <div class="right menu">
+                <div class="item">
+                    <div class="ui action input">
+                        <input type="text" placeholder="Anything">
+                        <button class="ui inverted right labeled icon button">
+                            <i class="search icon"></i>
+                            Search
+                        </button>
+                    </div>
+                </div>
+                <div class="item">
+                    {% if user.is_authenticated %}
+                    <a href="{{ " /user/"|addstr:user.get_username|addstr:"/" }}"
+                        class="ui inverted right labeled icon button">
+                        <i class="user outline icon"></i>
+                        {{ user.get_username }}
                     </a>
-                    {% if SelectedTag == "composers" %}
-                    <a class="active item" href="/index/composers">
-                        {% else %}
-                        <a class="item" href="/index/composers">
-                            {% endif %}
-                            Composers
-                        </a>
-                        {% if SelectedTag == "upload" %}
-                        <a class="active item" href="/index/upload">
-                            {% else %}
-                            <a class="item" href="/index/upload">
-                                {% endif %}
-                                Upload
-                            </a>
-                            <div class="right menu">
-                                <div class="item">
-                                    <div class="ui action input">
-                                        <input type="text" placeholder="Anything">
-                                        <button class="ui inverted right labeled icon button">
-                                            <i class="search icon"></i>
-                                            Search
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    {% if user.is_authenticated %}
-                                    <a href="{{ " /user/"|addstr:user.get_username|addstr:"/" }}"
-                                        class="ui inverted right labeled icon button">
-                                        <i class="user outline icon"></i>
-                                        {{ user.get_username }}
-                                    </a>
-                                    {% else %}
-                                    <a href="/login/" class="ui inverted button">
-                                        <i class="user outline icon"></i>
-                                    </a>
-                                    {% endif %}
-                                </div>
-                            </div>
+                    {% else %}
+                    <a href="/login/" class="ui inverted button">
+                        <i class="user outline icon"></i>
+                    </a>
+                    {% endif %}
+                </div>
+            </div>
         </div>
     </div>
 
@@ -68,12 +76,12 @@
         {% if SelectedTag == "timeline" %}
         <div class="ui three doubling stackable link cards">
             {% for show_recording in RecordingList %}
-            <a class="ui fluid raised link card" href="{{ " /recording/"|addstr:show_recording.get_id|addstr:"/" }}" >
+            <a class="ui fluid raised link card" href="{{ " /recording/"|addstr:show_recording.get_id|addstr:"/" }}">
                 <div class="content">
                     <div class="header">{{ show_recording.get_title }}</div>
                     <div class="meta">
                         Uploaded by: {{ show_recording.get_username }}
-                    </br>
+                        </br>
                         Composer : {{ show_recording.get_composer }}
                     </div>
                     <div class="description">
@@ -104,7 +112,7 @@
                 </div>
                 <div class="extra content">
                     <span class="right floated">
-                        Joined in {{ show_user.get_join_date }}
+                        Joined in {{ show_user.get_join_date.date }}
                     </span>
                     <span>
                         <i class="file audio outline icon"></i>
@@ -201,9 +209,32 @@
             </button>
         </form>
         {% endif %}
+
         <script>
             $('.ui.dropdown').dropdown();
         </script>
+    </div>
+
+    <!-- Page selection bar -->
+    <div class="ui divider"></div>
+    <div class="ui center aligned container">
+        <a class="button circular ui icon button" href="{{ " /index/"|addstr:SelectedTag|addstr:"/"|addstr:PrevPage|addstr:"/" }}">
+            <i class="angle left icon"></i>
+        </a>
+        {% for i in PageRange %}
+            {% if i == CurrentPage %}
+            <button class="circular orange ui icon button">
+                {{ i }}
+            </button>
+            {% else %}
+            <a class="button circular ui icon button" href="{{ " /index/"|addstr:SelectedTag|addstr:"/"|addstr:i|addstr:"/" }}">
+                {{ i }}
+            </a>
+            {% endif %}
+        {% endfor %}
+        <a class="button circular ui icon button" href="{{ " /index/"|addstr:SelectedTag|addstr:"/"|addstr:NextPage|addstr:"/" }}">
+            <i class="angle right icon"></i>
+        </a>
     </div>
 
     <div class="ui divider"></div>

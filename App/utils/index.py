@@ -1,22 +1,37 @@
+from math import ceil
 from tabnanny import verbose
 from django.shortcuts import render
 from App.models import User, Recording
 from django.conf import settings
 from django.db.models import Count
 
-def render_index(OriginalRequest, SelectedTag=None) :
+def render_index(OriginalRequest, SelectedTag=None, SelectedPage=None) :
 
     if SelectedTag is None :
-        SelectedTag = "TimeLine"
+        SelectedTag = "timeline"
+    
+    if SelectedPage is None :
+        SelectedPage = 0
 
     UserList = User.objects.annotate(NumRecordings=Count('Recordings'))
     RecordingList = Recording.objects.order_by('-UploadTime')
 
+
+    if SelectedTag == "timeline" :
+        PageNum                 = ceil(len(RecordingList)/settings.ITEMS_PER_PAGE)
+    elif SelectedTag == "members" :
+        PageNum                 = ceil(len(UserList)/settings.ITEMS_PER_PAGE)
+    
     context                 = {}
+    context['RecordingList']= RecordingList[SelectedPage*settings.ITEMS_PER_PAGE : (SelectedPage+1)*settings.ITEMS_PER_PAGE]
+    context['UserList']     = UserList[SelectedPage*settings.ITEMS_PER_PAGE: (SelectedPage+1)*settings.ITEMS_PER_PAGE]
     context['hello']        = 'PKUpiano Sound Library!'
-    context['UserList']     = UserList[:settings.ITEMS_PER_PAGE]
-    context['RecordingList']= RecordingList[:settings.ITEMS_PER_PAGE]
     context['SelectedTag']  = SelectedTag
+    context['CurrentPage']  = SelectedPage
+    context['PageRange']    = list(range(max(0, SelectedPage-2), min(PageNum, SelectedPage+3)))
+    context['PagePrefix']   = '/index/'+SelectedTag+'/'
+    context['PrevPage']     = max(0, SelectedPage-1)
+    context['NextPage']     = min(PageNum-1, SelectedPage+1)
 
     for item in context['UserList'] :
         item.view(verbose=False)
