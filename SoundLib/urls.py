@@ -27,6 +27,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.hello),
     path('index/<str:tag>/<int:page>/', views.hello),
+    path('index/<str:tag>/', views.hello),
     path('upload/', views.upload),
     path('login/', views.login),
     path('login/login/', views.login_form),

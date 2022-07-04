@@ -17,10 +17,13 @@ from App.utils.recording import render_recording_info, render_recording_change, 
  # Index page
 def hello(Request, **kwargs):
 
-    if "tag" not in kwargs or "page" not in kwargs:
+    if "tag" not in kwargs:
         return redirect('index/timeline/0')
     
-    return render_index(Request, kwargs["tag"], kwargs["page"])
+    if "page" in kwargs:
+        return render_index(Request, kwargs["tag"], kwargs["page"])
+    else :
+        return render_index(Request, kwargs["tag"])
 
 # User is accesing upload page
 # This page needs auth

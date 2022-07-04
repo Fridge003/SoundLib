@@ -18,9 +18,11 @@ def render_index(OriginalRequest, SelectedTag=None, SelectedPage=None) :
 
 
     if SelectedTag == "timeline" :
-        PageNum                 = ceil(len(RecordingList)/settings.ITEMS_PER_PAGE)
+        PageNum = ceil(len(RecordingList)/settings.ITEMS_PER_PAGE)
     elif SelectedTag == "members" :
-        PageNum                 = ceil(len(UserList)/settings.ITEMS_PER_PAGE)
+        PageNum = ceil(len(UserList)/settings.ITEMS_PER_PAGE)
+    else :
+        PageNum = 0
     
     context                 = {}
     context['RecordingList']= RecordingList[SelectedPage*settings.ITEMS_PER_PAGE : (SelectedPage+1)*settings.ITEMS_PER_PAGE]
