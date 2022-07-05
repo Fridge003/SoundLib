@@ -36,7 +36,7 @@ def upload(Request):
     UploadTime = datetime.datetime.now()
     MyFile = Request.FILES['File']
     if Request.method == 'POST' and MyFile:
-        process_upload(MyFile, 
+        process_upload(MyFile,
             RecordingName=RecordingName,
             ComposerName=ComposerName,
             Description=Description,
@@ -228,3 +228,8 @@ def verify_email_process(Request, **kwargs):
         return render(Request, "verification_fail.html", context)
     else :
         return render(Request, "verification_success.html", context)
+
+# Error page of not verified email
+def error_email_not_verified(Request) :
+
+    return render(Request, "verification_needed.html", {})
