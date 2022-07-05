@@ -153,3 +153,4 @@ USE_TZ = True
 ###########################
 
 ITEMS_PER_PAGE = 12
+SITE_URL = "https://pkupiano.club"

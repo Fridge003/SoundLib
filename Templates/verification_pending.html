@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load App_extras %}
+{% load static %}
+{% block content %}
+
+<div class="pusher">
+    <div class="ui container">
+        <div class="ui divider"></div>
+        <div class="segment">
+            <a href="javascript:history.go(-1)" class="ui left labeled icon button">
+                <i class="left arrow icon"></i>
+                Back
+            </a>
+        </div>
+        {% csrf_token %}
+        <h1>
+            Pending Verification
+        </h1>
+        <p>
+            {{ Reason }}
+        </p>
+    </div>
+</div>
+
+{% endblock %}

@@ -11,8 +11,8 @@ from App.models import Recording, User
 from App.utils.index import render_index
 from App.utils.login import render_login, process_login_form, process_register_form
 from App.utils.upload import process_upload
-from App.utils.user import render_user_change, render_user_info, process_change_form
-from App.utils.recording import render_recording_info, render_recording_change, process_recording_change
+from App.utils.user import render_user_change, render_user_info, process_change_form, process_verification, verification_required, send_verification_email
+from App.utils.recording import render_recording_info, render_recording_change, process_recording_change, process_recording_delete
  
  # Index page
 def hello(Request, **kwargs):
@@ -28,6 +28,7 @@ def hello(Request, **kwargs):
 # User is accesing upload page
 # This page needs auth
 @login_required
+@verification_required
 def upload(Request):
     RecordingName = Request.POST['RecordingName']
     ComposerName = Request.POST['ComposerName']
@@ -85,7 +86,8 @@ def register_form(Request):
                             login_failed=False,
                             register_failed=res["register_failed"],
                             register_nonconsistency=res["register_nonconsistency"],
-                            register_used_name=res["register_used_name"])
+                            register_used_name=res["register_used_name"],
+                            register_non_pku=res["register_non_pku"])
     else :
         return redirect('/')
 
@@ -119,15 +121,20 @@ def user_info_change_commit(Request, **kwards) :
 
     res = process_change_form(Request, UserName, Email, Password, Password2, Introduction)
 
-    if res == True :    # the user info changed successfully
+    if res["change_failed"] == False :    # the user info changed successfully
 
         print("changed successfully, refreshing...")
-        logout_user(Request)
-        res = process_login_form(Request, UserName, Password)
-        if res == True :    # success
-            return redirect('/user/'+Request.user.username+'/')
-        else : # failure
-            return render_login(Request, login_failed=True)
+
+        # if Password and Password2 :     # if refreshed password, need to reload user
+        #     logout_user(Request)
+        #     res = process_login_form(Request, UserName, Password)
+        #     if res == True :    # success
+        #         return redirect('/user/'+Request.user.username+'/')
+        #     else : # failure
+        #         return render_login(Request, login_failed=True)
+        
+        # else :
+        return render_user_info(Request, [Request.user])
 
     else :  # failed, error info are presented in a dict
 
@@ -139,7 +146,7 @@ def user_info_change_commit(Request, **kwards) :
         else :
             raise NotImplementedError("Error not handled in views.change")
     
-    return render_user(Request)
+    return render_user_info(Request)
 
 # Showing recording info page
 def recording_info(Request, **kwargs) :
@@ -166,6 +173,10 @@ def recording_change_commit(Request, **kwargs) :
         MyFile = Request.FILES['File']
     else :
         MyFile = None
+    Delete = False
+    
+    if 'delete_button' in Request.POST :
+        Delete = True
 
     SelectedRecordings = Recording.objects.filter(Id=kwargs["id"])
 
@@ -173,13 +184,47 @@ def recording_change_commit(Request, **kwargs) :
 
     SelectedRecording = SelectedRecordings[0]
 
-    res = process_recording_change(
-        SelectedRecording,
-        MyFile,
-        RecordingName,
-        ComposerName,
-        Description,
-        UploadTime,
-        Request.user)
+    if not Delete :
+        res = process_recording_change(
+            SelectedRecording,
+            MyFile,
+            RecordingName,
+            ComposerName,
+            Description,
+            UploadTime,
+            Request.user)
+        return redirect('/recording/' + str(SelectedRecording.get_id()) + '/')
+    else :
+        res = process_recording_delete(SelectedRecording)
+        return redirect('/')
     
-    return redirect('/recording/' + str(SelectedRecording.get_id()) + '/')
+
+# The link to send a verification email
+def verify_email(Request, **kwargs) :
+
+    email = Request.user.get_email()
+
+    context = {"Reason": ""}
+
+    if email[-15:] != ".stu.pku.edu.cn" and email[-11:] != ".pku.edu.cn" :
+        context["Reason"] = "Email is not a PKU email address."
+        return render(Request, "verification_fail.html", context)
+    else :
+        send_verification_email(Request.user)
+        return render(Request, "verification_pending.html", context)
+
+# If the user is accessing the verification page
+# Process the verification information
+def verify_email_process(Request, **kwargs):
+
+    UserName = kwargs["username"]
+    Code = kwargs["code"]
+
+    res = process_verification(Request, UserName, Code)
+
+    context = {"Reason": res["reason"]}
+
+    if res["verification_failed"] == True :
+        return render(Request, "verification_fail.html", context)
+    else :
+        return render(Request, "verification_success.html", context)
