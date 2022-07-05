@@ -51,3 +51,6 @@ def process_recording_change(
     CurRecording.save()
 
     return
+
+def process_recording_delete(CurRecording: Recording) :
+    CurRecording.delete()

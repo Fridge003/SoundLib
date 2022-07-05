@@ -36,6 +36,13 @@
                 Your name is conflict with others!
             </div>
         </div>
+        {% elif register_non_pku %}
+        <div class="ui error message">
+            <i class="close icon"></i>
+            <div class="header">
+                Please use pku emails (@pku.edu.cn or @stu.pku.edu.cn)!
+            </div>
+        </div>
         {% elif register_failed %}
         <div class="ui error message">
             <i class="close icon"></i>

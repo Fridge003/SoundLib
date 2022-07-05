@@ -36,9 +36,12 @@ urlpatterns = [
     path('user/<str:username>/', views.user_info),
     path('user/<str:username>/change/', views.user_info_change),
     path('user/<str:username>/change/commit/', views.user_info_change_commit),
+    path('user/<str:username>/verify/', views.verify_email),
+    path('user/<str:username>/verify/<str:code>/', views.verify_email_process),
     path('recording/<int:id>/', views.recording_info),
     path('recording/<int:id>/change/', views.recording_change),
     path('recording/<int:id>/change/commit/', views.recording_change_commit),
+    path('error/verification_needed/', views.error_email_not_verified),
     path(
         "password_reset/",
         auth_views.PasswordResetView.as_view(template_name='password_reset.html'),

@@ -37,6 +37,12 @@
                                     <i class="pencil alternate icon"></i>
                                     Change Info
                                 </a>
+                                {% if user.get_verification_status == False %}
+                                <a href="{{ " /user/"|addstr:user.get_username|addstr:"/verify/" }}" class="ui left floated left labeled icon button">
+                                    <i class="check square outline icon"></i>
+                                    Verify Email
+                                </a>
+                                {% endif %}
                             </div>
                             <a href="/logout/" class="ui right floated right labeled icon button">
                                 <i class="user outline icon"></i>

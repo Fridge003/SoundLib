@@ -49,6 +49,8 @@ class MyUserManager(BaseUserManager):
 class User(AbstractUser):
     
     Introduction = models.CharField(max_length=65535, default="This person is mysterious")
+    EmailVerified = models.BooleanField(default=False)      # If the initial email is verified
+    VerificationCode = models.CharField(max_length=128, default="") # Temporarily save the verification code
     objects = MyUserManager()
 
     verbose = True
@@ -86,6 +88,10 @@ class User(AbstractUser):
     def get_last_login(self):
         """Return time of last login for this User."""
         return self.last_login
+    
+    def get_verification_status(self) :
+        """Return if the user is verified"""
+        return self.EmailVerified
     
     def view(self, verbose = True, max_words=32, max_letters=128) :
 

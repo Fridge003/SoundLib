@@ -17,20 +17,22 @@
         <div class="ui raised segment">
             <div class="ui items">
                 {% for show_recording in RecordingList %}
-                <form class="ui form" method="post" enctype="multipart/form-data" action="{{ " /recording/"|addstr:show_recording.get_id|addstr:"/change/commit/" }}">
+                <form class="ui form" method="post" enctype="multipart/form-data" action="{{ "/recording/"|addstr:show_recording.get_id|addstr:"/change/commit/" }}">
                     {% csrf_token %}
                     <h3 class="ui dividing header">Recording Information</h3>
                     <div class="two fields">
                         <div class="field">
                             <label>Recording Name</label>
                             <div class="field">
-                                <input type="text" name="RecordingName" value="{{ show_recording.get_title }}" required="required">
+                                <input type="text" name="RecordingName" value="{{ show_recording.get_title }}"
+                                    required="required">
                             </div>
                         </div>
                         <div class="field">
                             <label>Composer Name</label>
                             <div class="ui fluid search selection dropdown">
-                                <input type="hidden" name="ComposerName" value="{{ show_recording.get_composer }}" required="required">
+                                <input type="hidden" name="ComposerName" value="{{ show_recording.get_composer }}"
+                                    required="required">
                                 <i class="dropdown icon"></i>
                                 <div class="default text">Select Composer</div>
                                 <div class="menu">
@@ -51,13 +53,49 @@
                         If you don't want to change the recording file, you can keep here blank.
                         <input type="file" name="File" />
                     </div>
-                    <button class="massive ui primary button" type="submit">
+                    <button class="ui primary button" type="submit" name="update_button">
                         Submit
                     </button>
+                    <a class="ui red button" id="coins">
+                        Delete
+                    </a>
+                    <button class="ui red right labeled icon button" type="submit" name="delete_button">
+                        Yep, Delete
+                        <i class="checkmark icon"></i>
+                    </button>
+                    <!-- <div class="ui modal">
+                        <i class="close icon"></i>
+                        <div class="header">
+                            Delete Recording
+                        </div>
+                        <div class="content">
+                            <div class="description">
+                                <div class="ui header">Please Confirm.</div>
+                                <p>By clicking on the "Confirm" button, this recording will be permanently deleted and CANNOT be recovered.</p>
+                                <p>If you uploaded the wrong piece, you can edit description or reload file in the recording management page,
+                                    it's not necessary to delete the recording.</p>
+                                <p>Are you sure to delete it?</p>
+                            </div>
+                        </div>
+                        <div class="actions">
+                            <div class="ui black deny button">
+                                Nope, Go Back
+                            </div>
+                            <button class="ui red right labeled icon button" type="submit" name="delete_button">
+                                Yep, Delete
+                                <i class="checkmark icon"></i>
+                            </button>
+                        </div>
+                    </div> -->
                 </form>
                 {% endfor %}
                 <script>
                     $('.ui.dropdown').dropdown();
+                </script>
+                <script>
+                    $('#coins').click(function(){
+                        $('.ui.modal').modal('show');
+                    });
                 </script>
             </div>
         </div>
