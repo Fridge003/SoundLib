@@ -45,7 +45,7 @@ def process_register_form(request, name, email, password, password2, introductio
     # Only .pku .stu.pku are allowed #
     ##################################
 
-    if email[-15:] != ".stu.pku.edu.cn" and email[-11:] != ".pku.edu.cn" :
+    if email[-15:] != "@stu.pku.edu.cn" and email[-11:] != "@pku.edu.cn" :
         return {"register_failed":True, "register_used_name":False, "register_nonconsistency":False, "register_non_pku":True}
 
     try:

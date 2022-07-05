@@ -206,7 +206,7 @@ def verify_email(Request, **kwargs) :
 
     context = {"Reason": ""}
 
-    if email[-15:] != ".stu.pku.edu.cn" and email[-11:] != ".pku.edu.cn" :
+    if email[-15:] != "@stu.pku.edu.cn" and email[-11:] != "@pku.edu.cn" :
         context["Reason"] = "Email is not a PKU email address."
         return render(Request, "verification_fail.html", context)
     else :
