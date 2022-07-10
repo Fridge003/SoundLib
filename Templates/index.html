@@ -5,7 +5,7 @@
 <div class="pusher">
     <!-- Menu bar -->
     <div class="ui inverted vertical masthead center aligned segment">
-        <div class="ui massive inverted stackable tabs menu">
+        <div class="ui large inverted stackable tabs menu">
             {% if SelectedTag == "timeline" %}
             <a class="active item" href="/index/timeline/0/">
                 Timeline
@@ -40,6 +40,15 @@
             {% else %}
             <a class="item" href="/index/upload/">
                 Upload
+            </a>
+            {% endif %}
+            {% if SelectedTag == "about" %}
+            <a class="active item" href="/index/about/">
+                About
+            </a>
+            {% else %}
+            <a class="item" href="/index/about/">
+                About
             </a>
             {% endif %}
             <div class="right menu">
@@ -210,34 +219,39 @@
         </form>
         {% endif %}
 
+        {% if SelectedTag == "about" %}
+            <h1>This is a website maintained by PKU Piano Club</h1>
+        {% endif %}
+
         <script>
             $('.ui.dropdown').dropdown();
         </script>
     </div>
 
-    <!-- Page selection bar -->
-    <div class="ui divider"></div>
-    <div class="ui center aligned container">
-        <a class="button circular ui icon button" href="{{ " /index/"|addstr:SelectedTag|addstr:"/"|addstr:PrevPage|addstr:"/" }}">
-            <i class="angle left icon"></i>
-        </a>
-        {% for i in PageRange %}
-            {% if i == CurrentPage %}
-            <button class="circular orange ui icon button">
-                {{ i }}
-            </button>
-            {% else %}
-            <a class="button circular ui icon button" href="{{ " /index/"|addstr:SelectedTag|addstr:"/"|addstr:i|addstr:"/" }}">
-                {{ i }}
+    {% if HavePages %}
+        <!-- Page selection bar -->
+        <div class="ui divider"></div>
+        <div class="ui center aligned container">
+            <a class="button circular ui icon button" href="{{ " /index/"|addstr:SelectedTag|addstr:"/"|addstr:PrevPage|addstr:"/" }}">
+                <i class="angle left icon"></i>
             </a>
-            {% endif %}
-        {% endfor %}
-        <a class="button circular ui icon button" href="{{ " /index/"|addstr:SelectedTag|addstr:"/"|addstr:NextPage|addstr:"/" }}">
-            <i class="angle right icon"></i>
-        </a>
-    </div>
-
-    <div class="ui divider"></div>
+            {% for i in PageRange %}
+                {% if i == CurrentPage %}
+                <button class="circular orange ui icon button">
+                    {{ i }}
+                </button>
+                {% else %}
+                <a class="button circular ui icon button" href="{{ " /index/"|addstr:SelectedTag|addstr:"/"|addstr:i|addstr:"/" }}">
+                    {{ i }}
+                </a>
+                {% endif %}
+            {% endfor %}
+            <a class="button circular ui icon button" href="{{ " /index/"|addstr:SelectedTag|addstr:"/"|addstr:NextPage|addstr:"/" }}">
+                <i class="angle right icon"></i>
+            </a>
+        </div>
+        <div class="ui divider"></div>
+    {% endif %}
 </div>
 
 {% endblock %}
