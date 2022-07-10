@@ -63,7 +63,7 @@ def send_verification_email(CurUser: User):
     CurUser.save()
 
     Msg = "Please access the link below to verify your account\n"
-    Msg += "<a href='" + settings.SITE_URL + "/user/" + CurUser.get_username() + "/verify/" + CurUser.VerificationCode + "/" + "'>LINK</a>"
+    Msg += '<a href="' + settings.SITE_URL + "/user/" + CurUser.get_username() + "/verify/" + CurUser.VerificationCode + "/" + '">LINK</a>'
 
     send_mail(
         subject='Email Verification',
