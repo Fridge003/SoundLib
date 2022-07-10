@@ -7,11 +7,14 @@ from django.db.models import Count
 
 def render_index(OriginalRequest, SelectedTag=None, SelectedPage=None) :
 
+    HavePages = True
+
     if SelectedTag is None :
         SelectedTag = "timeline"
     
     if SelectedPage is None :
         SelectedPage = 0
+        HavePages = False
 
     UserList = User.objects.annotate(NumRecordings=Count('Recordings'))
     RecordingList = Recording.objects.order_by('-UploadTime')
@@ -30,6 +33,7 @@ def render_index(OriginalRequest, SelectedTag=None, SelectedPage=None) :
     context['hello']        = 'PKUpiano Sound Library!'
     context['SelectedTag']  = SelectedTag
     context['CurrentPage']  = SelectedPage
+    context['HavePages']    = HavePages
     context['PageRange']    = list(range(max(0, SelectedPage-2), min(PageNum, SelectedPage+3)))
     context['PagePrefix']   = '/index/'+SelectedTag+'/'
     context['PrevPage']     = max(0, SelectedPage-1)
