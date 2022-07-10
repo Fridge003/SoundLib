@@ -59,7 +59,7 @@ def process_change_form(Request, UserName, Email, Password, Password2, Introduct
 
 # Send a link to the user's email address to verify
 def send_verification_email(CurUser: User):
-    CurUser.VerificationCode = ''.join([random.choice('zyxwvutsrqponmlkjihgfedcba') for i in range(128)])
+    CurUser.VerificationCode = ''.join([random.choice('zyxwvutsrqponmlkjihgfedcba') for i in range(16)])
     CurUser.save()
 
     Msg = "Please access the link below to verify your account\n"
