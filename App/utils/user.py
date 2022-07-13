@@ -62,8 +62,14 @@ def send_verification_email(CurUser: User):
     CurUser.VerificationCode = ''.join([random.choice('zyxwvutsrqponmlkjihgfedcba') for i in range(16)])
     CurUser.save()
 
-    Msg = "Please access the link below to verify your account\n"
-    Msg += '<a href="' + settings.SITE_URL + "/user/" + CurUser.get_username() + "/verify/" + CurUser.VerificationCode + "/" + '">LINK</a>'
+    MsgHead = "Please access the link below to verify your account\n"
+    MsgLink = "<div><p><a href='{0}/user/{1}/verify/{2}/'>Link</a><br /></p><br /></div>".format(
+        settings.SITE_URL,
+        CurUser.get_username(),
+        CurUser.VerificationCode
+    )
+
+    Msg = MsgHead + MsgLink
 
     send_mail(
         subject='Email Verification',
