@@ -79,7 +79,6 @@ def send_verification_email(CurUser: User):
         from_email=settings.DEFAULT_FROM_EMAIL,
         to=[CurUser.get_email()],
         reply_to=[settings.DEFAULT_FROM_EMAIL],
-        fail_silently=False
     )
     Msg.content_subtype ="html"# Main content is now text/html
     Msg.send()
