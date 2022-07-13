@@ -4,7 +4,8 @@ from django.shortcuts import redirect, render
 from django.db.utils import IntegrityError
 from App.models import User
 from django.contrib.auth import logout as logout_user
-from django.core.mail import send_mail
+from django.core.mail import send_mail, EmailMessage
+from django.template.loader import render_to_string, get_template
 import random
 
 # Render the "user" page,
@@ -62,22 +63,25 @@ def send_verification_email(CurUser: User):
     CurUser.VerificationCode = ''.join([random.choice('zyxwvutsrqponmlkjihgfedcba') for i in range(16)])
     CurUser.save()
 
-    MsgHead = "Please access the link below to verify your account\n"
-    MsgLink = "<div><p><a href='{0}/user/{1}/verify/{2}/'>Link</a><br /></p><br /></div>".format(
-        settings.SITE_URL,
-        CurUser.get_username(),
-        CurUser.VerificationCode
-    )
+    content = {
+        "user": CurUser.get_username(),
+        "site": settings.SITE_URL,
+        "url": "{0}/user/{1}/verify/{2}/".format(settings.SITE_URL,
+            CurUser.get_username(),
+            CurUser.VerificationCode
+        )
+    }
 
-    Msg = MsgHead + MsgLink
-
-    send_mail(
-        subject='Email Verification',
-        message=Msg,
+    message = get_template('email.html').render(content)
+    Msg = EmailMessage(
+        'Email Verification',
+        message,
         from_email=settings.DEFAULT_FROM_EMAIL,
         recipient_list=[CurUser.get_email()],
         fail_silently=False
     )
+    Msg.content_subtype ="html"# Main content is now text/html
+    Msg.send()
 
 # If the user clicks the verification link, verify
 def process_verification(Request, UserName, Code) :
