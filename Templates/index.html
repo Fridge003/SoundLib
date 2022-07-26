@@ -53,13 +53,14 @@
             {% endif %}
             <div class="right menu">
                 <div class="item">
-                    <div class="ui action input">
-                        <input type="text" placeholder="Anything">
-                        <button class="ui inverted right labeled icon button">
+                    <form class="ui action input" method="post" enctype="multipart/form-data" action="/index/search/">
+                        {% csrf_token %}
+                        <input type="text" name="Keyword" placeholder="Anything">
+                        <button class="ui inverted right labeled icon button" type="submit">
                             <i class="search icon"></i>
                             Search
                         </button>
-                    </div>
+                    </form>
                 </div>
                 <div class="item">
                     {% if user.is_authenticated %}
@@ -84,7 +85,7 @@
     <div class="ui container">
         {% if SelectedTag == "timeline" %}
         <div class="ui three doubling stackable link cards">
-            {% for show_recording in RecordingList %}
+            {% for show_recording in List %}
             <a class="ui fluid raised link card" href="{{ " /recording/"|addstr:show_recording.get_id|addstr:"/" }}">
                 <div class="content">
                     <div class="header">{{ show_recording.get_title }}</div>
@@ -107,7 +108,7 @@
 
         {% if SelectedTag == "members" %}
         <div class="ui three doubling stackable link cards">
-            {% for show_user in UserList %}
+            {% for show_user in List %}
             <a class="ui fluid raised link card" href="{{ " /user/"|addstr:show_user.get_username|addstr:"/" }}">
                 <div class="content">
                     <img class="ui left floated tiny image" src="{% static '/images/avatar2/matthew.png' %}">
