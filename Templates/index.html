@@ -1,11 +1,13 @@
 {% extends 'base.html' %}
 {% load App_extras %}
 {% load static %}
-{% block content %}
+{% block page %}
 <div class="pusher">
     <!-- Menu bar -->
     <div class="ui inverted vertical masthead center aligned segment">
         <div class="ui large inverted stackable tabs menu">
+            {% block menu %}
+            {% endblock %}
             {% if SelectedTag == "timeline" %}
             <a class="active item" href="/index/timeline/0/">
                 Timeline
@@ -83,146 +85,9 @@
 
     <div class="ui divider"></div>
     <div class="ui container">
-        {% if SelectedTag == "timeline" %}
-        <div class="ui three doubling stackable link cards">
-            {% for show_recording in List %}
-            <a class="ui fluid raised link card" href="{{ " /recording/"|addstr:show_recording.get_id|addstr:"/" }}">
-                <div class="content">
-                    <div class="header">{{ show_recording.get_title }}</div>
-                    <div class="meta">
-                        Uploaded by: {{ show_recording.get_username }}
-                        </br>
-                        Composer : {{ show_recording.get_composer }}
-                    </div>
-                    <div class="description">
-                        {{ show_recording.get_description }}
-                    </div>
-                </div>
-                <div class="extra content">
-                    Uploaded at {{ show_recording.get_upload_date }}
-                </div>
-            </a>
-            {% endfor %}
-        </div>
-        {% endif %}
 
-        {% if SelectedTag == "members" %}
-        <div class="ui three doubling stackable link cards">
-            {% for show_user in List %}
-            <a class="ui fluid raised link card" href="{{ " /user/"|addstr:show_user.get_username|addstr:"/" }}">
-                <div class="content">
-                    <img class="ui left floated tiny image" src="{% static '/images/avatar2/matthew.png' %}">
-                    <div class="header">{{ show_user.get_username }}</div>
-                    <div class="meta">
-                        Last login: {{ show_user.get_last_login}}
-                    </div>
-                    <div class="description">
-                        {{ show_user.get_introduction }}
-                    </div>
-                </div>
-                <div class="extra content">
-                    <span class="right floated">
-                        Joined in {{ show_user.get_join_date.date }}
-                    </span>
-                    <span>
-                        <i class="file audio outline icon"></i>
-                        {{ show_user.NumRecordings }} Recordings
-                    </span>
-                </div>
-            </a>
-            {% endfor %}
-        </div>
-        {% endif %}
-
-        {% if SelectedTag == "composers" %}
-        <div class="ui link cards">
-            <div class="ui raised link card">
-                <div class="content">
-                    <div class="header">Rachmaninoff</div>
-                    <div class="meta">
-                        <span class="category">Russian</span>
-                    </div>
-                    <div class="description">
-                        Rachmaninoff was born on 1 April 1873 into a family of the Russian aristocracy in the
-                        Russian Empire.
-                    </div>
-                </div>
-                <div class="extra content">
-                    <span class="right floated">
-                        1873-1943
-                    </span>
-                    <span>
-                        <i class="file audio outline icon"></i>
-                        2 Recordings
-                    </span>
-                </div>
-            </div>
-            <div class="ui raised link card">
-                <div class="content">
-                    <div class="header">Chopin</div>
-                    <div class="meta">
-                        <span class="category">Polish</span>
-                    </div>
-                    <div class="description">
-                        Frédéric François Chopin was a Polish composer and virtuoso pianist of the Romantic
-                        period who wrote primarily for solo piano.
-                    </div>
-                </div>
-                <div class="extra content">
-                    <span class="right floated">
-                        1810-1849
-                    </span>
-                    <span>
-                        <i class="file audio outline icon"></i>
-                        10 Recordings
-                    </span>
-                </div>
-            </div>
-        </div>
-        {% endif %}
-
-        {% if SelectedTag == "upload" %}
-        <form class="ui form" method="post" enctype="multipart/form-data" action="/upload/">
-            {% csrf_token %}
-            <h3 class="ui dividing header">Recording Information</h3>
-            <div class="two fields">
-                <div class="field">
-                    <label>Recording Name</label>
-                    <div class="field">
-                        <input type="text" name="RecordingName" placeholder="Recording Name" required="required">
-                    </div>
-                </div>
-                <div class="field">
-                    <label>Composer Name</label>
-                    <div class="ui fluid search selection dropdown">
-                        <input type="hidden" name="ComposerName" required="required">
-                        <i class="dropdown icon"></i>
-                        <div class="default text">Select Composer</div>
-                        <div class="menu">
-                            <div class="item">Chopin</div>
-                            <div class="item">Beethoven</div>
-                            <div class="item">Mozart</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="field">
-                <label>Description</label>
-                <textarea type="input" name="Description" placeholder="Enter details here..."></textarea>
-            </div>
-            <div class="field">
-                <label>Recording File</label>
-                <input type="file" name="File" required/>
-            </div>
-            <button class="massive ui primary button" type="submit">
-                Submit
-            </button>
-        </form>
-        {% endif %}
-
-        {% if SelectedTag == "about" %}
-            <h1>This is a website maintained by PKU Piano Club</h1>
-        {% endif %}
+        {% block content %}
+        {% endblock %}
 
         <script>
             $('.ui.dropdown').dropdown();

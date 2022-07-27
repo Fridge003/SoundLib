@@ -1,0 +1,43 @@
+{% extends "index.html" %}
+
+{% load App_extras %}
+{% load static %}
+
+{% block content %}
+<form class="ui form" method="post" enctype="multipart/form-data" action="/upload/">
+    {% csrf_token %}
+    <h3 class="ui dividing header">Recording Information</h3>
+    <div class="two fields">
+        <div class="field">
+            <label>Recording Name</label>
+            <div class="field">
+                <input type="text" name="RecordingName" placeholder="Recording Name" required="required">
+            </div>
+        </div>
+        <div class="field">
+            <label>Composer Name</label>
+            <div class="ui fluid search selection dropdown">
+                <input type="hidden" name="ComposerName" required="required">
+                <i class="dropdown icon"></i>
+                <div class="default text">Select Composer</div>
+                <div class="menu">
+                    <div class="item">Chopin</div>
+                    <div class="item">Beethoven</div>
+                    <div class="item">Mozart</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="field">
+        <label>Description</label>
+        <textarea type="input" name="Description" placeholder="Enter details here..."></textarea>
+    </div>
+    <div class="field">
+        <label>Recording File</label>
+        <input type="file" name="File" required/>
+    </div>
+    <button class="massive ui primary button" type="submit">
+        Submit
+    </button>
+</form>
+{% endblock %}

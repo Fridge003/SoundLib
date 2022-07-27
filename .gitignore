@@ -5,3 +5,4 @@ venv
 log
 App/__pycache__
 SoundLib/__pycache__
+*.json
