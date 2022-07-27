@@ -10,6 +10,10 @@ https://docs.djangoproject.com/en/4.0/howto/deployment/wsgi/
 import os
 
 from django.core.wsgi import get_wsgi_application
+from SoundLib import settings
+
+settings.DEBUG = False
+settings.SITE_URL = settings.SITE_URL_DEPLOY
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'SoundLib.settings')
 

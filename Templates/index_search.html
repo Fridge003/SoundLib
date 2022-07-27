@@ -6,7 +6,48 @@
 {% block content %}
 <div class="ui three doubling stackable link cards">
     {% for show_item in List %}
-    
+        {% if show_item|get_class == "Recording" %}
+        <a class="ui fluid raised link card" href="{{ " /recording/"|addstr:show_item.get_id|addstr:"/" }}">
+            <div class="content">
+                <div class="header">{{ show_item.get_title }}</div>
+                <div class="meta">
+                    Uploaded by: {{ show_item.get_username }}
+                    </br>
+                    Composer : {{ show_item.get_composer }}
+                </div>
+                <div class="description">
+                    {{ show_item.get_description }}
+                </div>
+            </div>
+            <div class="extra content">
+                Uploaded at {{ show_item.get_upload_date }}
+            </div>
+        </a>
+        {% elif show_item|get_class == "User" %}
+        <a class="ui fluid raised link card" href="{{ " /user/"|addstr:show_item.get_username|addstr:"/" }}">
+            <div class="content">
+                <img class="ui left floated tiny image" src="{% static '/images/avatar2/matthew.png' %}">
+                <div class="header">{{ show_item.get_username }}</div>
+                <div class="meta">
+                    Last login: {{ show_item.get_last_login}}
+                </div>
+                <div class="description">
+                    {{ show_item.get_introduction }}
+                </div>
+            </div>
+            <div class="extra content">
+                <span class="right floated">
+                    Joined in {{ show_item.get_join_date.date }}
+                </span>
+                <span>
+                    <i class="file audio outline icon"></i>
+                    {{ show_item.NumRecordings }} Recordings
+                </span>
+            </div>
+        </a>
+        {% elif show_item|get_class == Composer %}
+        <!-- Need to finish this part -->
+        {% endif %}
     {% endfor %}
 </div>
 {% endblock %}

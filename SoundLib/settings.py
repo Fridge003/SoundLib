@@ -157,11 +157,16 @@ MEDIA_URL = '/media/'
 
 # Time Zone
 TIME_ZONE = 'Asia/Shanghai' 
-USE_TZ = True 
+USE_TZ = True
 
 ###########################
 #### Private Settings #####
 ###########################
 
 ITEMS_PER_PAGE = 12
-SITE_URL = "https://pkupiano.club"
+SITE_URL_DEBUG = "http://localhost:8000"
+SITE_URL_DEPLOY = "https://pkupiano.club"
+if DEBUG == True :
+    SITE_URL = "http://localhost:8000"
+else :
+    SITE_URL = "https://pkupiano.club"

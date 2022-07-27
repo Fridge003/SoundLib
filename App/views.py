@@ -35,6 +35,7 @@ def upload(Request):
     Description = Request.POST['Description']
     UploadTime = datetime.datetime.now()
     MyFile = Request.FILES['File']
+
     if Request.method == 'POST' and MyFile:
         process_upload(MyFile,
             RecordingName=RecordingName,
@@ -125,16 +126,16 @@ def user_info_change_commit(Request, **kwards) :
 
         print("changed successfully, refreshing...")
 
-        # if Password and Password2 :     # if refreshed password, need to reload user
-        #     logout_user(Request)
-        #     res = process_login_form(Request, UserName, Password)
-        #     if res == True :    # success
-        #         return redirect('/user/'+Request.user.username+'/')
-        #     else : # failure
-        #         return render_login(Request, login_failed=True)
+        if Password and Password2 :     # if refreshed password, need to reload user
+            logout_user(Request)
+            res = process_login_form(Request, UserName, Password)
+            if res == True :    # success
+                return redirect('/user/'+Request.user.username+'/')
+            else : # failure
+                return render_login(Request, login_failed=True)
         
-        # else :
-        return render_user_info(Request, [Request.user])
+        else :
+            return render_user_info(Request, [Request.user])
 
     else :  # failed, error info are presented in a dict
 
