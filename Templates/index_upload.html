@@ -36,8 +36,15 @@
         <label>Recording File</label>
         <input type="file" name="File" required/>
     </div>
+    {% if user.get_verification_status %}
     <button class="massive ui primary button" type="submit">
         Submit
     </button>
+    {% else %}
+    <button class="massive disabled ui primary button" type="submit">
+        Submit
+    </button>
+    <p>A user can upload recordings if logged in and get email verified.</p>
+    {% endif %}
 </form>
 {% endblock %}
