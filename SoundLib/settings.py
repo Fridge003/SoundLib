@@ -166,3 +166,5 @@ if DEBUG == True :
     SITE_URL = "http://localhost:8000"
 else :
     SITE_URL = "https://pkupiano.club"
+
+SAERCH_SIMILARITY_THRSHOLD = 0.1

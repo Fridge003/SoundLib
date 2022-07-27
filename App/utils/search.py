@@ -3,6 +3,7 @@ from App.models import Recording, User, Composer
 from django.db.models import Count
 from django.contrib.postgres.search import TrigramDistance, TrigramSimilarity
 from django.db.models.functions import Greatest
+from SoundLib import settings
 
 def obtain_result_by_search_rank(database, keyword, search_vector) :
 
@@ -19,7 +20,7 @@ def obtain_result_by_trigram_dist(database, fields, keyword) :
         similarity=Greatest(
             *[TrigramSimilarity(search_field, keyword) for search_field in fields]
         )
-    ).filter(similarity__gt=0.1).order_by('-similarity')
+    ).filter(similarity__gt=settings.SAERCH_SIMILARITY_THRSHOLD).order_by('-similarity')
     return results
 
 def default_search(keyword) :
