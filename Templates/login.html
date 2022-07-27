@@ -6,7 +6,7 @@
 {% if user.is_authenticated %}
 <p>Authenticated user</p>
 <div class="segment">
-    <a href="/" class="ui left labeled icon button">
+    <a href="javascript:history.go(-1)" class="ui left labeled icon button">
         <i class="left arrow icon"></i>
         Back
     </a>
@@ -36,6 +36,13 @@
                 Your name is conflict with others!
             </div>
         </div>
+        {% elif register_non_pku %}
+        <div class="ui error message">
+            <i class="close icon"></i>
+            <div class="header">
+                Please use pku emails (@pku.edu.cn or @stu.pku.edu.cn)!
+            </div>
+        </div>
         {% elif register_failed %}
         <div class="ui error message">
             <i class="close icon"></i>
@@ -60,7 +67,7 @@
                             Login
                             <i class="User icon"></i>
                         </div>
-                        <form class="ui form" method="post" enctype="multipart/form-data" action="/login/login">
+                        <form class="ui form" method="post" enctype="multipart/form-data" action="/login/login/">
                             {% csrf_token %}
                             <div class="field">
                                 <label>User Name</label>
@@ -83,7 +90,7 @@
                             Register
                             <i class="world icon"></i>
                         </div>
-                        <form class="ui form" method="post" enctype="multipart/form-data" action="/login/register">
+                        <form class="ui form" method="post" enctype="multipart/form-data" action="/login/register/">
                             {% csrf_token %}
                             <div class="field">
                                 <label>User Name</label>

@@ -20,7 +20,7 @@ class MyUserManager(BaseUserManager):
         user = self.model(
             username=username,
             email=self.normalize_email(email),
-            introduction=introduction
+            Introduction=introduction
         )
 
         user.set_password(password)
@@ -36,7 +36,7 @@ class MyUserManager(BaseUserManager):
         user = self.model(
             username=username,
             email=self.normalize_email(email),
-            introduction=introduction,
+            Introduction=introduction,
             password=password
         )
 
@@ -49,6 +49,8 @@ class MyUserManager(BaseUserManager):
 class User(AbstractUser):
     
     Introduction = models.CharField(max_length=65535, default="This person is mysterious")
+    EmailVerified = models.BooleanField(default=False)      # If the initial email is verified
+    VerificationCode = models.CharField(max_length=128, default="") # Temporarily save the verification code
     objects = MyUserManager()
 
     verbose = True
@@ -87,6 +89,10 @@ class User(AbstractUser):
         """Return time of last login for this User."""
         return self.last_login
     
+    def get_verification_status(self) :
+        """Return if the user is verified"""
+        return self.EmailVerified
+    
     def view(self, verbose = True, max_words=32, max_letters=128) :
 
         self.verbose = verbose
@@ -97,6 +103,9 @@ class Composer(models.Model) :
     Name = models.CharField(max_length=255, unique=True, primary_key=True)
     Introduction = models.CharField(max_length=65535, default="Empty")
 
+    def get_name(self) :
+        return self.Name
+
 class Recording(models.Model) :
 
     Id = models.AutoField(primary_key=True)
@@ -104,6 +113,35 @@ class Recording(models.Model) :
     File = models.FileField(upload_to='Recordings')
     Composer = models.ForeignKey(Composer, on_delete=models.CASCADE)            # One composer to many recordings
     UploadUser = models.ForeignKey(User, on_delete=models.CASCADE, related_name="Recordings")              # for searching
-    UploadUserName = models.CharField(max_length=255, default="Anonymous")      # to show
+    UploadUserName = models.CharField(max_length=255, default="Anonymous")      # to show, in case the user is deleted
     Description = models.CharField(max_length=65535, default="Empty")
     UploadTime = models.DateTimeField(auto_now=True, editable=True)
+    LastEditTime = models.DateTimeField(auto_now=True, editable=True)
+    Views = models.IntegerField(default=0)                                      # How many views
+
+    def get_title(self) :
+        return self.Name
+    
+    def get_description(self) :
+        return self.Description
+    
+    def get_username(self) :
+        return self.UploadUserName
+    
+    def get_user(self) :
+        return self.UploadUser.get_username()   # in case the user is deleted
+    
+    def get_upload_date(self) :
+        return self.UploadTime
+    
+    def get_composer(self) :
+        return self.Composer.get_name()
+    
+    def get_id(self) :
+        return self.Id
+    
+    def get_file_url(self) :
+        return self.File.url
+    
+    def get_views(self) :
+        return self.Views
