@@ -175,7 +175,9 @@ def recording_change_commit(Request, **kwargs) :
     else :
         MyFile = None
     Delete = False
-    
+
+    print(Request.POST)
+
     if 'delete_button' in Request.POST :
         Delete = True
 
