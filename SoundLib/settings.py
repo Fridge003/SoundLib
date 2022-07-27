@@ -117,7 +117,7 @@ AUTH_USER_MODEL = 'App.User'
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Shanghai' 
 
 USE_I18N = True
 
@@ -154,10 +154,6 @@ DEFAULT_FROM_EMAIL = 'pkupiano_public@126.com'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'Media')
 MEDIA_URL = '/media/'
-
-# Time Zone
-TIME_ZONE = 'Asia/Shanghai' 
-USE_TZ = True
 
 ###########################
 #### Private Settings #####

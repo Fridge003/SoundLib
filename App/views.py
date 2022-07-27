@@ -82,7 +82,7 @@ def register_form(Request):
 
     res = process_register_form(Request, UserName, Email, Password, Password2)
 
-    if "register_failed" in res : # failed registration
+    if "register_failed" in res and res["register_failed"] == True: # failed registration
         return render_login(Request,
                             login_failed=False,
                             register_failed=res["register_failed"],
