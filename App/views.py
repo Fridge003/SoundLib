@@ -11,7 +11,7 @@ from App.models import Recording, User
 from App.utils.index import render_index
 from App.utils.login import render_login, process_login_form, process_register_form
 from App.utils.upload import process_upload
-from App.utils.user import render_user_change, render_user_info, process_change_form, process_verification, verification_required, send_verification_email
+from App.utils.user import render_user_change, render_user_info, process_user_change_form, process_user_delete, process_verification, verification_required, send_verification_email
 from App.utils.recording import render_recording_info, render_recording_change, process_recording_change, process_recording_delete
  
  # Index page
@@ -120,32 +120,42 @@ def user_info_change_commit(Request, **kwards) :
     Password2 = Request.POST['Password2']
     Introduction = Request.POST['Introduction']
 
-    res = process_change_form(Request, UserName, Email, Password, Password2, Introduction)
+    if 'delete_button' in Request.POST :
+        Delete = True
+    
+    if not Delete :
 
-    if res["change_failed"] == False :    # the user info changed successfully
+        res = process_user_change_form(Request, UserName, Email, Password, Password2, Introduction)
 
-        print("changed successfully, refreshing...")
+        if res["change_failed"] == False :    # the user info changed successfully
 
-        if Password and Password2 :     # if refreshed password, need to reload user
-            logout_user(Request)
-            res = process_login_form(Request, UserName, Password)
-            if res == True :    # success
-                return redirect('/user/'+Request.user.username+'/')
-            else : # failure
-                return render_login(Request, login_failed=True)
-        
-        else :
-            return render_user_info(Request, [Request.user])
+            print("changed successfully, refreshing...")
 
-    else :  # failed, error info are presented in a dict
+            if Password and Password2 :     # if refreshed password, need to reload user
+                logout_user(Request)
+                res = process_login_form(Request, UserName, Password)
+                if res == True :    # success
+                    return redirect('/user/'+Request.user.username+'/')
+                else : # failure
+                    return render_login(Request, login_failed=True)
+            
+            else :
+                return render_user_info(Request, [Request.user])
 
-        print("change failed")
-        if "inconsistent_password" in res :
-            return render_user_change(Request, ChangeFailed=True, Inconsistency=True)
-        elif "conflict_username" in res :
-            return render_user_change(Request, ChangeFailed=True, UsedName=True)
-        else :
-            raise NotImplementedError("Error not handled in views.change")
+        else :  # failed, error info are presented in a dict
+
+            print("change failed")
+            if "inconsistent_password" in res :
+                return render_user_change(Request, ChangeFailed=True, Inconsistency=True)
+            elif "conflict_username" in res :
+                return render_user_change(Request, ChangeFailed=True, UsedName=True)
+            else :
+                raise NotImplementedError("Error not handled in views.change")
+    
+    else :
+
+        process_user_delete(Request)
+        return redirect('/')
     
     return render_user_info(Request)
 
@@ -175,8 +185,6 @@ def recording_change_commit(Request, **kwargs) :
     else :
         MyFile = None
     Delete = False
-
-    print(Request.POST)
 
     if 'delete_button' in Request.POST :
         Delete = True

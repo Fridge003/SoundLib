@@ -26,7 +26,7 @@ def render_user_info(Request, Users) :
     return render(Request, 'user.html', Context)
 
 # Process a submitted change-user-info form
-def process_change_form(Request, UserName, Email, Password, Password2, Introduction="Empty") :
+def process_user_change_form(Request, UserName, Email, Password, Password2, Introduction="Empty") :
 
     OldUserName = Request.user.username
     print('changing', OldUserName, 'to', UserName, Email, Password, Password2, Introduction)
@@ -57,6 +57,10 @@ def process_change_form(Request, UserName, Email, Password, Password2, Introduct
     Request.user = CurUser
     
     return {"change_failed": False, "inconsistent_password": False, "conflict_username": False}
+
+def process_user_delete(Request) :
+
+    Request.user.delete()
 
 # Send a link to the user's email address to verify
 def send_verification_email(CurUser: User):

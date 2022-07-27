@@ -37,7 +37,7 @@
             </div>
         </div>
         {% endif %}
-        <form class="ui form" method="post" enctype="multipart/form-data" action="{{ "/user/"|addstr:user.get_username|addstr:"/change/commit/" }}">
+        <form class="ui form" id="change_form" method="post" enctype="multipart/form-data" action="{{ "/user/"|addstr:user.get_username|addstr:"/change/commit/" }}">
             {% csrf_token %}
             <div class="two fields">
                 <div class="field">
@@ -79,6 +79,51 @@
             <i class="user outline icon"></i>
             Logout
         </a>
+        <a class="ui red button" id="coins" name="delete_button">
+            Delete User
+        </a>
+        <div class="ui modal">
+            <i class="close icon"></i>
+            <div class="header">
+                Delete User
+            </div>
+            <div class="content">
+                <div class="description">
+                    <div class="ui header">Please Confirm.</div>
+                    <p>By clicking on the "Yep, Delete" button, current user will be permanently deleted and CANNOT be recovered.</p>
+                    <p>If you registered with incorrect information, you can edit it in the user-info management page,
+                        it's not necessary to delete the user.</p>
+                    <p>Are you sure to delete it?</p>
+                </div>
+            </div>
+            <div class="actions">
+                <div class="ui black deny button">
+                    Nope, Go Back
+                </div>
+                <button class="ui positive red right labeled icon button">
+                    Yep, Delete
+                    <i class="checkmark icon"></i>
+                </button>
+            </div>
+        </div>
+        <script>
+            $('.ui.modal').modal('setting', {
+                closable  : false,
+                onDeny    : function(){
+                },
+                onApprove : function() {
+                    var input = document.createElement("input");
+                    input.type = "text";
+                    input.name = "delete_button";
+                    let form = document.getElementById("change_form");
+                    form.appendChild(input);
+                    form.submit();
+                }
+            })
+            $('#coins').click(function(){
+                $('.ui.modal').modal('show');
+            });
+        </script>
     </div>
 </div>
 
