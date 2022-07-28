@@ -104,11 +104,11 @@
             {% for i in PageRange %}
                 {% if i == CurrentPage %}
                 <button class="circular orange ui icon button">
-                    {{ i+1 }}
+                    {{ i|add:1 }}
                 </button>
                 {% else %}
                 <a class="button circular ui icon button" href="{{ " /index/"|addstr:SelectedTag|addstr:"/"|addstr:i|addstr:"/" }}">
-                    {{ i+1 }}
+                    {{ i|add:1 }}
                 </a>
                 {% endif %}
             {% endfor %}
