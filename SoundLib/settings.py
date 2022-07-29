@@ -129,9 +129,10 @@ USE_TZ = True
 
 STATIC_URL = '/Static/'
 
-STATICFILES_DIRS = [
-    "Static/"
-]
+if DEBUG:
+    STATICFILES_DIRS = [os.path.join(BASE_DIR, 'Static')]
+else:
+    STATIC_ROOT = os.path.join(BASE_DIR, 'Static')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
@@ -162,9 +163,11 @@ MEDIA_URL = '/media/'
 ITEMS_PER_PAGE = 12
 SITE_URL_DEBUG = "http://localhost:8000"
 SITE_URL_DEPLOY = "https://pkupiano.club"
-if DEBUG == True :
-    SITE_URL = "http://localhost:8000"
-else :
-    SITE_URL = "https://pkupiano.club"
+
 
 SAERCH_SIMILARITY_THRSHOLD = 0.1
+
+if DEBUG == True:
+    SITE_URL = "http://localhost:8000"
+else:
+    SITE_URL = "https://pkupiano.club"

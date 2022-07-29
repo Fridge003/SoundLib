@@ -14,6 +14,7 @@ from SoundLib import settings
 
 settings.DEBUG = False
 settings.SITE_URL = settings.SITE_URL_DEPLOY
+settings.STATIC_ROOT = os.path.join(settings.BASE_DIR, 'Static')
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'SoundLib.settings')
 
