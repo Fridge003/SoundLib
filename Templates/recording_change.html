@@ -30,17 +30,13 @@
                         </div>
                         <div class="field">
                             <label>Composer Name</label>
-                            <div class="ui fluid search selection dropdown">
-                                <input type="hidden" name="ComposerName" value="{{ show_recording.get_composer }}"
-                                    required="required">
-                                <i class="dropdown icon"></i>
-                                <div class="default text">Select Composer</div>
-                                <div class="menu">
-                                    <div class="item">Chopin</div>
-                                    <div class="item">Beethoven</div>
-                                    <div class="item">Mozart</div>
-                                    <div class="item">{{ show_recording.get_composer }}</div>
-                                </div>
+                            <div class="ui input">
+                                <input list="browsers" name="ComposerName" type="text" autocomplete="off" value="{{ show_recording.get_composer }}">
+                                <datalist id="browsers">
+                                    {% for show_composer in AllComposers %}
+                                    <option value="{{ show_composer.get_name }}"></option>
+                                    {% endfor %}
+                                </datalist>
                             </div>
                         </div>
                     </div>

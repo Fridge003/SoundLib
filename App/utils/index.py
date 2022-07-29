@@ -3,7 +3,7 @@ from dataclasses import field
 from math import ceil
 from tabnanny import verbose
 from django.shortcuts import render
-from App.models import User, Recording, Composer
+from App.models import User, Recording, Composer, get_all_available_composers
 from App.utils.search import default_search
 from django.conf import settings
 from django.db.models import Count
@@ -20,6 +20,8 @@ def render_index(OriginalRequest, SelectedTag=None, SelectedPage=None) :
         HavePages = False
 
     SelectedItems = []
+    AllComposers = []
+    PageNum = 0
 
     if SelectedTag == "timeline" :
         RecordingList = Recording.objects.order_by('-UploadTime')
@@ -32,17 +34,19 @@ def render_index(OriginalRequest, SelectedTag=None, SelectedPage=None) :
         SelectedItems = UserList[SelectedPage*settings.ITEMS_PER_PAGE: (SelectedPage+1)*settings.ITEMS_PER_PAGE]
     elif SelectedTag == "search" :
         SearchResults = default_search(OriginalRequest.POST['Keyword'])
-        print(SearchResults)
         PageNum = ceil(len(SearchResults)/settings.ITEMS_PER_PAGE)
         SelectedItems = SearchResults[SelectedPage*settings.ITEMS_PER_PAGE: (SelectedPage+1)*settings.ITEMS_PER_PAGE]
-    else :
-        PageNum = 0
+    elif SelectedTag == "upload" :
+        AllComposers = get_all_available_composers()
+    elif SelectedTag == "composers" :
+        AllComposers = get_all_available_composers()
     
     context                 = {}
     context['hello']        = 'PKUpiano Sound Library!'
     context['List']         = SelectedItems
     context['SelectedTag']  = SelectedTag
     context['CurrentPage']  = SelectedPage
+    context['AllComposers'] = AllComposers
     context['HavePages']    = HavePages
     context['PageRange']    = list(range(max(0, SelectedPage-2), min(PageNum, SelectedPage+3)))
     context['PagePrefix']   = '/index/'+SelectedTag+'/'

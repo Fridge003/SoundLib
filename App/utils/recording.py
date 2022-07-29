@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.db.utils import IntegrityError
-from App.models import Recording, Composer
+from App.models import Recording, Composer, get_all_available_composers
 
 def render_recording_info(Request, Recordings) :
     Context                  = {}
@@ -11,6 +11,7 @@ def render_recording_change(Request, Recordings) :
 
     Context                  = {}
     Context["RecordingList"] = Recordings
+    Context["AllComposers"]  = get_all_available_composers()
     return render(Request, 'recording_change.html', Context)
 
 # Save a uploaded file to disk and maintain databases

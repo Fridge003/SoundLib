@@ -1,5 +1,7 @@
+import datetime
 from tkinter import CASCADE
 from django.db import models
+from django.db.models import Count
 import types
 
 # Create your models here.
@@ -102,16 +104,32 @@ class Composer(models.Model) :
 
     Name = models.CharField(max_length=255, unique=True, primary_key=True)
     Introduction = models.CharField(max_length=65535, default="Empty")
+    Country = models.CharField(max_length=255, default="Unknown")
+    Birthday = models.DateField(default=datetime.date(year=1900, month=1, day=1))
+    Deathday = models.DateField(default=datetime.date(year=1900, month=1, day=1))
+    Alive = models.BooleanField(default=False)
 
     def get_name(self) :
         return self.Name
+    
+    def get_description(self) :
+        return self.Introduction
+    
+    def get_country(self) :
+        return self.Country
+    
+    def get_lifetime(self) :
+        if self.Alive :
+            return "{0}-Now".format(self.Birthday.year)
+        else :
+            return "{0}-{1}".format(self.Birthday.year, self.Deathday.year)
 
 class Recording(models.Model) :
 
     Id = models.AutoField(primary_key=True)
     Name = models.CharField(max_length=255, default="Mysterious Recording")
     File = models.FileField(upload_to='Recordings')
-    Composer = models.ForeignKey(Composer, on_delete=models.CASCADE)            # One composer to many recordings
+    Composer = models.ForeignKey(Composer, on_delete=models.CASCADE, related_name="Recordings")            # One composer to many recordings
     UploadUser = models.ForeignKey(User, on_delete=models.CASCADE, related_name="Recordings")              # for searching
     UploadUserName = models.CharField(max_length=255, default="Anonymous")      # to show, in case the user is deleted
     Description = models.CharField(max_length=65535, default="Empty")
@@ -145,3 +163,9 @@ class Recording(models.Model) :
     
     def get_views(self) :
         return self.Views
+
+def get_all_available_composers() :
+
+    ComposerList = Composer.objects.annotate(NumRecordings=Count('Recordings')).filter(NumRecordings__gte=1).order_by('-NumRecordings').all()
+    
+    return ComposerList

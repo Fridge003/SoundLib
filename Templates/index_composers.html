@@ -5,47 +5,27 @@
 
 {% block content %}
 <div class="ui link cards">
+    {% for show_composer in AllComposers %}
     <div class="ui raised link card">
         <div class="content">
-            <div class="header">Rachmaninoff</div>
+            <div class="header">{{ show_composer.get_name }}</div>
             <div class="meta">
-                <span class="category">Russian</span>
+                <span class="category"> Country: {{ show_composer.get_country }}</span>
             </div>
             <div class="description">
-                Rachmaninoff was born on 1 April 1873 into a family of the Russian aristocracy in the
-                Russian Empire.
+                {{ show_composer.get_description }}
             </div>
         </div>
         <div class="extra content">
             <span class="right floated">
-                1873-1943
+                {{ show_composer.get_lifetime }}
             </span>
             <span>
                 <i class="file audio outline icon"></i>
-                2 Recordings
+                {{ show_composer.NumRecordings }}
             </span>
         </div>
     </div>
-    <div class="ui raised link card">
-        <div class="content">
-            <div class="header">Chopin</div>
-            <div class="meta">
-                <span class="category">Polish</span>
-            </div>
-            <div class="description">
-                Frédéric François Chopin was a Polish composer and virtuoso pianist of the Romantic
-                period who wrote primarily for solo piano.
-            </div>
-        </div>
-        <div class="extra content">
-            <span class="right floated">
-                1810-1849
-            </span>
-            <span>
-                <i class="file audio outline icon"></i>
-                10 Recordings
-            </span>
-        </div>
-    </div>
+    {% endfor %}
 </div>
 {% endblock %}
