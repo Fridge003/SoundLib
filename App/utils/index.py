@@ -57,7 +57,7 @@ def render_index(OriginalRequest, SelectedTag=None, SelectedPage=None) :
     context['PageRange']    = list(range(max(0, SelectedPage-2), min(PageNum, SelectedPage+3)))
     context['PagePrefix']   = '/index/'+SelectedTag+'/'
     context['PrevPage']     = max(0, SelectedPage-1)
-    context['NextPage']     = min(PageNum-1, SelectedPage+1)
+    context['NextPage']     = max(min(PageNum-1, SelectedPage+1), 0)
 
     for item in context['List'] :
         if isinstance(item, User) :
