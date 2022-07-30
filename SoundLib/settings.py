@@ -119,7 +119,7 @@ AUTH_USER_MODEL = 'App.User'
 
 LANGUAGE_CODE = 'en-us'
 LANGUAGES = [
-    ('zh-hans', _('Simplified Chinese')),
+    ('zh-Hans', _('Simplified Chinese')),
     ('en', _('English')),
 ]
 
