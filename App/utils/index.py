@@ -34,7 +34,7 @@ def render_index(OriginalRequest, SelectedTag=None, SelectedPage=None) :
         PageNum = ceil(len(UserList)/settings.ITEMS_PER_PAGE)
         SelectedItems = UserList[SelectedPage*settings.ITEMS_PER_PAGE: (SelectedPage+1)*settings.ITEMS_PER_PAGE]
     elif SelectedTag == "search" :
-        SearchResults = default_search(OriginalRequest.POST['Keyword'])
+        SearchResults = default_search(OriginalRequest.POST.get('Keyword'))
         PageNum = ceil(len(SearchResults)/settings.ITEMS_PER_PAGE)
         SelectedItems = SearchResults[SelectedPage*settings.ITEMS_PER_PAGE: (SelectedPage+1)*settings.ITEMS_PER_PAGE]
     elif SelectedTag == "upload" :

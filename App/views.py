@@ -14,9 +14,11 @@ from App.utils.login import render_login, process_login_form, process_register_f
 from App.utils.upload import process_upload
 from App.utils.user import render_user_change, render_user_info, process_user_change_form, process_user_delete, process_verification, verification_required, send_verification_email
 from App.utils.recording import render_recording_info, render_recording_change, process_recording_change, process_recording_delete
- 
+from django.utils.html import escape
  # Index page
 def hello(Request, **kwargs):
+
+    print(Request.__dict__)
 
     if "tag" not in kwargs:
         return redirect('index/timeline/0')
@@ -31,11 +33,11 @@ def hello(Request, **kwargs):
 @login_required
 @verification_required
 def upload(Request):
-    RecordingName = Request.POST['RecordingName']
-    ComposerName = Request.POST['ComposerName']
-    Description = Request.POST['Description']
+    RecordingName = Request.POST.get('RecordingName')
+    ComposerName = Request.POST.get('ComposerName')
+    Description = Request.POST.get('Description')
     UploadTime = datetime.datetime.now()
-    MyFile = Request.FILES['File']
+    MyFile = Request.FILES.get('File')
 
     if Request.method == 'POST' and MyFile:
         process_upload(MyFile,
@@ -62,8 +64,8 @@ def login(Request):
 # process that form and redirect to main page if successed
 def login_form(Request):
 
-    UserName = Request.POST['UserName']
-    Password = Request.POST['Password']
+    UserName = Request.POST.get('UserName')
+    Password = Request.POST.get('Password')
 
     res = process_login_form(Request, UserName, Password)
 
@@ -76,10 +78,10 @@ def login_form(Request):
 # process that from and auto-login if successed
 def register_form(Request):
 
-    UserName = Request.POST['UserName']
-    Email = Request.POST['Email']
-    Password = Request.POST['Password']
-    Password2 = Request.POST['Password2']
+    UserName = Request.POST.get('UserName')
+    Email = Request.POST.get('Email')
+    Password = Request.POST.get('Password')
+    Password2 = Request.POST.get('Password2')
 
     res = process_register_form(Request, UserName, Email, Password, Password2)
 
@@ -115,11 +117,11 @@ def user_info_change(Request, **kwards) :
 # Comminting a change form
 def user_info_change_commit(Request, **kwards) :
 
-    UserName = Request.POST['UserName']
-    Email = Request.POST['Email']
-    Password = Request.POST['Password']
-    Password2 = Request.POST['Password2']
-    Introduction = Request.POST['Introduction']
+    UserName = Request.POST.get('UserName')
+    Email = Request.POST.get('Email')
+    Password = Request.POST.get('Password')
+    Password2 = Request.POST.get('Password2')
+    Introduction = Request.POST.get('Introduction')
 
     if 'delete_button' in Request.POST :
         Delete = True
@@ -177,12 +179,12 @@ def recording_change(Request, **kwargs) :
 # Handling recording change forms
 def recording_change_commit(Request, **kwargs) :
 
-    RecordingName = Request.POST['RecordingName']
-    ComposerName = Request.POST['ComposerName']
-    Description = Request.POST['Description']
+    RecordingName = Request.POST.get('RecordingName')
+    ComposerName = Request.POST.get('ComposerName')
+    Description = Request.POST.get('Description')
     UploadTime = datetime.datetime.now()
     if 'File' in Request.FILES :
-        MyFile = Request.FILES['File']
+        MyFile = Request.FILES.get('File')
     else :
         MyFile = None
     Delete = False

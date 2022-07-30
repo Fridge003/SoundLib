@@ -65,6 +65,7 @@ urlpatterns += i18n_patterns(
         auth_views.PasswordResetCompleteView.as_view(template_name='password_reset_complete.html'),
         name="password_reset_complete",
     ),
+    prefix_default_language = False
 )
 
 if settings.DEBUG: # in debug mode, django doesn't support media url
