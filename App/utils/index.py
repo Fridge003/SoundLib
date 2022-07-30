@@ -28,19 +28,24 @@ def render_index(OriginalRequest, SelectedTag=None, SelectedPage=None) :
         RecordingList = Recording.objects.order_by('-UploadTime')
         PageNum = ceil(len(RecordingList)/settings.ITEMS_PER_PAGE)
         SelectedItems = RecordingList[SelectedPage*settings.ITEMS_PER_PAGE : (SelectedPage+1)*settings.ITEMS_PER_PAGE]
+        HavePages = True
     elif SelectedTag == "members" :
         # annotate means count the related recordings of a user and save the result as a key
         UserList = User.objects.annotate(NumRecordings=Count('Recordings'))
         PageNum = ceil(len(UserList)/settings.ITEMS_PER_PAGE)
         SelectedItems = UserList[SelectedPage*settings.ITEMS_PER_PAGE: (SelectedPage+1)*settings.ITEMS_PER_PAGE]
+        HavePages = True
     elif SelectedTag == "search" :
         SearchResults = default_search(OriginalRequest.POST.get('Keyword'))
         PageNum = ceil(len(SearchResults)/settings.ITEMS_PER_PAGE)
         SelectedItems = SearchResults[SelectedPage*settings.ITEMS_PER_PAGE: (SelectedPage+1)*settings.ITEMS_PER_PAGE]
+        HavePages = True
     elif SelectedTag == "upload" :
         AllComposers = get_all_available_composers()
+        HavePages = False
     elif SelectedTag == "composers" :
         AllComposers = get_all_available_composers()
+        HavePages = True
     
     context                 = {}
     context['hello']        = _('PKUpiano Sound Library!')
