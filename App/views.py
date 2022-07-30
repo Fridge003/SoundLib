@@ -18,8 +18,6 @@ from django.utils.html import escape
  # Index page
 def hello(Request, **kwargs):
 
-    print(Request.__dict__)
-
     if "tag" not in kwargs:
         return redirect('index/timeline/0')
     
@@ -123,6 +121,7 @@ def user_info_change_commit(Request, **kwards) :
     Password2 = Request.POST.get('Password2')
     Introduction = Request.POST.get('Introduction')
 
+    Delete = False
     if 'delete_button' in Request.POST :
         Delete = True
     
