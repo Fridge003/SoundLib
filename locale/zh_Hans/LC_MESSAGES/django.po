@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-30 13:02+0800\n"
+"POT-Creation-Date: 2022-07-30 23:48+0800\n"
 "PO-Revision-Date: 2022-07-30 12:38+0800\n"
 "Last-Translator: Boshi An, boshi_an@stu.pku.edu.cn\n"
 "Language-Team: Boshi An, boshi_an@stu.pku.edu.cn\n"
@@ -18,1587 +18,381 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: App/utils/index.py:46 App/utils/login.py:18
+#: .\App\utils\index.py:46 .\App\utils\login.py:18
 msgid "PKUpiano Sound Library!"
 msgstr "北京大学钢琴社：声音图书馆"
 
-#: App/utils/user.py:105
+#: .\App\utils\user.py:105
 msgid "Congratulations! You can now access the full content of this website."
 msgstr "恭喜你验证成功！现在你可以使用该网站的全部功能了"
 
-#: App/utils/user.py:107
+#: .\App\utils\user.py:107
 msgid "Verification code incorrect!"
 msgstr "验证失败！"
 
-#: App/views.py:222
+#: .\App\views.py:224
 msgid "Email is not a PKU email address."
 msgstr "这不是一个北京大学邮箱"
 
-#: App/views.py:225
+#: .\App\views.py:227
 msgid "We have send you a verification email, please check your inbox."
 msgstr "我们向您发送了一个验证邮件，请查收"
 
-#: SoundLib/settings.py:122
+#: .\SoundLib\settings.py:122
 msgid "Simplified Chinese"
 msgstr "简体中文"
 
-#: SoundLib/settings.py:123
+#: .\SoundLib\settings.py:123
 msgid "English"
 msgstr "英文"
 
-#: Templates/base.html:138
+#: .\Templates\base.html:138
 msgid "PKUPiano Sound Library!"
 msgstr "声音图书馆"
 
-#: Templates/base.html:140
+#: .\Templates\base.html:140
 msgid "Need to have a background."
 msgstr "北京大学钢琴社"
 
-#: Templates/base.html:151
+#: .\Templates\base.html:151
 msgid "Community"
 msgstr "社区"
 
-#: Templates/base.html:154
+#: .\Templates\base.html:154
 msgid "Bilibili Link"
 msgstr "B站链接"
 
-#: Templates/base.html:157
+#: .\Templates\base.html:157
 msgid "Wechat（Todo）"
 msgstr "微信公众号"
 
-#: Templates/base.html:162
+#: .\Templates\base.html:162
 msgid "Project"
 msgstr "项目"
 
-#: Templates/base.html:165
+#: .\Templates\base.html:165
 msgid "Site GitHub Project"
 msgstr "网站GitHub链接"
 
-#: Templates/base.html:168
+#: .\Templates\base.html:168
 msgid "Wechat Server GitHub Project"
 msgstr "微信公众号GitHub链接"
 
-#: Templates/base.html:173
+#: .\Templates\base.html:173
 msgid "ICP Code"
 msgstr "ICP备案号"
 
-#: Templates/base.html:179
+#: .\Templates\base.html:179
 msgid "Public Security Record"
 msgstr "公安备案号"
 
-#: Templates/base.html:188
+#: .\Templates\base.html:188
 msgid "Help Preserve This Project"
 msgstr "帮助保护这个项目"
 
-#: Templates/base.html:189
+#: .\Templates\base.html:189
 msgid "Support for the continued development of PKU piano club."
 msgstr "帮助北京大学钢琴社"
 
-#: Templates/index.html:16 Templates/index.html:20
+#: .\Templates\index.html:16 .\Templates\index.html:20
 msgid "Timeline"
 msgstr "时间线"
 
-#: Templates/index.html:25 Templates/index.html:29
+#: .\Templates\index.html:25 .\Templates\index.html:29
 msgid "Members"
 msgstr "成员"
 
-#: Templates/index.html:34 Templates/index.html:38
+#: .\Templates\index.html:34 .\Templates\index.html:38
 msgid "Composers"
 msgstr "作曲家"
 
-#: Templates/index.html:43 Templates/index.html:47
+#: .\Templates\index.html:43 .\Templates\index.html:47
 msgid "Upload"
 msgstr "上传录音"
 
-#: Templates/index.html:52 Templates/index.html:56
+#: .\Templates\index.html:52 .\Templates\index.html:56
 msgid "About"
 msgstr "关于"
 
-#: Templates/index.html:66
+#: .\Templates\index.html:66
 msgid "Search"
 msgstr "搜索"
 
-#: Templates/index_about.html:8
+#: .\Templates\index_about.html:8
 msgid "This is a website maintained by PKU Piano Club"
 msgstr "该网站由北京大学钢琴社运营"
 
-#: Templates/index_members.html:15 Templates/index_search.html:33
+#: .\Templates\index_members.html:15 .\Templates\index_search.html:33
 msgid "Last login"
 msgstr "上次登陆"
 
-#: Templates/index_members.html:23 Templates/index_search.html:41
+#: .\Templates\index_members.html:23 .\Templates\index_search.html:41
 msgid "Joined in"
 msgstr "注册时间"
 
-#: Templates/index_members.html:27 Templates/index_search.html:45
+#: .\Templates\index_members.html:27 .\Templates\index_search.html:45
 msgid "Recordings"
 msgstr "个录音"
 
-#: Templates/index_search.html:15 Templates/index_timeline.html:14
-#: Templates/recording.html:26
+#: .\Templates\index_search.html:15 .\Templates\index_timeline.html:14
+#: .\Templates\recording.html:26
 msgid "Uploaded by"
 msgstr "上传自"
 
-#: Templates/index_search.html:17 Templates/index_timeline.html:16
-#: Templates/recording.html:28
+#: .\Templates\index_search.html:17 .\Templates\index_timeline.html:16
+#: .\Templates\recording.html:28
 msgid "Composer"
 msgstr "作曲家"
 
-#: Templates/index_search.html:24 Templates/index_timeline.html:23
-#: Templates/recording.html:34
+#: .\Templates\index_search.html:24 .\Templates\index_timeline.html:23
+#: .\Templates\recording.html:34
 msgid "Uploaded at"
 msgstr "上传于"
 
-#: Templates/index_upload.html:10 Templates/recording.html:18
-#: Templates/recording_change.html:18 Templates/recording_change.html:24
+#: .\Templates\index_upload.html:10 .\Templates\recording.html:18
+#: .\Templates\recording_change.html:18 .\Templates\recording_change.html:24
 msgid "Recording Information"
 msgstr "录音信息"
 
-#: Templates/index_upload.html:13 Templates/recording_change.html:27
+#: .\Templates\index_upload.html:13 .\Templates\recording_change.html:27
 msgid "Recording Name"
 msgstr "录音名称"
 
-#: Templates/index_upload.html:19 Templates/recording_change.html:34
+#: .\Templates\index_upload.html:19 .\Templates\recording_change.html:34
 msgid "Composer Name"
 msgstr "作曲家名称"
 
-#: Templates/index_upload.html:31 Templates/recording_change.html:46
-#: Templates/user.html:29
+#: .\Templates\index_upload.html:31 .\Templates\recording_change.html:46
+#: .\Templates\user.html:29
 msgid "Description"
 msgstr "介绍"
 
-#: Templates/index_upload.html:35 Templates/recording_change.html:50
+#: .\Templates\index_upload.html:35 .\Templates\recording_change.html:50
 msgid "Recording File"
 msgstr "录音文件"
 
-#: Templates/index_upload.html:40 Templates/index_upload.html:44
-#: Templates/password_reset.html:26 Templates/password_reset_confirm.html:23
-#: Templates/recording_change.html:55
+#: .\Templates\index_upload.html:40 .\Templates\index_upload.html:44
+#: .\Templates\password_reset.html:26
+#: .\Templates\password_reset_confirm.html:23
+#: .\Templates\recording_change.html:55
 msgid "Submit"
 msgstr "提交"
 
-#: Templates/index_upload.html:46
+#: .\Templates\index_upload.html:46
 msgid "A user can upload recordings if logged in and get email verified."
 msgstr "只有用户登陆并验证邮箱后可以上传录音"
 
-#: Templates/login.html:10
+#: .\Templates\login.html:10
 msgid "Registration Success!"
 msgstr "注册成功！"
 
-#: Templates/login.html:14 Templates/login.html:25
-#: Templates/password_reset_confirm.html:13
-#: Templates/password_reset_done.html:13 Templates/recording.html:14
-#: Templates/recording_change.html:14 Templates/user.html:14
-#: Templates/user_change.html:14 Templates/verification_fail.html:14
-#: Templates/verification_pending.html:14
+#: .\Templates\login.html:14 .\Templates\login.html:25
+#: .\Templates\password_reset_confirm.html:13
+#: .\Templates\password_reset_done.html:13 .\Templates\recording.html:14
+#: .\Templates\recording_change.html:14 .\Templates\user.html:14
+#: .\Templates\user_change.html:14 .\Templates\verification_fail.html:14
+#: .\Templates\verification_pending.html:14
 msgid "Back"
 msgstr "返回"
 
-#: Templates/login.html:33 Templates/user_change.html:24
+#: .\Templates\login.html:33 .\Templates\user_change.html:24
 msgid "Passwords should be the same!"
 msgstr "两次输入的密码不一致！"
 
-#: Templates/login.html:40 Templates/user_change.html:31
+#: .\Templates\login.html:40 .\Templates\user_change.html:31
 msgid "Your name is conflict with others!"
 msgstr "你的用户名与他人重复！"
 
-#: Templates/login.html:54 Templates/user_change.html:38
+#: .\Templates\login.html:54 .\Templates\user_change.html:38
 msgid "Registration failed due to some unkonwn reason!"
 msgstr "由于未知原因，注册失败！"
 
-#: Templates/login.html:61
+#: .\Templates\login.html:61
 msgid "Login failed!"
 msgstr "登陆失败！"
 
-#: Templates/login.html:71 Templates/login.html:88
-#: Templates/password_reset_complete.html:17
+#: .\Templates\login.html:71 .\Templates\login.html:88
+#: .\Templates\password_reset_complete.html:17
 msgid "Login"
 msgstr "登陆"
 
-#: Templates/login.html:77 Templates/login.html:100
-#: Templates/user_change.html:47
+#: .\Templates\login.html:77 .\Templates\login.html:100
+#: .\Templates\user_change.html:47
 msgid "User Name"
 msgstr "用户名"
 
-#: Templates/login.html:83 Templates/login.html:112
-#: Templates/user_change.html:59
+#: .\Templates\login.html:83 .\Templates\login.html:112
+#: .\Templates\user_change.html:59
 msgid "Password"
 msgstr "密码"
 
-#: Templates/login.html:90
+#: .\Templates\login.html:90
 msgid "Forget?"
 msgstr "忘记密码？"
 
-#: Templates/login.html:94 Templates/login.html:123
+#: .\Templates\login.html:94 .\Templates\login.html:123
 msgid "Register"
 msgstr "注册"
 
-#: Templates/login.html:106 Templates/user_change.html:53
+#: .\Templates\login.html:106 .\Templates\user_change.html:53
 msgid "Email"
 msgstr "邮箱"
 
-#: Templates/login.html:118 Templates/user_change.html:65
+#: .\Templates\login.html:118 .\Templates\user_change.html:65
 msgid "Password Again"
 msgstr "再次输入密码"
 
-#: Templates/password_reset.html:16
+#: .\Templates\password_reset.html:16
 msgid "Password Reset"
 msgstr "重置密码"
 
-#: Templates/password_reset.html:18
+#: .\Templates\password_reset.html:18
 msgid "Forgotten your password?"
 msgstr "忘记密码？"
 
-#: Templates/password_reset.html:21
+#: .\Templates\password_reset.html:21
 msgid ""
 "Enter your email address below, and we'll email instructions for setting a "
 "new one."
 msgstr "输入你的邮箱，我们将向您的邮箱发送重置密码的链接"
 
-#: Templates/password_reset_complete.html:10
+#: .\Templates\password_reset_complete.html:10
 msgid "Password reset complete"
 msgstr "密码重置完成"
 
-#: Templates/password_reset_complete.html:12
+#: .\Templates\password_reset_complete.html:12
 msgid "Your password has been set. You may go ahead and log in now."
 msgstr "你的密码已经设置，可以前往登陆"
 
-#: Templates/password_reset_confirm.html:16
+#: .\Templates\password_reset_confirm.html:16
 msgid "Enter New Password"
 msgstr "输入新密码"
 
-#: Templates/password_reset_confirm.html:18
+#: .\Templates\password_reset_confirm.html:18
 msgid ""
 "Please enter your new password twice so we can verify you typed it in "
 "correctly."
 msgstr "情输入两次你的密码以确保你没有输错"
 
-#: Templates/password_reset_done.html:16
+#: .\Templates\password_reset_done.html:16
 msgid "Password Reset Sent"
 msgstr "密码重置邮件已经发送"
 
-#: Templates/password_reset_done.html:18
+#: .\Templates\password_reset_done.html:18
 msgid ""
 "We've emailed you instructions for setting your password, if an account "
 "exists with the email you entered. You should receive them shortly."
 msgstr ""
 "我们已经发送了密码重置邮件，如果该邮箱有一个关联的账号，你将很快收到该邮件"
 
-#: Templates/password_reset_done.html:21
+#: .\Templates\password_reset_done.html:21
 msgid ""
 "If you don't receive an email, please make sure you've entered the address "
 "you registered with, and check your spam folder."
 msgstr ""
 "如果你没有收到邮件，情确保你输入了对应账号使用的邮箱，并且检查邮箱的垃圾箱"
 
-#: Templates/recording.html:37
+#: .\Templates\recording.html:37
 msgid "Your browser does not support the audio element."
 msgstr "你的浏览器不支持播放音频"
 
-#: Templates/recording.html:44 Templates/user.html:40
+#: .\Templates\recording.html:44 .\Templates\user.html:40
 msgid "Change Info"
 msgstr "更改录音信息"
 
-#: Templates/recording_change.html:51
+#: .\Templates\recording_change.html:51
 msgid ""
 "If you don't want to change the recording file, you can keep here blank."
 msgstr "如果你不想修改录音文件，可以忽略这项"
 
-#: Templates/recording_change.html:58
-#: venv/lib/python3.6/site-packages/django/forms/formsets.py:417
+#: .\Templates\recording_change.html:58
 msgid "Delete"
 msgstr "删除"
 
-#: Templates/recording_change.html:64
+#: .\Templates\recording_change.html:64
 msgid "Delete Recording"
 msgstr "删除录音"
 
-#: Templates/recording_change.html:68 Templates/user_change.html:94
+#: .\Templates\recording_change.html:68 .\Templates\user_change.html:94
 msgid "Please Confirm."
 msgstr "请确认"
 
-#: Templates/recording_change.html:69 Templates/user_change.html:95
+#: .\Templates\recording_change.html:69 .\Templates\user_change.html:95
 msgid "By clicking on the "
 msgstr "点击"
 
-#: Templates/recording_change.html:69 Templates/recording_change.html:80
-#: Templates/user_change.html:95 Templates/user_change.html:106
+#: .\Templates\recording_change.html:69 .\Templates\recording_change.html:80
+#: .\Templates\user_change.html:95 .\Templates\user_change.html:106
 msgid "Yep, Delete"
 msgstr "是的，删除"
 
-#: Templates/recording_change.html:69
+#: .\Templates\recording_change.html:69
 msgid ""
 " button, this recording will be permanently deleted and CANNOT be recovered."
 msgstr "按钮将会永久删除该录音，并且<b>不能</b>被恢复"
 
-#: Templates/recording_change.html:72 Templates/user_change.html:98
+#: .\Templates\recording_change.html:72 .\Templates\user_change.html:98
 msgid "Are you sure to delete it?"
 msgstr "你确定要删除吗？"
 
-#: Templates/recording_change.html:77 Templates/user_change.html:103
+#: .\Templates\recording_change.html:77 .\Templates\user_change.html:103
 msgid "Nope, Go Back"
 msgstr "不，返回"
 
-#: Templates/user.html:18 Templates/user_change.html:18
+#: .\Templates\user.html:18 .\Templates\user_change.html:18
 msgid "User Information"
 msgstr "用户信息"
 
-#: Templates/user.html:35
+#: .\Templates\user.html:35
 msgid "Joined on"
 msgstr "注册时间"
 
-#: Templates/user.html:45
+#: .\Templates\user.html:45
 msgid "Verify Email"
 msgstr "验证邮箱"
 
-#: Templates/user.html:51 Templates/user_change.html:82
+#: .\Templates\user.html:51 .\Templates\user_change.html:82
 msgid "Logout"
 msgstr "登出"
 
-#: Templates/user_change.html:72
+#: .\Templates\user_change.html:72
 msgid "Introduction"
 msgstr "介绍"
 
-#: Templates/user_change.html:78
+#: .\Templates\user_change.html:78
 msgid "Update"
 msgstr "更新"
 
-#: Templates/user_change.html:85 Templates/user_change.html:90
+#: .\Templates\user_change.html:85 .\Templates\user_change.html:90
 msgid "Delete User"
 msgstr "删除用户"
 
-#: Templates/user_change.html:95
+#: .\Templates\user_change.html:95
 msgid ""
 " button, current user will be permanently deleted and CANNOT be recovered."
 msgstr "键，当前用户将会被永久删除，并且<b>不能</b>被恢复"
 
-#: Templates/verification_fail.html:19
+#: .\Templates\verification_fail.html:19
 msgid "Verification Failed"
 msgstr "验证失败"
 
-#: Templates/verification_needed.html:14 Templates/verification_success.html:14
+#: .\Templates\verification_needed.html:14
+#: .\Templates\verification_success.html:14
 msgid "Home"
 msgstr "返回"
 
-#: Templates/verification_needed.html:19
+#: .\Templates\verification_needed.html:19
 msgid "Operation Failed"
 msgstr "操作失败"
 
-#: Templates/verification_needed.html:22
+#: .\Templates\verification_needed.html:22
 msgid "You need to first authenticate your email."
 msgstr "你需要先验证邮箱"
 
-#: Templates/verification_pending.html:19
+#: .\Templates\verification_pending.html:19
 msgid "Pending Verification"
 msgstr "等待验证"
 
-#: Templates/verification_success.html:19
+#: .\Templates\verification_success.html:19
 msgid "Verification Successed"
 msgstr "验证成功"
-
-#: venv/lib/python3.6/site-packages/django/contrib/messages/apps.py:7
-msgid "Messages"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/contrib/sitemaps/apps.py:8
-msgid "Site Maps"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/contrib/staticfiles/apps.py:9
-msgid "Static Files"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/contrib/syndication/apps.py:7
-#, fuzzy
-#| msgid "Introduction"
-msgid "Syndication"
-msgstr "介绍"
-
-#. Translators: String used to replace omitted page numbers in elided page
-#. range generated by paginators, e.g. [1, 2, '…', 5, 6, 7, '…', 9, 10].
-#: venv/lib/python3.6/site-packages/django/core/paginator.py:30
-msgid "…"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/core/paginator.py:51
-msgid "That page number is not an integer"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/core/paginator.py:53
-msgid "That page number is less than 1"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/core/paginator.py:58
-msgid "That page contains no results"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/core/validators.py:22
-msgid "Enter a valid value."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/core/validators.py:93
-#: venv/lib/python3.6/site-packages/django/forms/fields.py:675
-msgid "Enter a valid URL."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/core/validators.py:150
-msgid "Enter a valid integer."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/core/validators.py:161
-#, fuzzy
-#| msgid "Email is not a PKU email address."
-msgid "Enter a valid email address."
-msgstr "这不是一个北京大学邮箱"
-
-#. Translators: "letters" means latin letters: a-z and A-Z.
-#: venv/lib/python3.6/site-packages/django/core/validators.py:262
-msgid ""
-"Enter a valid “slug” consisting of letters, numbers, underscores or hyphens."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/core/validators.py:269
-msgid ""
-"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or "
-"hyphens."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/core/validators.py:278
-#: venv/lib/python3.6/site-packages/django/core/validators.py:288
-#: venv/lib/python3.6/site-packages/django/core/validators.py:311
-msgid "Enter a valid IPv4 address."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/core/validators.py:296
-#: venv/lib/python3.6/site-packages/django/core/validators.py:312
-msgid "Enter a valid IPv6 address."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/core/validators.py:306
-#: venv/lib/python3.6/site-packages/django/core/validators.py:310
-msgid "Enter a valid IPv4 or IPv6 address."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/core/validators.py:340
-msgid "Enter only digits separated by commas."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/core/validators.py:346
-#, python-format
-msgid "Ensure this value is %(limit_value)s (it is %(show_value)s)."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/core/validators.py:379
-#, python-format
-msgid "Ensure this value is less than or equal to %(limit_value)s."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/core/validators.py:388
-#, python-format
-msgid "Ensure this value is greater than or equal to %(limit_value)s."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/core/validators.py:398
-#, python-format
-msgid ""
-"Ensure this value has at least %(limit_value)d character (it has "
-"%(show_value)d)."
-msgid_plural ""
-"Ensure this value has at least %(limit_value)d characters (it has "
-"%(show_value)d)."
-msgstr[0] ""
-
-#: venv/lib/python3.6/site-packages/django/core/validators.py:413
-#, python-format
-msgid ""
-"Ensure this value has at most %(limit_value)d character (it has "
-"%(show_value)d)."
-msgid_plural ""
-"Ensure this value has at most %(limit_value)d characters (it has "
-"%(show_value)d)."
-msgstr[0] ""
-
-#: venv/lib/python3.6/site-packages/django/core/validators.py:432
-#: venv/lib/python3.6/site-packages/django/forms/fields.py:292
-#: venv/lib/python3.6/site-packages/django/forms/fields.py:327
-msgid "Enter a number."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/core/validators.py:434
-#, python-format
-msgid "Ensure that there are no more than %(max)s digit in total."
-msgid_plural "Ensure that there are no more than %(max)s digits in total."
-msgstr[0] ""
-
-#: venv/lib/python3.6/site-packages/django/core/validators.py:439
-#, python-format
-msgid "Ensure that there are no more than %(max)s decimal place."
-msgid_plural "Ensure that there are no more than %(max)s decimal places."
-msgstr[0] ""
-
-#: venv/lib/python3.6/site-packages/django/core/validators.py:444
-#, python-format
-msgid ""
-"Ensure that there are no more than %(max)s digit before the decimal point."
-msgid_plural ""
-"Ensure that there are no more than %(max)s digits before the decimal point."
-msgstr[0] ""
-
-#: venv/lib/python3.6/site-packages/django/core/validators.py:506
-#, python-format
-msgid ""
-"File extension “%(extension)s” is not allowed. Allowed extensions are: "
-"%(allowed_extensions)s."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/core/validators.py:559
-msgid "Null characters are not allowed."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/db/models/base.py:1210
-#: venv/lib/python3.6/site-packages/django/forms/models.py:768
-msgid "and"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/db/models/base.py:1212
-#, python-format
-msgid "%(model_name)s with this %(field_labels)s already exists."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/db/models/fields/__init__.py:100
-#, python-format
-msgid "Value %(value)r is not a valid choice."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/db/models/fields/__init__.py:101
-msgid "This field cannot be null."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/db/models/fields/__init__.py:102
-msgid "This field cannot be blank."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/db/models/fields/__init__.py:103
-#, python-format
-msgid "%(model_name)s with this %(field_label)s already exists."
-msgstr ""
-
-#. Translators: The 'lookup_type' is one of 'date', 'year' or 'month'.
-#. Eg: "Title must be unique for pub_date year"
-#: venv/lib/python3.6/site-packages/django/db/models/fields/__init__.py:107
-#, python-format
-msgid ""
-"%(field_label)s must be unique for %(date_field_label)s %(lookup_type)s."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/db/models/fields/__init__.py:126
-#, python-format
-msgid "Field of type: %(field_type)s"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/db/models/fields/__init__.py:958
-#, python-format
-msgid "“%(value)s” value must be either True or False."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/db/models/fields/__init__.py:959
-#, python-format
-msgid "“%(value)s” value must be either True, False, or None."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/db/models/fields/__init__.py:961
-msgid "Boolean (Either True or False)"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/db/models/fields/__init__.py:1002
-#, python-format
-msgid "String (up to %(max_length)s)"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/db/models/fields/__init__.py:1096
-msgid "Comma-separated integers"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/db/models/fields/__init__.py:1145
-#, python-format
-msgid ""
-"“%(value)s” value has an invalid date format. It must be in YYYY-MM-DD "
-"format."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/db/models/fields/__init__.py:1147
-#: venv/lib/python3.6/site-packages/django/db/models/fields/__init__.py:1290
-#, python-format
-msgid ""
-"“%(value)s” value has the correct format (YYYY-MM-DD) but it is an invalid "
-"date."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/db/models/fields/__init__.py:1150
-msgid "Date (without time)"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/db/models/fields/__init__.py:1288
-#, python-format
-msgid ""
-"“%(value)s” value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[."
-"uuuuuu]][TZ] format."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/db/models/fields/__init__.py:1292
-#, python-format
-msgid ""
-"“%(value)s” value has the correct format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
-"[TZ]) but it is an invalid date/time."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/db/models/fields/__init__.py:1296
-msgid "Date (with time)"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/db/models/fields/__init__.py:1444
-#, python-format
-msgid "“%(value)s” value must be a decimal number."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/db/models/fields/__init__.py:1446
-msgid "Decimal number"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/db/models/fields/__init__.py:1585
-#, python-format
-msgid ""
-"“%(value)s” value has an invalid format. It must be in [DD] [[HH:]MM:]ss[."
-"uuuuuu] format."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/db/models/fields/__init__.py:1588
-#, fuzzy
-#| msgid "Description"
-msgid "Duration"
-msgstr "介绍"
-
-#: venv/lib/python3.6/site-packages/django/db/models/fields/__init__.py:1638
-msgid "Email address"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/db/models/fields/__init__.py:1661
-msgid "File path"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/db/models/fields/__init__.py:1727
-#, python-format
-msgid "“%(value)s” value must be a float."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/db/models/fields/__init__.py:1729
-msgid "Floating point number"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/db/models/fields/__init__.py:1767
-#, python-format
-msgid "“%(value)s” value must be an integer."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/db/models/fields/__init__.py:1769
-msgid "Integer"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/db/models/fields/__init__.py:1852
-msgid "Big (8 byte) integer"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/db/models/fields/__init__.py:1867
-msgid "Small integer"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/db/models/fields/__init__.py:1875
-msgid "IPv4 address"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/db/models/fields/__init__.py:1906
-msgid "IP address"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/db/models/fields/__init__.py:1986
-#: venv/lib/python3.6/site-packages/django/db/models/fields/__init__.py:1987
-#, python-format
-msgid "“%(value)s” value must be either None, True or False."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/db/models/fields/__init__.py:1989
-msgid "Boolean (Either True, False or None)"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/db/models/fields/__init__.py:2043
-msgid "Positive big integer"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/db/models/fields/__init__.py:2056
-msgid "Positive integer"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/db/models/fields/__init__.py:2069
-msgid "Positive small integer"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/db/models/fields/__init__.py:2083
-#, python-format
-msgid "Slug (up to %(max_length)s)"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/db/models/fields/__init__.py:2115
-msgid "Text"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/db/models/fields/__init__.py:2181
-#, python-format
-msgid ""
-"“%(value)s” value has an invalid format. It must be in HH:MM[:ss[.uuuuuu]] "
-"format."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/db/models/fields/__init__.py:2183
-#, python-format
-msgid ""
-"“%(value)s” value has the correct format (HH:MM[:ss[.uuuuuu]]) but it is an "
-"invalid time."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/db/models/fields/__init__.py:2186
-#, fuzzy
-#| msgid "Timeline"
-msgid "Time"
-msgstr "时间线"
-
-#: venv/lib/python3.6/site-packages/django/db/models/fields/__init__.py:2312
-msgid "URL"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/db/models/fields/__init__.py:2334
-msgid "Raw binary data"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/db/models/fields/__init__.py:2399
-#, python-format
-msgid "“%(value)s” is not a valid UUID."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/db/models/fields/__init__.py:2401
-msgid "Universally unique identifier"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/db/models/fields/files.py:226
-msgid "File"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/db/models/fields/files.py:375
-msgid "Image"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/db/models/fields/json.py:18
-msgid "A JSON object"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/db/models/fields/json.py:20
-msgid "Value must be valid JSON."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/db/models/fields/related.py:790
-#, python-format
-msgid "%(model)s instance with %(field)s %(value)r does not exist."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/db/models/fields/related.py:792
-msgid "Foreign Key (type determined by related field)"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/db/models/fields/related.py:1045
-msgid "One-to-one relationship"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/db/models/fields/related.py:1099
-#, python-format
-msgid "%(from)s-%(to)s relationship"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/db/models/fields/related.py:1100
-#, python-format
-msgid "%(from)s-%(to)s relationships"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/db/models/fields/related.py:1142
-msgid "Many-to-many relationship"
-msgstr ""
-
-#. Translators: If found as last label character, these punctuation
-#. characters will prevent the default label_suffix to be appended to the label
-#: venv/lib/python3.6/site-packages/django/forms/boundfield.py:150
-msgid ":?.!"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/forms/fields.py:54
-msgid "This field is required."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/forms/fields.py:247
-msgid "Enter a whole number."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/forms/fields.py:402
-#: venv/lib/python3.6/site-packages/django/forms/fields.py:1143
-msgid "Enter a valid date."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/forms/fields.py:426
-#: venv/lib/python3.6/site-packages/django/forms/fields.py:1144
-msgid "Enter a valid time."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/forms/fields.py:454
-msgid "Enter a valid date/time."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/forms/fields.py:488
-msgid "Enter a valid duration."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/forms/fields.py:489
-#, python-brace-format
-msgid "The number of days must be between {min_days} and {max_days}."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/forms/fields.py:549
-msgid "No file was submitted. Check the encoding type on the form."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/forms/fields.py:550
-msgid "No file was submitted."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/forms/fields.py:551
-msgid "The submitted file is empty."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/forms/fields.py:553
-#, python-format
-msgid "Ensure this filename has at most %(max)d character (it has %(length)d)."
-msgid_plural ""
-"Ensure this filename has at most %(max)d characters (it has %(length)d)."
-msgstr[0] ""
-
-#: venv/lib/python3.6/site-packages/django/forms/fields.py:556
-msgid "Please either submit a file or check the clear checkbox, not both."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/forms/fields.py:617
-msgid ""
-"Upload a valid image. The file you uploaded was either not an image or a "
-"corrupted image."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/forms/fields.py:779
-#: venv/lib/python3.6/site-packages/django/forms/fields.py:869
-#: venv/lib/python3.6/site-packages/django/forms/models.py:1309
-#, python-format
-msgid "Select a valid choice. %(value)s is not one of the available choices."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/forms/fields.py:870
-#: venv/lib/python3.6/site-packages/django/forms/fields.py:985
-#: venv/lib/python3.6/site-packages/django/forms/models.py:1308
-msgid "Enter a list of values."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/forms/fields.py:986
-msgid "Enter a complete value."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/forms/fields.py:1202
-msgid "Enter a valid UUID."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/forms/fields.py:1232
-msgid "Enter a valid JSON."
-msgstr ""
-
-#. Translators: This is the default suffix added to form field labels
-#: venv/lib/python3.6/site-packages/django/forms/forms.py:76
-msgid ":"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/forms/forms.py:203
-#, python-format
-msgid "(Hidden field %(name)s) %(error)s"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/forms/formsets.py:61
-#, python-format
-msgid ""
-"ManagementForm data is missing or has been tampered with. Missing fields: "
-"%(field_names)s. You may need to file a bug report if the issue persists."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/forms/formsets.py:370
-#, python-format
-msgid "Please submit at most %d form."
-msgid_plural "Please submit at most %d forms."
-msgstr[0] ""
-
-#: venv/lib/python3.6/site-packages/django/forms/formsets.py:377
-#, python-format
-msgid "Please submit at least %d form."
-msgid_plural "Please submit at least %d forms."
-msgstr[0] ""
-
-#: venv/lib/python3.6/site-packages/django/forms/formsets.py:405
-#: venv/lib/python3.6/site-packages/django/forms/formsets.py:412
-msgid "Order"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/forms/models.py:763
-#, python-format
-msgid "Please correct the duplicate data for %(field)s."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/forms/models.py:767
-#, python-format
-msgid "Please correct the duplicate data for %(field)s, which must be unique."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/forms/models.py:773
-#, python-format
-msgid ""
-"Please correct the duplicate data for %(field_name)s which must be unique "
-"for the %(lookup)s in %(date_field)s."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/forms/models.py:782
-msgid "Please correct the duplicate values below."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/forms/models.py:1109
-msgid "The inline value did not match the parent instance."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/forms/models.py:1193
-msgid "Select a valid choice. That choice is not one of the available choices."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/forms/models.py:1311
-#, python-format
-msgid "“%(pk)s” is not a valid value."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/forms/utils.py:172
-#, python-format
-msgid ""
-"%(datetime)s couldn’t be interpreted in time zone %(current_timezone)s; it "
-"may be ambiguous or it may not exist."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/forms/widgets.py:403
-msgid "Clear"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/forms/widgets.py:404
-msgid "Currently"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/forms/widgets.py:405
-#, fuzzy
-#| msgid "Change Info"
-msgid "Change"
-msgstr "更改录音信息"
-
-#: venv/lib/python3.6/site-packages/django/forms/widgets.py:714
-msgid "Unknown"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/forms/widgets.py:715
-msgid "Yes"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/forms/widgets.py:716
-msgid "No"
-msgstr ""
-
-#. Translators: Please do not add spaces around commas.
-#: venv/lib/python3.6/site-packages/django/template/defaultfilters.py:817
-msgid "yes,no,maybe"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/template/defaultfilters.py:846
-#: venv/lib/python3.6/site-packages/django/template/defaultfilters.py:863
-#, python-format
-msgid "%(size)d byte"
-msgid_plural "%(size)d bytes"
-msgstr[0] ""
-
-#: venv/lib/python3.6/site-packages/django/template/defaultfilters.py:865
-#, python-format
-msgid "%s KB"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/template/defaultfilters.py:867
-#, python-format
-msgid "%s MB"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/template/defaultfilters.py:869
-#, python-format
-msgid "%s GB"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/template/defaultfilters.py:871
-#, python-format
-msgid "%s TB"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/template/defaultfilters.py:873
-#, python-format
-msgid "%s PB"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/dateformat.py:66
-msgid "p.m."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/dateformat.py:67
-msgid "a.m."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/dateformat.py:72
-msgid "PM"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/dateformat.py:73
-msgid "AM"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/dateformat.py:146
-msgid "midnight"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/dateformat.py:148
-msgid "noon"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:6
-msgid "Monday"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:6
-msgid "Tuesday"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:6
-msgid "Wednesday"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:6
-msgid "Thursday"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:6
-msgid "Friday"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:7
-msgid "Saturday"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:7
-msgid "Sunday"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:10
-msgid "Mon"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:10
-msgid "Tue"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:10
-msgid "Wed"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:10
-msgid "Thu"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:10
-msgid "Fri"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:11
-msgid "Sat"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:11
-msgid "Sun"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:14
-msgid "January"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:14
-msgid "February"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:14
-#, fuzzy
-#| msgid "Search"
-msgid "March"
-msgstr "搜索"
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:14
-msgid "April"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:14
-msgid "May"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:14
-msgid "June"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:15
-msgid "July"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:15
-msgid "August"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:15
-#, fuzzy
-#| msgid "Members"
-msgid "September"
-msgstr "成员"
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:15
-msgid "October"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:15
-#, fuzzy
-#| msgid "Members"
-msgid "November"
-msgstr "成员"
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:16
-#, fuzzy
-#| msgid "Members"
-msgid "December"
-msgstr "成员"
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:19
-msgid "jan"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:19
-msgid "feb"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:19
-msgid "mar"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:19
-msgid "apr"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:19
-msgid "may"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:19
-msgid "jun"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:20
-msgid "jul"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:20
-msgid "aug"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:20
-msgid "sep"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:20
-#, fuzzy
-#| msgid "Project"
-msgid "oct"
-msgstr "项目"
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:20
-msgid "nov"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:20
-msgid "dec"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:23
-msgctxt "abbrev. month"
-msgid "Jan."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:24
-msgctxt "abbrev. month"
-msgid "Feb."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:25
-#, fuzzy
-#| msgid "Search"
-msgctxt "abbrev. month"
-msgid "March"
-msgstr "搜索"
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:26
-msgctxt "abbrev. month"
-msgid "April"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:27
-msgctxt "abbrev. month"
-msgid "May"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:28
-msgctxt "abbrev. month"
-msgid "June"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:29
-msgctxt "abbrev. month"
-msgid "July"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:30
-msgctxt "abbrev. month"
-msgid "Aug."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:31
-msgctxt "abbrev. month"
-msgid "Sept."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:32
-msgctxt "abbrev. month"
-msgid "Oct."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:33
-msgctxt "abbrev. month"
-msgid "Nov."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:34
-msgctxt "abbrev. month"
-msgid "Dec."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:37
-msgctxt "alt. month"
-msgid "January"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:38
-msgctxt "alt. month"
-msgid "February"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:39
-#, fuzzy
-#| msgid "Search"
-msgctxt "alt. month"
-msgid "March"
-msgstr "搜索"
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:40
-msgctxt "alt. month"
-msgid "April"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:41
-msgctxt "alt. month"
-msgid "May"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:42
-msgctxt "alt. month"
-msgid "June"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:43
-msgctxt "alt. month"
-msgid "July"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:44
-msgctxt "alt. month"
-msgid "August"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:45
-#, fuzzy
-#| msgid "Members"
-msgctxt "alt. month"
-msgid "September"
-msgstr "成员"
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:46
-msgctxt "alt. month"
-msgid "October"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:47
-#, fuzzy
-#| msgid "Members"
-msgctxt "alt. month"
-msgid "November"
-msgstr "成员"
-
-#: venv/lib/python3.6/site-packages/django/utils/dates.py:48
-#, fuzzy
-#| msgid "Members"
-msgctxt "alt. month"
-msgid "December"
-msgstr "成员"
-
-#: venv/lib/python3.6/site-packages/django/utils/ipv6.py:8
-#, fuzzy
-#| msgid "Email is not a PKU email address."
-msgid "This is not a valid IPv6 address."
-msgstr "这不是一个北京大学邮箱"
-
-#: venv/lib/python3.6/site-packages/django/utils/text.py:71
-#, python-format
-msgctxt "String to return when truncating text"
-msgid "%(truncated_text)s…"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/text.py:240
-msgid "or"
-msgstr ""
-
-#. Translators: This string is used as a separator between list elements
-#: venv/lib/python3.6/site-packages/django/utils/text.py:259
-#: venv/lib/python3.6/site-packages/django/utils/timesince.py:94
-msgid ", "
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/utils/timesince.py:9
-#, python-format
-msgid "%d year"
-msgid_plural "%d years"
-msgstr[0] ""
-
-#: venv/lib/python3.6/site-packages/django/utils/timesince.py:10
-#, python-format
-msgid "%d month"
-msgid_plural "%d months"
-msgstr[0] ""
-
-#: venv/lib/python3.6/site-packages/django/utils/timesince.py:11
-#, python-format
-msgid "%d week"
-msgid_plural "%d weeks"
-msgstr[0] ""
-
-#: venv/lib/python3.6/site-packages/django/utils/timesince.py:12
-#, python-format
-msgid "%d day"
-msgid_plural "%d days"
-msgstr[0] ""
-
-#: venv/lib/python3.6/site-packages/django/utils/timesince.py:13
-#, python-format
-msgid "%d hour"
-msgid_plural "%d hours"
-msgstr[0] ""
-
-#: venv/lib/python3.6/site-packages/django/utils/timesince.py:14
-#, python-format
-msgid "%d minute"
-msgid_plural "%d minutes"
-msgstr[0] ""
-
-#: venv/lib/python3.6/site-packages/django/views/csrf.py:110
-msgid "Forbidden"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/views/csrf.py:111
-msgid "CSRF verification failed. Request aborted."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/views/csrf.py:115
-msgid ""
-"You are seeing this message because this HTTPS site requires a “Referer "
-"header” to be sent by your Web browser, but none was sent. This header is "
-"required for security reasons, to ensure that your browser is not being "
-"hijacked by third parties."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/views/csrf.py:120
-msgid ""
-"If you have configured your browser to disable “Referer” headers, please re-"
-"enable them, at least for this site, or for HTTPS connections, or for “same-"
-"origin” requests."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/views/csrf.py:124
-msgid ""
-"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or "
-"including the “Referrer-Policy: no-referrer” header, please remove them. The "
-"CSRF protection requires the “Referer” header to do strict referer checking. "
-"If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
-"\" …> for links to third-party sites."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/views/csrf.py:132
-msgid ""
-"You are seeing this message because this site requires a CSRF cookie when "
-"submitting forms. This cookie is required for security reasons, to ensure "
-"that your browser is not being hijacked by third parties."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/views/csrf.py:137
-msgid ""
-"If you have configured your browser to disable cookies, please re-enable "
-"them, at least for this site, or for “same-origin” requests."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/views/csrf.py:142
-msgid "More information is available with DEBUG=True."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/views/generic/dates.py:41
-msgid "No year specified"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/views/generic/dates.py:61
-#: venv/lib/python3.6/site-packages/django/views/generic/dates.py:111
-#: venv/lib/python3.6/site-packages/django/views/generic/dates.py:208
-msgid "Date out of range"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/views/generic/dates.py:90
-msgid "No month specified"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/views/generic/dates.py:142
-msgid "No day specified"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/views/generic/dates.py:188
-msgid "No week specified"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/views/generic/dates.py:338
-#: venv/lib/python3.6/site-packages/django/views/generic/dates.py:367
-#, python-format
-msgid "No %(verbose_name_plural)s available"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/views/generic/dates.py:594
-#, python-format
-msgid ""
-"Future %(verbose_name_plural)s not available because %(class_name)s."
-"allow_future is False."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/views/generic/dates.py:628
-#, python-format
-msgid "Invalid date string “%(datestr)s” given format “%(format)s”"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/views/generic/detail.py:54
-#, python-format
-msgid "No %(verbose_name)s found matching the query"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/views/generic/list.py:67
-msgid "Page is not “last”, nor can it be converted to an int."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/views/generic/list.py:72
-#, python-format
-msgid "Invalid page (%(page_number)s): %(message)s"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/views/generic/list.py:154
-#, python-format
-msgid "Empty list and “%(class_name)s.allow_empty” is False."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/views/static.py:40
-msgid "Directory indexes are not allowed here."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/views/static.py:42
-#, python-format
-msgid "“%(path)s” does not exist"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/views/static.py:80
-#, python-format
-msgid "Index of %(directory)s"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/views/templates/default_urlconf.html:7
-#: venv/lib/python3.6/site-packages/django/views/templates/default_urlconf.html:221
-msgid "The install worked successfully! Congratulations!"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/views/templates/default_urlconf.html:207
-#, python-format
-msgid ""
-"View <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
-"target=\"_blank\" rel=\"noopener\">release notes</a> for Django %(version)s"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/views/templates/default_urlconf.html:222
-#, python-format
-msgid ""
-"You are seeing this page because <a href=\"https://docs.djangoproject.com/en/"
-"%(version)s/ref/settings/#debug\" target=\"_blank\" rel=\"noopener"
-"\">DEBUG=True</a> is in your settings file and you have not configured any "
-"URLs."
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/views/templates/default_urlconf.html:230
-msgid "Django Documentation"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/views/templates/default_urlconf.html:231
-msgid "Topics, references, &amp; how-to’s"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/views/templates/default_urlconf.html:239
-msgid "Tutorial: A Polling App"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/views/templates/default_urlconf.html:240
-msgid "Get started with Django"
-msgstr ""
-
-#: venv/lib/python3.6/site-packages/django/views/templates/default_urlconf.html:248
-#, fuzzy
-#| msgid "Community"
-msgid "Django Community"
-msgstr "社区"
-
-#: venv/lib/python3.6/site-packages/django/views/templates/default_urlconf.html:249
-msgid "Connect, get help, or contribute"
-msgstr ""
