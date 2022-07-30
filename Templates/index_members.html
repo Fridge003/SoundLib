@@ -2,6 +2,7 @@
 
 {% load App_extras %}
 {% load static %}
+{% load i18n %}
 
 {% block content %}
 <div class="ui three doubling stackable link cards">
@@ -11,7 +12,7 @@
             <img class="ui left floated tiny image" src="{% static '/images/avatar2/matthew.png' %}">
             <div class="header">{{ show_user.get_username }}</div>
             <div class="meta">
-                Last login: {{ show_user.get_last_login}}
+                {% translate "Last login" %}: {{ show_user.get_last_login}}
             </div>
             <div class="description">
                 {{ show_user.get_introduction }}
@@ -19,11 +20,11 @@
         </div>
         <div class="extra content">
             <span class="right floated">
-                Joined in {{ show_user.get_join_date.date }}
+                {% translate "Joined in" %} {{ show_user.get_join_date.date }}
             </span>
             <span>
                 <i class="file audio outline icon"></i>
-                {{ show_user.NumRecordings }} Recordings
+                {{ show_user.NumRecordings }} {% translate "Recordings" %}
             </span>
         </div>
     </a>

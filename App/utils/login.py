@@ -3,8 +3,7 @@ from django.db.utils import IntegrityError
 from django.shortcuts import render
 from django.contrib.auth import authenticate, login
 from App.models import User
-
-from .index import render_index
+from django.utils.translation import gettext as _
 
 # Render the "login" page
 # Parameters include error messages when login or registration fails
@@ -16,7 +15,7 @@ def render_login(request,
     register_non_pku=False
     ) :
     context          = {}
-    context['hello'] = 'PKUpiano Sound Library!'
+    context['hello'] = _('PKUpiano Sound Library!')
     context['register_nonconsistency'] = register_nonconsistency
     context['register_non_pku'] = register_non_pku
     context['register_used_name'] = register_used_name

@@ -1,15 +1,17 @@
 {% extends 'base.html' %}
+
 {% load static %}
+{% load i18n %}
 
 {% block page %}
 
 {% if user.is_authenticated %}
 <div class="pusher">
-    <h4>Registration Success!</h4>
+    <h4>{% translate "Registration Success!" %}</h4>
     <div class="segment">
         <a href="/" class="ui left labeled icon button">
             <i class="left arrow icon"></i>
-            Back
+            {% translate "Back" %}
         </a>
     </div>
 </div>
@@ -20,7 +22,7 @@
         <div class="segment">
             <a href="/" class="ui left labeled icon button">
                 <i class="left arrow icon"></i>
-                Back
+                {% translate "Back" %}
             </a>
         </div>
         <!-- When error occurs -->
@@ -28,14 +30,14 @@
         <div class="ui error message">
             <i class="close icon"></i>
             <div class="header">
-                Passwords should be the same!
+                {% translate "Passwords should be the same!" %}
             </div>
         </div>
         {% elif register_used_name %}
         <div class="ui error message">
             <i class="close icon"></i>
             <div class="header">
-                Your name is conflict with others!
+                {% translate "Your name is conflict with others!" %}
             </div>
         </div>
         {% elif register_non_pku %}
@@ -49,14 +51,14 @@
         <div class="ui error message">
             <i class="close icon"></i>
             <div class="header">
-                Registration failed due to some unkonwn reason!
+                {% translate "Registration failed due to some unkonwn reason!" %}
             </div>
         </div>
         {% elif login_failed %}
         <div class="ui error message">
             <i class="close icon"></i>
             <div class="header">
-                Login failed!
+                {% translate "Login failed!" %}
             </div>
         </div>
         {% endif %}
@@ -66,59 +68,59 @@
                 <div class="middle aligned row">
                     <div class="column">
                         <div class="ui icon header">
-                            Login
+                            {% translate "Login" %}
                             <i class="User icon"></i>
                         </div>
                         <form class="ui form" method="post" enctype="multipart/form-data" action="/login/login/">
                             {% csrf_token %}
                             <div class="field">
-                                <label>User Name</label>
+                                <label>{% translate "User Name" %}</label>
                                 <div class="field">
                                     <input type="text" name="UserName" placeholder="User Name" required="required">
                                 </div>
                             </div>
                             <div class="field">
-                                <label>Password</label>
+                                <label>{% translate "Password" %}</label>
                                 <div class="field">
                                     <input type="password" name="Password" placeholder="Password" required="required">
                                 </div>
                             </div>
-                            <button class="ui primary positive button" type="submit">Login</button>
+                            <button class="ui primary positive button" type="submit">{% translate "Login" %}</button>
                         </form>
-                        <a href="/password_reset/" class="ui button" type="submit">Forget?</a>
+                        <a href="/password_reset/" class="ui button" type="submit">{% translate "Forget?" %}</a>
                     </div>
                     <div class="column">
                         <div class="ui icon header">
-                            Register
+                            {% translate "Register" %}
                             <i class="world icon"></i>
                         </div>
                         <form class="ui form" method="post" enctype="multipart/form-data" action="/login/register/">
                             {% csrf_token %}
                             <div class="field">
-                                <label>User Name</label>
+                                <label>{% translate "User Name" %}</label>
                                 <div class="field">
                                     <input type="text" name="UserName" placeholder="User Name" required="required">
                                 </div>
                             </div>
                             <div class="field">
-                                <label>Email</label>
+                                <label>{% translate "Email" %}</label>
                                 <div class="field">
                                     <input type="text" name="Email" placeholder="example@gmail.com" required="required">
                                 </div>
                             </div>
                             <div class="field">
-                                <label>Password</label>
+                                <label>{% translate "Password" %}</label>
                                 <div class="field">
                                     <input type="password" name="Password" placeholder="Password" required="required">
                                 </div>
                             </div>
                             <div class="field">
-                                <label>Password Again</label>
+                                <label>{% translate "Password Again" %}</label>
                                 <div class="field">
                                     <input type="password" name="Password2" placeholder="Password" required="required">
                                 </div>
                             </div>
-                            <button class="ui positive button" type="submit">Register</button>
+                            <button class="ui positive button" type="submit">{% translate "Register" %}</button>
                         </form>
                     </div>
                 </div>

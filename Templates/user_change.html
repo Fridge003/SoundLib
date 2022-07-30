@@ -1,39 +1,41 @@
 {% extends 'base.html' %}
+
 {% load App_extras %}
 {% load static %}
-{% block page %}
+{% load i18n %}
 
+{% block page %}
 <div class="pusher">
     <div class="ui container">
         <div class="ui divider"></div>
         <div class="segment">
             <a href="javascript:history.go(-1)" class="ui left labeled icon button">
                 <i class="left arrow icon"></i>
-                Back
+                {% translate "Back" %}
             </a>
         </div>
         {% csrf_token %}
-        <h3 class="ui dividing header">User Information</h3>
+        <h3 class="ui dividing header">{% translate "User Information" %}</h3>
         <!-- When error occurs -->
         {% if Inconsistency %}
         <div class="ui error message">
             <i class="close icon"></i>
             <div class="header">
-                Passwords should be the same!
+                {% translate "Passwords should be the same!" %}
             </div>
         </div>
         {% elif UsedName %}
         <div class="ui error message">
             <i class="close icon"></i>
             <div class="header">
-                Your name is conflict with others!
+                {% translate "Your name is conflict with others!" %}
             </div>
         </div>
         {% elif ChangeFailed %}
         <div class="ui error message">
             <i class="close icon"></i>
             <div class="header">
-                Registration failed due to some unkonwn reason!
+                {% translate "Registration failed due to some unkonwn reason!" %}
             </div>
         </div>
         {% endif %}
@@ -42,66 +44,66 @@
             <div class="two fields">
                 <div class="field">
                     <div class="field">
-                        <label>User Name</label>
+                        <label>{% translate "User Name" %}</label>
                         <div class="field">
                             <input type="text" name="UserName" value="{{ user.get_username }}" required="required">
                         </div>
                     </div>
                     <div class="field">
-                        <label>Email</label>
+                        <label>{% translate "Email" %}</label>
                         <div class="field">
                             <input type="text" name="Email" value="{{ user.get_email }}" required="required">
                         </div>
                     </div>
                     <div class="field">
-                        <label>Password</label>
+                        <label>{% translate "Password" %}</label>
                         <div class="field">
                             <input type="password" name="Password" placeholder="Password">
                         </div>
                     </div>
                     <div class="field">
-                        <label>Password Again</label>
+                        <label>{% translate "Password Again" %}</label>
                         <div class="field">
                             <input type="password" name="Password2" placeholder="Password">
                         </div>
                     </div>
                 </div>
                 <div class="field">
-                    <label>Introduction</label>
+                    <label>{% translate "Introduction" %}</label>
                     <div class="field">
                         <textarea type="input" name="Introduction" required="required">{{ user.get_introduction }}</textarea>
                     </div>
                 </div>
             </div>
-            <button class="ui positive button" type="submit">Update</button>
+            <button class="ui positive button" type="submit">{% translate "Update" %}</button>
         </form>
         <a href="/logout/" class="ui right labeled icon button">
             <i class="user outline icon"></i>
-            Logout
+            {% translate "Logout" %}
         </a>
         <a class="ui red button" id="coins" name="delete_button">
-            Delete User
+            {% translate "Delete User" %}
         </a>
         <div class="ui modal">
             <i class="close icon"></i>
             <div class="header">
-                Delete User
+                {% translate "Delete User" %}
             </div>
             <div class="content">
                 <div class="description">
-                    <div class="ui header">Please Confirm.</div>
-                    <p>By clicking on the "Yep, Delete" button, current user will be permanently deleted and CANNOT be recovered.</p>
-                    <p>If you registered with incorrect information, you can edit it in the user-info management page,
-                        it's not necessary to delete the user.</p>
-                    <p>Are you sure to delete it?</p>
+                    <div class="ui header">{% translate "Please Confirm." %}</div>
+                    <p>{% translate "By clicking on the " %}{% translate "Yep, Delete" %}{% translate " button, current user will be permanently deleted and CANNOT be recovered." %}</p>
+                    <p>{% translate "If you registered with incorrect information, you can edit it in the user-info management page,
+                        it's not necessary to delete the user." %}</p>
+                    <p>{% translate "Are you sure to delete it?" %}</p>
                 </div>
             </div>
             <div class="actions">
                 <div class="ui black deny button">
-                    Nope, Go Back
+                    {% translate "Nope, Go Back" %}
                 </div>
                 <button class="ui positive red right labeled icon button">
-                    Yep, Delete
+                    {% translate "Yep, Delete" %}
                     <i class="checkmark icon"></i>
                 </button>
             </div>

@@ -22,8 +22,11 @@ from django.contrib.auth import views as auth_views
 
 from django.conf import settings
 from django.conf.urls.static import static
+from django.conf.urls.i18n import i18n_patterns
 
-urlpatterns = [
+urlpatterns = [path('i18n/', include('django.conf.urls.i18n')),]
+
+urlpatterns += i18n_patterns(
     path('admin/', admin.site.urls),
     path('', views.hello),
     path('index/<str:tag>/<int:page>/', views.hello),
@@ -62,7 +65,7 @@ urlpatterns = [
         auth_views.PasswordResetCompleteView.as_view(template_name='password_reset_complete.html'),
         name="password_reset_complete",
     ),
-]
+)
 
 if settings.DEBUG: # in debug mode, django doesn't support media url
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,35 +1,37 @@
 {% extends 'base.html' %}
+
 {% load App_extras %}
 {% load static %}
-{% block page %}
+{% load i18n %}
 
+{% block page %}
 <div class="pusher">
     <div class="ui container">
         <div class="ui divider"></div>
         <div class="segment">
             <a href="javascript:history.go(-1)" class="ui left labeled icon button">
                 <i class="left arrow icon"></i>
-                Back
+                {% translate "Back" %}
             </a>
         </div>
         {% csrf_token %}
-        <h3 class="ui dividing header">Recording Information</h3>
+        <h3 class="ui dividing header">{% translate "Recording Information" %}</h3>
         <div class="ui raised segment">
             <div class="ui items">
                 {% for show_recording in RecordingList %}
                 <form class="ui form" id="change_form" method="post" enctype="multipart/form-data" action="{{ "/recording/"|addstr:show_recording.get_id|addstr:"/change/commit/" }}">
                     {% csrf_token %}
-                    <h3 class="ui dividing header">Recording Information</h3>
+                    <h3 class="ui dividing header">{% translate "Recording Information" %}</h3>
                     <div class="two fields">
                         <div class="field">
-                            <label>Recording Name</label>
+                            <label>{% translate "Recording Name" %}</label>
                             <div class="field">
                                 <input type="text" name="RecordingName" value="{{ show_recording.get_title }}"
                                     required="required">
                             </div>
                         </div>
                         <div class="field">
-                            <label>Composer Name</label>
+                            <label>{% translate "Composer Name" %}</label>
                             <div class="ui input">
                                 <input list="browsers" name="ComposerName" type="text" autocomplete="off" value="{{ show_recording.get_composer }}">
                                 <datalist id="browsers">
@@ -41,41 +43,41 @@
                         </div>
                     </div>
                     <div class="field">
-                        <label>Description</label>
+                        <label>{% translate "Description" %}</label>
                         <textarea type="input" name="Description">{{ show_recording.get_description }}</textarea>
                     </div>
                     <div class="field">
-                        <label>Recording File</label>
-                        If you don't want to change the recording file, you can keep here blank.
+                        <label>{% translate "Recording File" %}</label>
+                        {% translate "If you don't want to change the recording file, you can keep here blank." %}
                         <input type="file" name="File" />
                     </div>
                     <button class="ui primary button" type="submit" name="update_button">
-                        Submit
+                        {% translate "Submit" %}
                     </button>
                     <a class="ui red button" id="coins" name="delete_button">
-                        Delete
+                        {% translate "Delete" %}
                     </a>
                 </form>
                 <div class="ui modal">
                     <i class="close icon"></i>
                     <div class="header">
-                        Delete Recording
+                        {% translate "Delete Recording" %}
                     </div>
                     <div class="content">
                         <div class="description">
-                            <div class="ui header">Please Confirm.</div>
-                            <p>By clicking on the "Yep, Delete" button, this recording will be permanently deleted and CANNOT be recovered.</p>
-                            <p>If you uploaded the wrong piece, you can edit description or reload file in the recording management page,
-                                it's not necessary to delete the recording.</p>
-                            <p>Are you sure to delete it?</p>
+                            <div class="ui header">{% translate "Please Confirm." %}</div>
+                            <p>{% translate "By clicking on the " %}{% translate "Yep, Delete" %} {% translate " button, this recording will be permanently deleted and CANNOT be recovered." %}</p>
+                            <p>{% translate "If you uploaded the wrong piece, you can edit description or reload file in the recording management page,
+                                it's not necessary to delete the recording." %}</p>
+                            <p>{% translate "Are you sure to delete it?" %}</p>
                         </div>
                     </div>
                     <div class="actions">
                         <div class="ui black deny button">
-                            Nope, Go Back
+                            {% translate "Nope, Go Back" %}
                         </div>
                         <button class="ui positive red right labeled icon button">
-                            Yep, Delete
+                            {% translate "Yep, Delete" %}
                             <i class="checkmark icon"></i>
                         </button>
                     </div>

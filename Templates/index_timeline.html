@@ -2,6 +2,7 @@
 
 {% load App_extras %}
 {% load static %}
+{% load i18n %}
 
 {% block content %}
 <div class="ui three doubling stackable link cards">
@@ -10,16 +11,16 @@
         <div class="content">
             <div class="header">{{ show_recording.get_title }}</div>
             <div class="meta">
-                Uploaded by: {{ show_recording.get_username }}
+                {% translate "Uploaded by" %}: {{ show_recording.get_username }}
                 </br>
-                Composer : {{ show_recording.get_composer }}
+                {% translate "Composer" %} : {{ show_recording.get_composer }}
             </div>
             <div class="description">
                 {{ show_recording.get_description }}
             </div>
         </div>
         <div class="extra content">
-            Uploaded at {{ show_recording.get_upload_date }}
+            {% translate "Uploaded at" %} {{ show_recording.get_upload_date }}
         </div>
     </a>
     {% endfor %}

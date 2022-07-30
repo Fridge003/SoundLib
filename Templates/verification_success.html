@@ -1,20 +1,22 @@
 {% extends 'base.html' %}
+
 {% load App_extras %}
 {% load static %}
-{% block page %}
+{% load i18n %}
 
+{% block page %}
 <div class="pusher">
     <div class="ui container">
         <div class="ui divider"></div>
         <div class="segment">
             <a href="/" class="ui left labeled icon button">
                 <i class="left arrow icon"></i>
-                Home
+                {% translate "Home" %}
             </a>
         </div>
         {% csrf_token %}
         <h1>
-            Verification Successed
+            {% translate "Verification Successed" %}
         </h1>
         <p>
             {{ Reason }}

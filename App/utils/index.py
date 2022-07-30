@@ -7,6 +7,7 @@ from App.models import User, Recording, Composer, get_all_available_composers
 from App.utils.search import default_search
 from django.conf import settings
 from django.db.models import Count
+from django.utils.translation import gettext as _
 
 def render_index(OriginalRequest, SelectedTag=None, SelectedPage=None) :
 
@@ -42,7 +43,7 @@ def render_index(OriginalRequest, SelectedTag=None, SelectedPage=None) :
         AllComposers = get_all_available_composers()
     
     context                 = {}
-    context['hello']        = 'PKUpiano Sound Library!'
+    context['hello']        = _('PKUpiano Sound Library!')
     context['List']         = SelectedItems
     context['SelectedTag']  = SelectedTag
     context['CurrentPage']  = SelectedPage

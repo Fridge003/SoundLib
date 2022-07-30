@@ -1,19 +1,21 @@
 {% extends 'base.html' %}
+
 {% load App_extras %}
 {% load static %}
-{% block page %}
+{% load i18n %}
 
+{% block page %}
 <div class="pusher">
     <div class="ui container">
         <div class="ui divider"></div>
         <div class="segment">
             <a href="javascript:history.go(-1)" class="ui left labeled icon button">
                 <i class="left arrow icon"></i>
-                Back
+                {% translate "Back" %}
             </a>
         </div>
         {% csrf_token %}
-        <h3 class="ui dividing header">User Information</h3>
+        <h3 class="ui dividing header">{% translate "User Information" %}</h3>
         <div class="ui raised segment">
             <div class="ui items">
                 {% for show_user in UserList %}
@@ -24,29 +26,29 @@
                     <div class="content">
                         <a class="header">{{ show_user.get_username }}</a>
                         <div class="meta">
-                            <span>Description</span>
+                            <span>{% translate "Description" %}</span>
                         </div>
                         <div class="description">
                             <p>{{ show_user.get_introduction }}</p>
                         </div>
                         <div class="extra">
-                            Joined on {{ show_user.date_joined }}
+                            {% translate "Joined on" %} {{ show_user.date_joined }}
                             {% if user.get_username == show_user.get_username %}
                             <div class="segment">
                                 <a href="{{ " /user/"|addstr:user.get_username|addstr:"/change/" }}" class="ui left floated left labeled icon button">
                                     <i class="pencil alternate icon"></i>
-                                    Change Info
+                                    {% translate "Change Info" %}
                                 </a>
                                 {% if user.get_verification_status == False %}
                                 <a href="{{ " /user/"|addstr:user.get_username|addstr:"/verify/" }}" class="ui left floated left labeled icon button">
                                     <i class="check square outline icon"></i>
-                                    Verify Email
+                                    {% translate "Verify Email" %}
                                 </a>
                                 {% endif %}
                             </div>
                             <a href="/logout/" class="ui right floated right labeled icon button">
                                 <i class="user outline icon"></i>
-                                Logout
+                                {% translate "Logout" %}
                             </a>
                             {% endif %}
                         </div>

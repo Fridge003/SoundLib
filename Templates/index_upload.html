@@ -2,20 +2,21 @@
 
 {% load App_extras %}
 {% load static %}
+{% load i18n %}
 
 {% block content %}
 <form class="ui form" method="post" enctype="multipart/form-data" action="/upload/">
     {% csrf_token %}
-    <h3 class="ui dividing header">Recording Information</h3>
+    <h3 class="ui dividing header">{% translate "Recording Information" %}</h3>
     <div class="two fields">
         <div class="field">
-            <label>Recording Name</label>
+            <label>{% translate "Recording Name" %}</label>
             <div class="field">
                 <input type="text" name="RecordingName" placeholder="Recording Name" required="required">
             </div>
         </div>
         <div class="field">
-            <label>Composer Name</label>
+            <label>{% translate "Composer Name" %}</label>
             <div class="ui input">
                 <input list="browsers" name="ComposerName" type="text" autocomplete="off">
                 <datalist id="browsers">
@@ -27,22 +28,22 @@
         </div>
     </div>
     <div class="field">
-        <label>Description</label>
+        <label>{% translate "Description" %}</label>
         <textarea type="input" name="Description" placeholder="Enter details here..."></textarea>
     </div>
     <div class="field">
-        <label>Recording File</label>
+        <label>{% translate "Recording File" %}</label>
         <input type="file" name="File" required/>
     </div>
     {% if user.get_verification_status %}
     <button class="massive ui primary button" type="submit">
-        Submit
+        {% translate "Submit" %}
     </button>
     {% else %}
     <button class="massive disabled ui primary button" type="submit">
-        Submit
+        {% translate "Submit" %}
     </button>
-    <p>A user can upload recordings if logged in and get email verified.</p>
+    <p>{% translate "A user can upload recordings if logged in and get email verified." %}</p>
     {% endif %}
 </form>
 {% endblock %}

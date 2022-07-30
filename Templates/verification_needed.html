@@ -1,23 +1,25 @@
 {% extends 'base.html' %}
+
 {% load App_extras %}
 {% load static %}
-{% block page %}
+{% load i18n %}
 
+{% block page %}
 <div class="pusher">
     <div class="ui container">
         <div class="ui divider"></div>
         <div class="segment">
             <a href="/" class="ui left labeled icon button">
                 <i class="left arrow icon"></i>
-                Home
+                {% translate "Home" %}
             </a>
         </div>
         {% csrf_token %}
         <h1>
-            Operation Failed
+            {% translate "Operation Failed" %}
         </h1>
         <p>
-            You need to first authenticate your email.
+            {% translate "You need to first authenticate your email." %}
         </p>
     </div>
 </div>

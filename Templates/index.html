@@ -1,6 +1,9 @@
 {% extends 'base.html' %}
+
 {% load App_extras %}
 {% load static %}
+{% load i18n %}
+
 {% block page %}
 <div class="pusher">
     <!-- Menu bar -->
@@ -10,47 +13,47 @@
             {% endblock %}
             {% if SelectedTag == "timeline" %}
             <a class="active item" href="/index/timeline/0/">
-                Timeline
+                {% translate "Timeline" %}
             </a>
             {% else %}
             <a class="item" href="/index/timeline/0/">
-                Timeline
+                {% translate "Timeline" %}
             </a>
             {% endif %}
             {% if SelectedTag == "members" %}
             <a class="active item" href="/index/members/0/">
-                Members
+                {% translate "Members" %}
             </a>
             {% else %}
             <a class="item" href="/index/members/0/">
-                Members
+                {% translate "Members" %}
             </a>
             {% endif %}
             {% if SelectedTag == "composers" %}
             <a class="active item" href="/index/composers/0/">
-                Composers
+                {% translate "Composers" %}
             </a>
             {% else %}
             <a class="item" href="/index/composers/0/">
-                Composers
+                {% translate "Composers" %}
             </a>
             {% endif %}
             {% if SelectedTag == "upload" %}
             <a class="active item" href="/index/upload/">
-                Upload
+                {% translate "Upload" %}
             </a>
             {% else %}
             <a class="item" href="/index/upload/">
-                Upload
+                {% translate "Upload" %}
             </a>
             {% endif %}
             {% if SelectedTag == "about" %}
             <a class="active item" href="/index/about/">
-                About
+                {% translate "About" %}
             </a>
             {% else %}
             <a class="item" href="/index/about/">
-                About
+                {% translate "About" %}
             </a>
             {% endif %}
             <div class="right menu">
@@ -60,7 +63,7 @@
                         <input type="text" name="Keyword" placeholder="Anything">
                         <button class="ui inverted right labeled icon button" type="submit">
                             <i class="search icon"></i>
-                            Search
+                            {% translate "Search" %}
                         </button>
                     </form>
                 </div>

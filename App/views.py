@@ -4,6 +4,7 @@ from django.core.files.storage import FileSystemStorage
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout as logout_user
 from django.contrib.auth import authenticate, login
+from django.utils.translation import gettext as _
 
 import datetime
 from App.models import Recording, User
@@ -218,9 +219,10 @@ def verify_email(Request, **kwargs) :
     context = {"Reason": ""}
 
     if email[-15:] != "@stu.pku.edu.cn" and email[-11:] != "@pku.edu.cn" :
-        context["Reason"] = "Email is not a PKU email address."
+        context["Reason"] = _("Email is not a PKU email address.")
         return render(Request, "verification_fail.html", context)
     else :
+        context["Reason"] = _("We have send you a verification email, please check your inbox.")
         send_verification_email(Request.user)
         return render(Request, "verification_pending.html", context)
 

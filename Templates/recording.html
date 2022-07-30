@@ -1,19 +1,21 @@
 {% extends 'base.html' %}
+
 {% load App_extras %}
 {% load static %}
-{% block page %}
+{% load i18n %}
 
+{% block page %}
 <div class="pusher">
     <div class="ui container">
         <div class="ui divider"></div>
         <div class="segment">
             <a href="javascript:history.go(-1)" class="ui left labeled icon button">
                 <i class="left arrow icon"></i>
-                Back
+                {% translate "Back" %}
             </a>
         </div>
         {% csrf_token %}
-        <h3 class="ui dividing header">Recording Information</h3>
+        <h3 class="ui dividing header">{% translate "Recording Information" %}</h3>
         <div class="ui raised segment">
             <div class="ui items">
                 {% for show_recording in RecordingList %}
@@ -21,25 +23,25 @@
                     <div class="content">
                         <div class="header">{{ show_recording.get_title }}</div>
                         <div class="meta">
-                            Uploaded by: {{ show_recording.get_username }}
+                            {% translate "Uploaded by" %}: {{ show_recording.get_username }}
                         </br>
-                            Composer : {{ show_recording.get_composer }}
+                            {% translate "Composer" %}: {{ show_recording.get_composer }}
                         </div>
                         <div class="description">
                             {{ show_recording.get_description }}
                         </div>
                         <div class="extra">
-                            Uploaded at {{ show_recording.get_upload_date }}
+                            {% translate "Uploaded at" %} {{ show_recording.get_upload_date }}
                             <div id="play">
                                 <audio src="{{ show_recording.get_file_url }}" controls="controls">
-                                    Your browser does not support the audio element.
+                                    {% translate "Your browser does not support the audio element." %}
                                 </audio>
                             </div>
                             {% if user.get_username == show_recording.get_user %}
                             <div class="segment">
                                 <a href="{{ " /recording/"|addstr:show_recording.get_id|addstr:"/change/" }}" class="ui left floated left labeled icon button">
                                     <i class="pencil alternate icon"></i>
-                                    Change Info
+                                    {% translate "Change Info" %}
                                 </a>
                             </div>
                             {% endif %}
