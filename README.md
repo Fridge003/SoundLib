@@ -13,7 +13,7 @@ SoundLib (abbreviation of sound library), provides a site for users to upload th
 - [ ] Detailed view: detailed view of recordings, composers and users when clicking on entries.
 - [x] About page: add an about page.
 - [ ] Admin page: have access to anything.
-- [ ] Translations: support Chinse and English.
+- [x] Translations: support Chinse and English.
 
 ## Project Introduction
 
