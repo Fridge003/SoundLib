@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-31 21:06+0800\n"
+"POT-Creation-Date: 2022-07-31 21:12+0800\n"
 "PO-Revision-Date: 2022-07-30 12:38+0800\n"
 "Last-Translator: Boshi An, boshi_an@stu.pku.edu.cn\n"
 "Language-Team: Boshi An, boshi_an@stu.pku.edu.cn\n"
@@ -114,6 +114,10 @@ msgstr "上传录音"
 msgid "About"
 msgstr "关于"
 
+#: .\Templates\index.html:63
+msgid "Anything"
+msgstr "搜索任何东西"
+
 #: .\Templates\index.html:66
 msgid "Search"
 msgstr "搜索"
@@ -154,7 +158,8 @@ msgstr "上传于"
 msgid "Recording Information"
 msgstr "录音信息"
 
-#: .\Templates\index_upload.html:13 .\Templates\recording_change.html:22
+#: .\Templates\index_upload.html:13 .\Templates\index_upload.html:15
+#: .\Templates\recording_change.html:22
 msgid "Recording Name"
 msgstr "录音名称"
 
@@ -166,6 +171,10 @@ msgstr "作曲家名称"
 #: .\Templates\user.html:24
 msgid "Description"
 msgstr "介绍"
+
+#: .\Templates\index_upload.html:32
+msgid "Enter details here..."
+msgstr "在这里输入介绍"
 
 #: .\Templates\index_upload.html:35 .\Templates\recording_change.html:45
 msgid "Recording File"
@@ -211,13 +220,16 @@ msgstr "登陆失败！"
 msgid "Login"
 msgstr "登陆"
 
-#: .\Templates\login.html:72 .\Templates\login.html:95
+#: .\Templates\login.html:72 .\Templates\login.html:74
+#: .\Templates\login.html:95 .\Templates\login.html:97
 #: .\Templates\user_change.html:42
 msgid "User Name"
 msgstr "用户名"
 
-#: .\Templates\login.html:78 .\Templates\login.html:107
-#: .\Templates\user_change.html:54
+#: .\Templates\login.html:78 .\Templates\login.html:80
+#: .\Templates\login.html:107 .\Templates\login.html:109
+#: .\Templates\login.html:115 .\Templates\user_change.html:54
+#: .\Templates\user_change.html:56 .\Templates\user_change.html:62
 msgid "Password"
 msgstr "密码"
 

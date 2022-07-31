@@ -60,7 +60,7 @@
                 <div class="item">
                     <form class="ui action input" method="post" enctype="multipart/form-data" action="{% url 'index' tag='search' page=0 %}">
                         {% csrf_token %}
-                        <input type="text" name="Keyword" placeholder="Anything">
+                        <input type="text" name="Keyword" placeholder="{% translate 'Anything' %}">
                         <button class="ui inverted right labeled icon button" type="submit">
                             <i class="search icon"></i>
                             {% translate "Search" %}
