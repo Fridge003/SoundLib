@@ -44,6 +44,9 @@ urlpatterns += i18n_patterns(
     path('recording/<int:id>/', views.recording_info, name="recording_info"),
     path('recording/<int:id>/change/', views.recording_change, name="recording_change"),
     path('recording/<int:id>/change/commit/', views.recording_change_commit, name="recording_change_commit"),
+    path('composer/<int:id>/', views.composer_info, name="composer_info"),
+    path('composer/<int:id>/change/', views.composer_change, name="composer_change"),
+    path('composer/<int:id>/change/commit/', views.composer_change_commit, name="composer_change_commit"),
     path('error/verification_needed/', views.error_email_not_verified, name="error_email_not_verified"),
     path(
         "password_reset/",

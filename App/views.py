@@ -7,13 +7,15 @@ from django.contrib.auth import authenticate, login
 from django.utils.translation import gettext as _
 
 import datetime
-from App.models import Recording, User
+from App import models
+from App.models import Recording, User, Composer
 
 from App.utils.index import render_index
 from App.utils.login import render_login, process_login_form, process_register_form
 from App.utils.upload import process_upload
 from App.utils.user import render_user_change, render_user_info, process_user_change_form, process_user_delete, process_verification, verification_required, send_verification_email
 from App.utils.recording import render_recording_info, render_recording_change, process_recording_change, process_recording_delete
+from App.utils.composer import render_composer_info, render_composer_change, process_composer_change
 from django.utils.html import escape
  # Index page
 def hello(Request, **kwargs):
@@ -211,7 +213,6 @@ def recording_change_commit(Request, **kwargs) :
         res = process_recording_delete(SelectedRecording)
         return redirect('/')
     
-
 # The link to send a verification email
 def verify_email(Request, **kwargs) :
 
@@ -247,3 +248,28 @@ def verify_email_process(Request, **kwargs):
 def error_email_not_verified(Request) :
 
     return render(Request, "verification_needed.html", {})
+
+def composer_info(Request, **kwargs) :
+
+    SelectedComposer = Composer.objects.filter(Id=kwargs["id"]).get()
+
+    return render_composer_info(Request, SelectedComposer)
+
+def composer_change(Request, **kwargs) :
+
+    SelectedComposer = Composer.objects.filter(Id=kwargs["id"]).get()
+
+    return render_composer_change(Request, SelectedComposer)
+
+def composer_change_commit(Request, **kwargs) :
+
+    SelectedComposer = Composer.objects.filter(Id=kwargs["id"]).get()
+    Name = Request.POST.get('Name')
+    Introduction = Request.POST.get('Introduction')
+
+    Res = process_composer_change(SelectedComposer, Name, Introduction)
+
+    if Res["ChangeFailed"] == True :
+        return render_composer_change(Request, SelectedComposer, **Res)
+    else :
+        return render_composer_info(Request, SelectedComposer)

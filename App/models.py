@@ -102,17 +102,21 @@ class User(AbstractUser):
 
 class Composer(models.Model) :
 
-    Name = models.CharField(max_length=255, unique=True, primary_key=True)
+    Id = models.AutoField(primary_key=True, unique=True)
+    Name = models.CharField(max_length=255, unique=True)
     Introduction = models.CharField(max_length=65535, default="Empty")
     Country = models.CharField(max_length=255, default="Unknown")
     Birthday = models.DateField(default=datetime.date(year=1900, month=1, day=1))
     Deathday = models.DateField(default=datetime.date(year=1900, month=1, day=1))
     Alive = models.BooleanField(default=False)
 
+    def get_id(self) :
+        return self.Id
+
     def get_name(self) :
         return self.Name
     
-    def get_description(self) :
+    def get_introduction(self) :
         return self.Introduction
     
     def get_country(self) :
@@ -166,6 +170,15 @@ class Recording(models.Model) :
 
 def get_all_available_composers() :
 
-    ComposerList = Composer.objects.annotate(NumRecordings=Count('Recordings')).filter(NumRecordings__gte=1).order_by('-NumRecordings').all()
+    ComposerList = Composer.objects.annotate(NumRecordings=Count('Recordings')).order_by('-NumRecordings').all()
     
     return ComposerList
+
+def remove_empty_composers(Suggestions=None) :
+
+    if Suggestions is None :
+        ComposerList = Composer.objects.annotate(NumRecordings=Count('Recordings')).filter(NumRecordings__exact=0).all()
+    else :
+        ComposerList = Composer.objects.filter(Name=Suggestions).annotate(NumRecordings=Count('Recordings')).filter(NumRecordings__exact=0).all()
+    
+    ComposerList.delete()

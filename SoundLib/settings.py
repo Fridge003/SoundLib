@@ -87,7 +87,7 @@ DATABASES = {
     # migrated from sqlite to postgresql
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'test',
+        'NAME': 'SoundLib',
         'USER': 'postgres',
         'PASSWORD': 'AnBS392854382',
         'HOST': 'localhost',

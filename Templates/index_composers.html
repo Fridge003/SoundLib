@@ -7,7 +7,7 @@
 {% block content %}
 <div class="ui link cards">
     {% for show_composer in AllComposers %}
-    <div class="ui raised link card">
+    <a class="ui raised link card" href="{% url 'composer_info' id=show_composer.get_id %}">
         <div class="content">
             <div class="header">{{ show_composer.get_name }}</div>
             <div class="meta">
@@ -26,7 +26,7 @@
                 {{ show_composer.NumRecordings }}
             </span>
         </div>
-    </div>
+    </a>
     {% endfor %}
 </div>
 {% endblock %}

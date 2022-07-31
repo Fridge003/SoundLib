@@ -17,7 +17,7 @@ SoundLib (abbreviation of sound library), provides a site for users to upload th
 
 ## Project Introduction
 
-Clone the project, install all dependencies (django) manually, and run the server using command `python manage.py runserver` to start.
+Clone the project, install all dependencies (django) manually, and run the server using command `python manage.py runserver` to start. For production use, please run via uwsgi (see uwsgi.ini), which automatically configures the website to non-debug mode and runs silently in the background.
 
 ### Upload Recordings
 

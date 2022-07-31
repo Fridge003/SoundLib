@@ -18,9 +18,11 @@
                     <div class="content">
                         <div class="header">{{ show_recording.get_title }}</div>
                         <div class="meta">
-                            {% translate "Uploaded by" %}: {{ show_recording.get_username }}
-                        </br>
+                        <a class="ui link" href="{% url 'composer_info' id=show_recording.Composer.get_id %}">
                             {% translate "Composer" %}: {{ show_recording.get_composer }}
+                        </a>
+                        <p>{% translate "Uploaded by" %}: {{ show_recording.get_username }}</p>
+                        </br>
                         </div>
                         <div class="description">
                             {{ show_recording.get_description }}
