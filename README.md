@@ -10,7 +10,7 @@ SoundLib (abbreviation of sound library), provides a site for users to upload th
 - [x] Forget password: send email to reset password.
 - [x] Database: need to add Recording and Composer database.
 - [x] Search: search entries from databases and show the result.
-- [ ] Detailed view: detailed view of recordings, composers and users when clicking on entries.
+- [x] Detailed view: detailed view of recordings, composers and users when clicking on entries.
 - [x] About page: add an about page.
 - [ ] Admin page: have access to anything.
 - [x] Translations: support Chinse and English.
