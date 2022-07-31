@@ -46,6 +46,8 @@ def render_index(OriginalRequest, SelectedTag=None, SelectedPage=None) :
     elif SelectedTag == "composers" :
         AllComposers = get_all_available_composers()
         HavePages = True
+    elif SelectedTag == "about" :
+        HavePages = False
     
     context                 = {}
     context['hello']        = _('PKUpiano Sound Library!')

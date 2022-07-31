@@ -5,7 +5,7 @@
 {% load i18n %}
 
 {% block content %}
-<form class="ui form" method="post" enctype="multipart/form-data" action="/upload/">
+<form class="ui form" method="post" enctype="multipart/form-data" action="{% url 'upload' %}">
     {% csrf_token %}
     <h3 class="ui dividing header">{% translate "Recording Information" %}</h3>
     <div class="two fields">

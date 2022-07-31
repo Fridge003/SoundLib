@@ -7,7 +7,7 @@
 {% block content %}
 <div class="ui three doubling stackable link cards">
     {% for show_recording in List %}
-    <a class="ui fluid raised link card" href="{{ " /recording/"|addstr:show_recording.get_id|addstr:"/" }}">
+    <a class="ui fluid raised link card" href="{% url 'recording_info' id=show_recording.get_id %}">
         <div class="content">
             <div class="header">{{ show_recording.get_title }}</div>
             <div class="meta">

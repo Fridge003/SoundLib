@@ -7,7 +7,7 @@
 {% block content %}
 <div class="ui three doubling stackable link cards">
     {% for show_user in List %}
-    <a class="ui fluid raised link card" href="{{ " /user/"|addstr:show_user.get_username|addstr:"/" }}">
+    <a class="ui fluid raised link card" href="{% url 'user_info' username=show_user.get_username %}">
         <div class="content">
             <img class="ui left floated tiny image" src="{% static '/images/avatar2/matthew.png' %}">
             <div class="header">{{ show_user.get_username }}</div>

@@ -8,12 +8,7 @@
 <div class="pusher">
     <div class="ui container">
         <div class="ui divider"></div>
-        <div class="segment">
-            <a href="javascript:history.go(-1)" class="ui left labeled icon button">
-                <i class="left arrow icon"></i>
-                {% translate "Back" %}
-            </a>
-        </div>
+        {% include 'util_back.html' %}
         {% csrf_token %}
         <h3 class="ui dividing header">{% translate "User Information" %}</h3>
         <div class="ui raised segment">
@@ -35,18 +30,18 @@
                             {% translate "Joined on" %} {{ show_user.date_joined }}
                             {% if user.get_username == show_user.get_username %}
                             <div class="segment">
-                                <a href="{{ " /user/"|addstr:user.get_username|addstr:"/change/" }}" class="ui left floated left labeled icon button">
+                                <a href="{% url 'user_info_change' username=user.get_username %}" class="ui left floated left labeled icon button">
                                     <i class="pencil alternate icon"></i>
-                                    {% translate "Change Info" %}
+                                    {% translate "Change User Info" %}
                                 </a>
                                 {% if user.get_verification_status == False %}
-                                <a href="{{ " /user/"|addstr:user.get_username|addstr:"/verify/" }}" class="ui left floated left labeled icon button">
+                                <a href="{% url 'verify_email' username=user.get_username %}" class="ui left floated left labeled icon button">
                                     <i class="check square outline icon"></i>
                                     {% translate "Verify Email" %}
                                 </a>
                                 {% endif %}
                             </div>
-                            <a href="/logout/" class="ui right floated right labeled icon button">
+                            <a href="{% url 'logout' %}" class="ui right floated right labeled icon button">
                                 <i class="user outline icon"></i>
                                 {% translate "Logout" %}
                             </a>

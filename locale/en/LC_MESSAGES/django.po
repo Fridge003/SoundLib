@@ -1,396 +1,408 @@
-# SoundLib by PKUPiano.
-# Copyright (C) 2022 PKUPiano. All rights reserved.
-# This file is distributed under the same license as the SoundLib package.
-# Boshi An, boshi_an@stu.pku.edu.cn, 2022.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: 1.0\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-07-31 21:06+0800\n"
-"PO-Revision-Date: 2022-07-30 12:38+0800\n"
-"Last-Translator: Boshi An, boshi_an@stu.pku.edu.cn\n"
-"Language-Team: Boshi An, boshi_an@stu.pku.edu.cn\n"
-"Language: zh_hans\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: .\App\utils\index.py:53 .\App\utils\login.py:18
 msgid "PKUpiano Sound Library!"
-msgstr "北京大学钢琴社：声音图书馆"
+msgstr "PKUpiano Sound Library!"
 
 #: .\App\utils\user.py:105
 msgid "Congratulations! You can now access the full content of this website."
-msgstr "恭喜你验证成功！现在你可以使用该网站的全部功能了"
+msgstr "Congratulations! You can now access the full content of this website."
 
 #: .\App\utils\user.py:107
 msgid "Verification code incorrect!"
-msgstr "验证失败！"
+msgstr "Verification code incorrect!"
 
 #: .\App\views.py:223
 msgid "Email is not a PKU email address."
-msgstr "这不是一个北京大学邮箱"
+msgstr "Email is not a PKU email address."
 
 #: .\App\views.py:226
 msgid "We have send you a verification email, please check your inbox."
-msgstr "我们向您发送了一个验证邮件，请查收"
+msgstr "We have send you a verification email, please check your inbox."
 
 #: .\SoundLib\settings.py:123
 msgid "Simplified Chinese"
-msgstr "简体中文"
+msgstr "Simplified Chinese"
 
 #: .\SoundLib\settings.py:124
 msgid "English"
-msgstr "英文"
+msgstr "v"
 
 #: .\Templates\base.html:138
 msgid "PKUPiano Sound Library!"
-msgstr "声音图书馆"
+msgstr "PKUPiano Sound Library!"
 
 #: .\Templates\base.html:140
 msgid "Need to have a background."
-msgstr "北京大学钢琴社"
+msgstr "Need to have a background."
 
 #: .\Templates\base.html:151
 msgid "Community"
-msgstr "社区"
+msgstr "Community"
 
 #: .\Templates\base.html:154
 msgid "Bilibili Link"
-msgstr "B站链接"
+msgstr "Bilibili Link"
 
 #: .\Templates\base.html:157
 msgid "Wechat（Todo）"
-msgstr "微信公众号"
+msgstr "Wechat（Todo）"
 
 #: .\Templates\base.html:162
 msgid "Project"
-msgstr "项目"
+msgstr "Project"
 
 #: .\Templates\base.html:165
 msgid "Site GitHub Project"
-msgstr "网站GitHub链接"
+msgstr "Site GitHub Project"
 
 #: .\Templates\base.html:168
 msgid "Wechat Server GitHub Project"
-msgstr "微信公众号GitHub链接"
+msgstr "Wechat Server GitHub Project"
 
 #: .\Templates\base.html:173
 msgid "ICP Code"
-msgstr "ICP备案号"
+msgstr "ICP Code"
 
 #: .\Templates\base.html:179
 msgid "Public Security Record"
-msgstr "公安备案号"
+msgstr "Public Security Record"
 
 #: .\Templates\base.html:188
 msgid "Help Preserve This Project"
-msgstr "帮助保护这个项目"
+msgstr "Help Preserve This Project"
 
 #: .\Templates\base.html:189
 msgid "Support for the continued development of PKU piano club."
-msgstr "帮助北京大学钢琴社"
+msgstr "Support for the continued development of PKU piano club."
 
 #: .\Templates\index.html:16 .\Templates\index.html:20
 msgid "Timeline"
-msgstr "时间线"
+msgstr "Timeline"
 
 #: .\Templates\index.html:25 .\Templates\index.html:29
 msgid "Members"
-msgstr "成员"
+msgstr "Members"
 
 #: .\Templates\index.html:34 .\Templates\index.html:38
 msgid "Composers"
-msgstr "作曲家"
+msgstr "Composers"
 
 #: .\Templates\index.html:43 .\Templates\index.html:47
 msgid "Upload"
-msgstr "上传录音"
+msgstr "Upload"
 
 #: .\Templates\index.html:52 .\Templates\index.html:56
 msgid "About"
-msgstr "关于"
+msgstr "About"
 
 #: .\Templates\index.html:66
 msgid "Search"
-msgstr "搜索"
+msgstr "Search"
 
 #: .\Templates\index_about.html:8
 msgid "This is a website maintained by PKU Piano Club"
-msgstr "该网站由北京大学钢琴社运营"
+msgstr "This is a website maintained by PKU Piano Club"
 
 #: .\Templates\index_members.html:15 .\Templates\index_search.html:33
 msgid "Last login"
-msgstr "上次登陆"
+msgstr "Last login"
 
 #: .\Templates\index_members.html:23 .\Templates\index_search.html:41
 msgid "Joined in"
-msgstr "注册时间"
+msgstr "Joined in"
 
 #: .\Templates\index_members.html:27 .\Templates\index_search.html:45
 msgid "Recordings"
-msgstr "个录音"
+msgstr "Recordings"
 
 #: .\Templates\index_search.html:15 .\Templates\index_timeline.html:14
 #: .\Templates\recording.html:21
 msgid "Uploaded by"
-msgstr "上传自"
+msgstr "Uploaded by"
 
 #: .\Templates\index_search.html:17 .\Templates\index_timeline.html:16
 #: .\Templates\recording.html:23
 msgid "Composer"
-msgstr "作曲家"
+msgstr "Composer"
 
 #: .\Templates\index_search.html:24 .\Templates\index_timeline.html:23
 #: .\Templates\recording.html:29
 msgid "Uploaded at"
-msgstr "上传于"
+msgstr "Uploaded at"
 
 #: .\Templates\index_upload.html:10 .\Templates\recording.html:13
 #: .\Templates\recording_change.html:13 .\Templates\recording_change.html:19
 msgid "Recording Information"
-msgstr "录音信息"
+msgstr "Recording Information"
 
 #: .\Templates\index_upload.html:13 .\Templates\recording_change.html:22
 msgid "Recording Name"
-msgstr "录音名称"
+msgstr "Recording Name"
 
 #: .\Templates\index_upload.html:19 .\Templates\recording_change.html:29
 msgid "Composer Name"
-msgstr "作曲家名称"
+msgstr "Composer Name"
 
 #: .\Templates\index_upload.html:31 .\Templates\recording_change.html:41
 #: .\Templates\user.html:24
 msgid "Description"
-msgstr "介绍"
+msgstr "Description"
 
 #: .\Templates\index_upload.html:35 .\Templates\recording_change.html:45
 msgid "Recording File"
-msgstr "录音文件"
+msgstr "Recording File"
 
 #: .\Templates\index_upload.html:40 .\Templates\index_upload.html:44
 #: .\Templates\password_reset.html:21
 #: .\Templates\password_reset_confirm.html:18
 #: .\Templates\recording_change.html:50
 msgid "Submit"
-msgstr "提交"
+msgstr "Submit"
 
 #: .\Templates\index_upload.html:46
 msgid "A user can upload recordings if logged in and get email verified."
-msgstr "只有用户登陆并验证邮箱后可以上传录音"
+msgstr "A user can upload recordings if logged in and get email verified."
 
 #: .\Templates\login.html:10
 msgid "Registration Success!"
-msgstr "注册成功！"
+msgstr "Registration Success!"
 
 #: .\Templates\login.html:20 .\Templates\util_back.html:6
 msgid "Back"
-msgstr "返回"
+msgstr "Back"
 
 #: .\Templates\login.html:28 .\Templates\user_change.html:19
 msgid "Passwords should be the same!"
-msgstr "两次输入的密码不一致！"
+msgstr "Passwords should be the same!"
 
 #: .\Templates\login.html:35 .\Templates\user_change.html:26
 msgid "Your name is conflict with others!"
-msgstr "你的用户名与他人重复！"
+msgstr "Your name is conflict with others!"
 
 #: .\Templates\login.html:49 .\Templates\user_change.html:33
 msgid "Registration failed due to some unkonwn reason!"
-msgstr "由于未知原因，注册失败！"
+msgstr "Registration failed due to some unkonwn reason!"
 
 #: .\Templates\login.html:56
 msgid "Login failed!"
-msgstr "登陆失败！"
+msgstr "Login failed!"
 
 #: .\Templates\login.html:66 .\Templates\login.html:83
 #: .\Templates\password_reset_complete.html:17
 msgid "Login"
-msgstr "登陆"
+msgstr "Login"
 
 #: .\Templates\login.html:72 .\Templates\login.html:95
 #: .\Templates\user_change.html:42
 msgid "User Name"
-msgstr "用户名"
+msgstr "User Name"
 
 #: .\Templates\login.html:78 .\Templates\login.html:107
 #: .\Templates\user_change.html:54
 msgid "Password"
-msgstr "密码"
+msgstr "Password"
 
 #: .\Templates\login.html:85
 msgid "Forget?"
-msgstr "忘记密码？"
+msgstr "Forget?"
 
 #: .\Templates\login.html:89 .\Templates\login.html:118
 msgid "Register"
-msgstr "注册"
+msgstr "Register"
 
 #: .\Templates\login.html:101 .\Templates\user_change.html:48
 msgid "Email"
-msgstr "邮箱"
+msgstr "Email"
 
 #: .\Templates\login.html:113 .\Templates\user_change.html:60
 msgid "Password Again"
-msgstr "再次输入密码"
+msgstr "Password Again"
 
 #: .\Templates\password_reset.html:11
 msgid "Password Reset"
-msgstr "重置密码"
+msgstr "Password Reset"
 
 #: .\Templates\password_reset.html:13
 msgid "Forgotten your password?"
-msgstr "忘记密码？"
+msgstr "Forgotten your password?"
 
 #: .\Templates\password_reset.html:16
 msgid ""
 "Enter your email address below, and we'll email instructions for setting a "
 "new one."
-msgstr "输入你的邮箱，我们将向您的邮箱发送重置密码的链接"
+msgstr ""
+"Enter your email address below, and we'll email instructions for setting a "
+"new one."
 
 #: .\Templates\password_reset_complete.html:10
 msgid "Password reset complete"
-msgstr "密码重置完成"
+msgstr ""
 
 #: .\Templates\password_reset_complete.html:12
 msgid "Your password has been set. You may go ahead and log in now."
-msgstr "你的密码已经设置，可以前往登陆"
+msgstr "Your password has been set. You may go ahead and log in now."
 
 #: .\Templates\password_reset_confirm.html:11
 msgid "Enter New Password"
-msgstr "输入新密码"
+msgstr "Enter New Password"
 
 #: .\Templates\password_reset_confirm.html:13
 msgid ""
 "Please enter your new password twice so we can verify you typed it in "
 "correctly."
-msgstr "情输入两次你的密码以确保你没有输错"
+msgstr ""
+"Please enter your new password twice so we can verify you typed it in "
+"correctly."
 
 #: .\Templates\password_reset_done.html:11
 msgid "Password Reset Sent"
-msgstr "密码重置邮件已经发送"
+msgstr "Password Reset Sent"
 
 #: .\Templates\password_reset_done.html:13
 msgid ""
 "We've emailed you instructions for setting your password, if an account "
 "exists with the email you entered. You should receive them shortly."
 msgstr ""
-"我们已经发送了密码重置邮件，如果该邮箱有一个关联的账号，你将很快收到该邮件"
+"We've emailed you instructions for setting your password, if an account "
+"exists with the email you entered. You should receive them shortly."
 
 #: .\Templates\password_reset_done.html:16
 msgid ""
 "If you don't receive an email, please make sure you've entered the address "
 "you registered with, and check your spam folder."
 msgstr ""
-"如果你没有收到邮件，情确保你输入了对应账号使用的邮箱，并且检查邮箱的垃圾箱"
+"If you don't receive an email, please make sure you've entered the address "
+"you registered with, and check your spam folder."
 
 #: .\Templates\recording.html:32
 msgid "Your browser does not support the audio element."
-msgstr "你的浏览器不支持播放音频"
+msgstr "Your browser does not support the audio element."
 
 #: .\Templates\recording.html:39
+#, fuzzy
+#| msgid "Change Info"
 msgid "Change Recording Info"
-msgstr "更改录音信息"
+msgstr "Change Info"
 
 #: .\Templates\recording_change.html:46
 msgid ""
 "If you don't want to change the recording file, you can keep here blank."
-msgstr "如果你不想修改录音文件，可以忽略这项"
+msgstr ""
+"If you don't want to change the recording file, you can keep here blank."
 
 #: .\Templates\recording_change.html:53
 msgid "Delete"
-msgstr "删除"
+msgstr "Delete"
 
 #: .\Templates\recording_change.html:59
 msgid "Delete Recording"
-msgstr "删除录音"
+msgstr "Delete Recording"
 
 #: .\Templates\recording_change.html:63 .\Templates\user_change.html:89
 msgid "Please Confirm."
-msgstr "请确认"
+msgstr "Please Confirm."
 
 #: .\Templates\recording_change.html:64 .\Templates\user_change.html:90
 msgid "By clicking on the "
-msgstr "点击"
+msgstr "By clicking on the "
 
 #: .\Templates\recording_change.html:64 .\Templates\recording_change.html:75
 #: .\Templates\user_change.html:90 .\Templates\user_change.html:101
 msgid "Yep, Delete"
-msgstr "是的，删除"
+msgstr "Yep, Delete"
 
 #: .\Templates\recording_change.html:64
 msgid ""
 " button, this recording will be permanently deleted and CANNOT be recovered."
-msgstr "按钮将会永久删除该录音，并且<b>不能</b>被恢复"
+msgstr ""
+" button, this recording will be permanently deleted and CANNOT be recovered."
 
 #: .\Templates\recording_change.html:67 .\Templates\user_change.html:93
 msgid "Are you sure to delete it?"
-msgstr "你确定要删除吗？"
+msgstr "Are you sure to delete it?"
 
 #: .\Templates\recording_change.html:72 .\Templates\user_change.html:98
 msgid "Nope, Go Back"
-msgstr "不，返回"
+msgstr "Nope, Go Back"
 
 #: .\Templates\user.html:13 .\Templates\user_change.html:13
 msgid "User Information"
-msgstr "用户信息"
+msgstr "User Information"
 
 #: .\Templates\user.html:30
 msgid "Joined on"
-msgstr "注册时间"
+msgstr "Joined on"
 
 #: .\Templates\user.html:35
+#, fuzzy
+#| msgid "Change Info"
 msgid "Change User Info"
-msgstr "更改用户信息"
+msgstr "Change Info"
 
 #: .\Templates\user.html:40
 msgid "Verify Email"
-msgstr "验证邮箱"
+msgstr "Verify Email"
 
 #: .\Templates\user.html:46 .\Templates\user_change.html:77
 msgid "Logout"
-msgstr "登出"
+msgstr "Logout"
 
 #: .\Templates\user_change.html:67
 msgid "Introduction"
-msgstr "介绍"
+msgstr "Introduction"
 
 #: .\Templates\user_change.html:73
 msgid "Update"
-msgstr "更新"
+msgstr "Update"
 
 #: .\Templates\user_change.html:80 .\Templates\user_change.html:85
 msgid "Delete User"
-msgstr "删除用户"
+msgstr "Delete User"
 
 #: .\Templates\user_change.html:90
 msgid ""
 " button, current user will be permanently deleted and CANNOT be recovered."
-msgstr "键，当前用户将会被永久删除，并且<b>不能</b>被恢复"
+msgstr ""
+" button, current user will be permanently deleted and CANNOT be recovered."
 
 #: .\Templates\verification_fail.html:14
 msgid "Verification Failed"
-msgstr "验证失败"
+msgstr "Verification Failed"
 
 #: .\Templates\verification_needed.html:14
 msgid "Operation Failed"
-msgstr "操作失败"
+msgstr "Operation Failed"
 
 #: .\Templates\verification_needed.html:17
 msgid "You need to first authenticate your email."
-msgstr "你需要先验证邮箱"
+msgstr "You need to first authenticate your email."
 
 #: .\Templates\verification_pending.html:14
 msgid "Pending Verification"
-msgstr "等待验证"
+msgstr "Pending Verification"
 
 #: .\Templates\verification_success.html:14
 msgid "Home"
-msgstr "返回"
+msgstr "Home"
 
 #: .\Templates\verification_success.html:19
 msgid "Verification Successed"
-msgstr "验证成功"
+msgstr "Verification Successed"

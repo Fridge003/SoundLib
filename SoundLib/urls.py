@@ -28,23 +28,23 @@ urlpatterns = [path('i18n/', include('django.conf.urls.i18n')),]
 
 urlpatterns += i18n_patterns(
     path('admin/', admin.site.urls),
-    path('', views.hello),
-    path('index/<str:tag>/<int:page>/', views.hello),
+    path('', views.hello, name="root"),
+    path('index/<str:tag>/<int:page>/', views.hello, name="index"),
     path('index/<str:tag>/', views.hello),
-    path('upload/', views.upload),
-    path('login/', views.login),
-    path('login/login/', views.login_form),
-    path('login/register/', views.register_form),
-    path('logout/', views.logout),
-    path('user/<str:username>/', views.user_info),
-    path('user/<str:username>/change/', views.user_info_change),
-    path('user/<str:username>/change/commit/', views.user_info_change_commit),
-    path('user/<str:username>/verify/', views.verify_email),
-    path('user/<str:username>/verify/<str:code>/', views.verify_email_process),
-    path('recording/<int:id>/', views.recording_info),
-    path('recording/<int:id>/change/', views.recording_change),
-    path('recording/<int:id>/change/commit/', views.recording_change_commit),
-    path('error/verification_needed/', views.error_email_not_verified),
+    path('upload/', views.upload, name="upload"),
+    path('login/', views.login, name="login"),
+    path('login/login/', views.login_form, name="login_form"),
+    path('login/register/', views.register_form, name="register_form"),
+    path('logout/', views.logout, name="logout"),
+    path('user/<str:username>/', views.user_info, name="user_info"),
+    path('user/<str:username>/change/', views.user_info_change, name="user_info_change"),
+    path('user/<str:username>/change/commit/', views.user_info_change_commit, name="user_info_change_commit"),
+    path('user/<str:username>/verify/', views.verify_email, name="verify_email"),
+    path('user/<str:username>/verify/<str:code>/', views.verify_email_process, name="verify_email_process"),
+    path('recording/<int:id>/', views.recording_info, name="recording_info"),
+    path('recording/<int:id>/change/', views.recording_change, name="recording_change"),
+    path('recording/<int:id>/change/commit/', views.recording_change_commit, name="recording_change_commit"),
+    path('error/verification_needed/', views.error_email_not_verified, name="error_email_not_verified"),
     path(
         "password_reset/",
         auth_views.PasswordResetView.as_view(template_name='password_reset.html'),
@@ -65,7 +65,7 @@ urlpatterns += i18n_patterns(
         auth_views.PasswordResetCompleteView.as_view(template_name='password_reset_complete.html'),
         name="password_reset_complete",
     ),
-    prefix_default_language = False
+    prefix_default_language = True
 )
 
 if settings.DEBUG: # in debug mode, django doesn't support media url

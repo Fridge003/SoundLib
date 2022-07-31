@@ -8,19 +8,14 @@
 {% if user.is_authenticated %}
 <div class="pusher">
     <h4>{% translate "Registration Success!" %}</h4>
-    <div class="segment">
-        <a href="/" class="ui left labeled icon button">
-            <i class="left arrow icon"></i>
-            {% translate "Back" %}
-        </a>
-    </div>
+    {% include 'util_back.html' %}
 </div>
 {% else %}
 <div class="pusher">
     <div class="ui container">
         <div class="ui divider"></div>
         <div class="segment">
-            <a href="/" class="ui left labeled icon button">
+            <a href="{% url 'root' %}" class="ui left labeled icon button">
                 <i class="left arrow icon"></i>
                 {% translate "Back" %}
             </a>
@@ -71,7 +66,7 @@
                             {% translate "Login" %}
                             <i class="User icon"></i>
                         </div>
-                        <form class="ui form" method="post" enctype="multipart/form-data" action="/login/login/">
+                        <form class="ui form" method="post" enctype="multipart/form-data" action="{% url 'login_form' %}">
                             {% csrf_token %}
                             <div class="field">
                                 <label>{% translate "User Name" %}</label>
@@ -94,7 +89,7 @@
                             {% translate "Register" %}
                             <i class="world icon"></i>
                         </div>
-                        <form class="ui form" method="post" enctype="multipart/form-data" action="/login/register/">
+                        <form class="ui form" method="post" enctype="multipart/form-data" action="{% url 'register_form' %}">
                             {% csrf_token %}
                             <div class="field">
                                 <label>{% translate "User Name" %}</label>

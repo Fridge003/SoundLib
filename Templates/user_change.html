@@ -8,12 +8,7 @@
 <div class="pusher">
     <div class="ui container">
         <div class="ui divider"></div>
-        <div class="segment">
-            <a href="javascript:history.go(-1)" class="ui left labeled icon button">
-                <i class="left arrow icon"></i>
-                {% translate "Back" %}
-            </a>
-        </div>
+        {% include 'util_back.html' %}
         {% csrf_token %}
         <h3 class="ui dividing header">{% translate "User Information" %}</h3>
         <!-- When error occurs -->
@@ -39,7 +34,7 @@
             </div>
         </div>
         {% endif %}
-        <form class="ui form" id="change_form" method="post" enctype="multipart/form-data" action="{{ "/user/"|addstr:user.get_username|addstr:"/change/commit/" }}">
+        <form class="ui form" id="change_form" method="post" enctype="multipart/form-data" action="{% url 'user_info_change_commit' username=user.get_username %}">
             {% csrf_token %}
             <div class="two fields">
                 <div class="field">
@@ -77,7 +72,7 @@
             </div>
             <button class="ui positive button" type="submit">{% translate "Update" %}</button>
         </form>
-        <a href="/logout/" class="ui right labeled icon button">
+        <a href="{% url 'logout' %}" class="ui right labeled icon button">
             <i class="user outline icon"></i>
             {% translate "Logout" %}
         </a>

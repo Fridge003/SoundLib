@@ -8,12 +8,7 @@
 <div class="pusher">
     <div class="ui container">
         <div class="ui divider"></div>
-        <div class="segment">
-            <a href="javascript:history.go(-1)" class="ui left labeled icon button">
-                <i class="left arrow icon"></i>
-                {% translate "Back" %}
-            </a>
-        </div>
+        {% include 'util_back.html' %}
         {% csrf_token %}
         <h3 class="ui dividing header">{% translate "Recording Information" %}</h3>
         <div class="ui raised segment">
@@ -39,9 +34,9 @@
                             </div>
                             {% if user.get_username == show_recording.get_user %}
                             <div class="segment">
-                                <a href="{{ " /recording/"|addstr:show_recording.get_id|addstr:"/change/" }}" class="ui left floated left labeled icon button">
+                                <a href="{% url 'recording_change' id=show_recording.get_id %}" class="ui left floated left labeled icon button">
                                     <i class="pencil alternate icon"></i>
-                                    {% translate "Change Info" %}
+                                    {% translate "Change Recording Info" %}
                                 </a>
                             </div>
                             {% endif %}
