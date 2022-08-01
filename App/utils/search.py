@@ -52,6 +52,8 @@ def default_search(keyword) :
     UserSearchResults = obtain_result_by_trigram_dist(User, UserSearchField, keyword)
     ComposerSearchResults = obtain_result_by_trigram_dist(Composer, ComposerSearchField, keyword)
 
+    print(RecordingSearchResults, UserSearchResults, ComposerSearchResults)
+
     MergedResults = list(RecordingSearchResults) + list(UserSearchResults) + list(ComposerSearchResults)
     
     # sort the search results by similarity rank
