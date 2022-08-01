@@ -52,7 +52,8 @@ def default_search(keyword) :
     UserSearchResults = obtain_result_by_trigram_dist(User, UserSearchField, keyword)
     ComposerSearchResults = obtain_result_by_trigram_dist(Composer, ComposerSearchField, keyword)
 
-    print(RecordingSearchResults, UserSearchResults, ComposerSearchResults)
+    UserSearchResults = UserSearchResults.annotate(NumRecordings=Count('Recordings'))
+    ComposerSearchResults = ComposerSearchResults.annotate(NumRecordings=Count('Recordings'))
 
     MergedResults = list(RecordingSearchResults) + list(UserSearchResults) + list(ComposerSearchResults)
     
