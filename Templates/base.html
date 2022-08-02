@@ -188,6 +188,24 @@
                     <h4 class="ui header">{% translate "Help Preserve This Project" %}</h4>
                     <p> {% translate "Support for the continued development of PKU piano club." %} </p>
                 </div>
+                <div class="three wide right floated column">
+                    <h4 class="ui header">{% translate "Switch language" %}</h4>
+                    <form class="ui form" action="{% url 'set_language' %}" method="post">
+                        {% csrf_token %}
+                        <div class="field">
+                            {% get_current_language as LANGUAGE_CODE %}
+                            {% get_available_languages as LANGUAGES %}
+                            {% get_language_info_list for LANGUAGES as languages %}
+                            {% for language in languages %}
+                            <p>
+                                <button type="submit" name="language" value="{{ language.code }}" class="ui button">
+                                    {{ language.name_local }}
+                                </button>
+                            </p>
+                            {% endfor %}
+                        </div>
+                    </form>
+                </div>
             </div>
             <div class="ui section divider"></div>
             <img src="{% static '/images/logo/108x108.png' %}" class="ui centered mini image">

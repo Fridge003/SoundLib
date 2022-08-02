@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-31 21:12+0800\n"
+"POT-Creation-Date: 2022-08-02 19:44+0800\n"
 "PO-Revision-Date: 2022-07-30 12:38+0800\n"
 "Last-Translator: Boshi An, boshi_an@stu.pku.edu.cn\n"
 "Language-Team: Boshi An, boshi_an@stu.pku.edu.cn\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: .\App\utils\index.py:53 .\App\utils\login.py:18
+#: .\App\utils\index.py:50 .\App\utils\login.py:18
 msgid "PKUpiano Sound Library!"
 msgstr "北京大学钢琴社：声音图书馆"
 
@@ -30,11 +30,11 @@ msgstr "恭喜你验证成功！现在你可以使用该网站的全部功能了
 msgid "Verification code incorrect!"
 msgstr "验证失败！"
 
-#: .\App\views.py:223
+#: .\App\views.py:224
 msgid "Email is not a PKU email address."
 msgstr "这不是一个北京大学邮箱"
 
-#: .\App\views.py:226
+#: .\App\views.py:227
 msgid "We have send you a verification email, please check your inbox."
 msgstr "我们向您发送了一个验证邮件，请查收"
 
@@ -94,6 +94,52 @@ msgstr "帮助保护这个项目"
 msgid "Support for the continued development of PKU piano club."
 msgstr "帮助北京大学钢琴社"
 
+#: .\Templates\base.html:192
+msgid "Switch language"
+msgstr "切换语言"
+
+#: .\Templates\composer.html:13 .\Templates\composer_change.html:13
+#, fuzzy
+#| msgid "User Information"
+msgid "Composer Information"
+msgstr "用户信息"
+
+#: .\Templates\composer.html:25 .\Templates\index_upload.html:31
+#: .\Templates\recording_change.html:41 .\Templates\user.html:24
+msgid "Description"
+msgstr "介绍"
+
+#: .\Templates\composer.html:35
+#, fuzzy
+#| msgid "Change User Info"
+msgid "Change Composer Info"
+msgstr "更改用户信息"
+
+#: .\Templates\composer_change.html:19
+#, fuzzy
+#| msgid "Your name is conflict with others!"
+msgid "The new name is conflict with other composes!"
+msgstr "你的用户名与他人重复！"
+
+#: .\Templates\composer_change.html:26
+#, fuzzy
+#| msgid "Registration failed due to some unkonwn reason!"
+msgid "Change failed due to some unkonwn reason!"
+msgstr "由于未知原因，注册失败！"
+
+#: .\Templates\composer_change.html:34 .\Templates\index_upload.html:19
+#: .\Templates\recording_change.html:29
+msgid "Composer Name"
+msgstr "作曲家名称"
+
+#: .\Templates\composer_change.html:41 .\Templates\user_change.html:67
+msgid "Introduction"
+msgstr "介绍"
+
+#: .\Templates\composer_change.html:46 .\Templates\user_change.html:73
+msgid "Update"
+msgstr "更新"
+
 #: .\Templates\index.html:16 .\Templates\index.html:20
 msgid "Timeline"
 msgstr "时间线"
@@ -135,11 +181,12 @@ msgid "Joined in"
 msgstr "注册时间"
 
 #: .\Templates\index_members.html:27 .\Templates\index_search.html:45
+#: .\Templates\index_search.html:64
 msgid "Recordings"
 msgstr "个录音"
 
 #: .\Templates\index_search.html:15 .\Templates\index_timeline.html:14
-#: .\Templates\recording.html:21
+#: .\Templates\recording.html:28
 msgid "Uploaded by"
 msgstr "上传自"
 
@@ -149,7 +196,7 @@ msgid "Composer"
 msgstr "作曲家"
 
 #: .\Templates\index_search.html:24 .\Templates\index_timeline.html:23
-#: .\Templates\recording.html:29
+#: .\Templates\recording.html:37
 msgid "Uploaded at"
 msgstr "上传于"
 
@@ -162,15 +209,6 @@ msgstr "录音信息"
 #: .\Templates\recording_change.html:22
 msgid "Recording Name"
 msgstr "录音名称"
-
-#: .\Templates\index_upload.html:19 .\Templates\recording_change.html:29
-msgid "Composer Name"
-msgstr "作曲家名称"
-
-#: .\Templates\index_upload.html:31 .\Templates\recording_change.html:41
-#: .\Templates\user.html:24
-msgid "Description"
-msgstr "介绍"
 
 #: .\Templates\index_upload.html:32
 msgid "Enter details here..."
@@ -299,11 +337,11 @@ msgid ""
 msgstr ""
 "如果你没有收到邮件，情确保你输入了对应账号使用的邮箱，并且检查邮箱的垃圾箱"
 
-#: .\Templates\recording.html:32
+#: .\Templates\recording.html:40
 msgid "Your browser does not support the audio element."
 msgstr "你的浏览器不支持播放音频"
 
-#: .\Templates\recording.html:39
+#: .\Templates\recording.html:47
 msgid "Change Recording Info"
 msgstr "更改录音信息"
 
@@ -365,14 +403,6 @@ msgstr "验证邮箱"
 #: .\Templates\user.html:46 .\Templates\user_change.html:77
 msgid "Logout"
 msgstr "登出"
-
-#: .\Templates\user_change.html:67
-msgid "Introduction"
-msgstr "介绍"
-
-#: .\Templates\user_change.html:73
-msgid "Update"
-msgstr "更新"
 
 #: .\Templates\user_change.html:80 .\Templates\user_change.html:85
 msgid "Delete User"

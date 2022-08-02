@@ -118,9 +118,9 @@ AUTH_USER_MODEL = 'App.User'
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
-LANGUAGE_CODE = 'zh-Hans'
+LANGUAGE_CODE = 'zh-hans'
 LANGUAGES = [
-    ('zh-Hans', _('Simplified Chinese')),
+    ('zh-hans', _('Simplified Chinese')),
     ('en', _('English')),
 ]
 
