@@ -36,7 +36,7 @@
                         <div class="extra">
                             {% translate "Uploaded at" %} {{ show_recording.get_upload_date }}
                             <div id="play">
-                                <audio src="{{ show_recording.get_file_url }}" controls="controls">
+                                <audio src="{{ show_recording.get_file_url }}" controls="controls" style="width: 400px;">
                                     {% translate "Your browser does not support the audio element." %}
                                 </audio>
                             </div>
