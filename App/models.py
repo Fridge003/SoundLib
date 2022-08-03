@@ -170,7 +170,7 @@ class Recording(models.Model) :
 
 def get_all_available_composers() :
 
-    ComposerList = Composer.objects.annotate(NumRecordings=Count('Recordings')).filter(NumRecordings_gte=1).order_by('-NumRecordings').all()
+    ComposerList = Composer.objects.annotate(NumRecordings=Count('Recordings')).filter(NumRecordings__gte=1).order_by('-NumRecordings').all()
     
     return ComposerList
 
