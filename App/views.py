@@ -21,7 +21,7 @@ from django.utils.html import escape
 def hello(Request, **kwargs):
 
     if "tag" not in kwargs:
-        return redirect('index/timeline/0')
+        return render_index(Request, 'timeline', 0)
     
     if "page" in kwargs:
         return render_index(Request, kwargs["tag"], kwargs["page"])
