@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-04 00:44+0800\n"
+"POT-Creation-Date: 2022-08-04 01:42+0800\n"
 "PO-Revision-Date: 2022-07-30 12:38+0800\n"
 "Last-Translator: Boshi An, boshi_an@stu.pku.edu.cn\n"
 "Language-Team: Boshi An, boshi_an@stu.pku.edu.cn\n"
@@ -46,55 +46,55 @@ msgstr "简体中文"
 msgid "English"
 msgstr "英文"
 
-#: .\Templates\base.html:138
+#: .\Templates\base.html:139
 msgid "PKUPiano Sound Library!"
 msgstr "声音图书馆"
 
-#: .\Templates\base.html:140
+#: .\Templates\base.html:141
 msgid "Need to have a background."
 msgstr "北京大学钢琴社"
 
-#: .\Templates\base.html:151
+#: .\Templates\base.html:152
 msgid "Community"
 msgstr "社区"
 
-#: .\Templates\base.html:154
+#: .\Templates\base.html:155
 msgid "Bilibili Link"
 msgstr "B站链接"
 
-#: .\Templates\base.html:157
-msgid "Wechat（Todo）"
-msgstr "微信公众号"
+#: .\Templates\base.html:158
+msgid "Wechat QR-code"
+msgstr ""
 
-#: .\Templates\base.html:162
+#: .\Templates\base.html:164
 msgid "Project"
 msgstr "项目"
 
-#: .\Templates\base.html:165
+#: .\Templates\base.html:167
 msgid "Site GitHub Project"
 msgstr "网站GitHub链接"
 
-#: .\Templates\base.html:168
+#: .\Templates\base.html:170
 msgid "Wechat Server GitHub Project"
 msgstr "微信公众号GitHub链接"
 
-#: .\Templates\base.html:173
+#: .\Templates\base.html:175
 msgid "ICP Code"
 msgstr "ICP备案号"
 
-#: .\Templates\base.html:179
+#: .\Templates\base.html:181
 msgid "Public Security Record"
 msgstr "公安备案号"
 
-#: .\Templates\base.html:188
+#: .\Templates\base.html:190
 msgid "Help Preserve This Project"
 msgstr "帮助保护这个项目"
 
-#: .\Templates\base.html:189
+#: .\Templates\base.html:191
 msgid "Support for the continued development of PKU piano club."
 msgstr "帮助北京大学钢琴社"
 
-#: .\Templates\base.html:192
+#: .\Templates\base.html:194
 msgid "Switch language"
 msgstr "切换语言"
 
@@ -169,8 +169,53 @@ msgid "Search"
 msgstr "搜索"
 
 #: .\Templates\index_about.html:8
-msgid "This is a website maintained by PKU Piano Club"
+msgid "What is This Website"
+msgstr "这是什么网站"
+
+#: .\Templates\index_about.html:10
+#, fuzzy
+#| msgid "This is a website maintained by PKU Piano Club"
+msgid "This is a website maintained by Peking University Piano Club."
 msgstr "该网站由北京大学钢琴社运营"
+
+#: .\Templates\index_about.html:11
+msgid "We built this website based on the idea of enjoy, share, and remember."
+msgstr ""
+"该网站为欣赏、分享和记录音乐而设计。一群音乐爱好者聚集于此，希望他们留下的音"
+"乐在毕业之后的数十年仍能被人聆听。"
+
+#: .\Templates\index_about.html:13
+#, fuzzy
+#| msgid "What is This Website"
+msgid "How to Use This Website"
+msgstr "这是什么网站？"
+
+#: .\Templates\index_about.html:15
+msgid ""
+"Anyone can access all the recordings and club membser through this website."
+msgstr "任何人都可以访问该网站的所有录音和成员信息。"
+
+#: .\Templates\index_about.html:17
+msgid ""
+"If you are a student of Peking University, you can upload your own "
+"recordings after signed in and verified your email."
+msgstr "如果你是北京大学的学生，在注册并验证邮箱后，你将可以上传自己的录音。"
+
+#: .\Templates\index_about.html:19
+msgid "Check Us Out!"
+msgstr "来关注我们！"
+
+#: .\Templates\index_about.html:21
+msgid "Public We-chat ID of PKU Piano Club: pianopku, here's our QR code:"
+msgstr "我们的微信账号是pianopku，这里是我们的二维码："
+
+#: .\Templates\index_about.html:23
+msgid "Or view our videos at Bilibili: "
+msgstr "或者来Bilibili看我们的视频："
+
+#: .\Templates\index_about.html:25
+msgid "CLICK HERE!"
+msgstr "点这个链接！"
 
 #: .\Templates\index_members.html:15 .\Templates\index_search.html:33
 msgid "Last login"
@@ -436,3 +481,6 @@ msgstr "返回"
 #: .\Templates\verification_success.html:19
 msgid "Verification Successed"
 msgstr "验证成功"
+
+#~ msgid "Wechat（Todo）"
+#~ msgstr "微信公众号"
