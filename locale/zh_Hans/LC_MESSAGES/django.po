@@ -99,8 +99,6 @@ msgid "Switch language"
 msgstr "切换语言"
 
 #: .\Templates\composer.html:13 .\Templates\composer_change.html:13
-#, fuzzy
-#| msgid "User Information"
 msgid "Composer Information"
 msgstr "用户信息"
 
@@ -110,20 +108,14 @@ msgid "Description"
 msgstr "介绍"
 
 #: .\Templates\composer.html:35
-#, fuzzy
-#| msgid "Change User Info"
 msgid "Change Composer Info"
 msgstr "更改用户信息"
 
 #: .\Templates\composer_change.html:19
-#, fuzzy
-#| msgid "Your name is conflict with others!"
 msgid "The new name is conflict with other composes!"
 msgstr "你的用户名与他人重复！"
 
 #: .\Templates\composer_change.html:26
-#, fuzzy
-#| msgid "Registration failed due to some unkonwn reason!"
 msgid "Change failed due to some unkonwn reason!"
 msgstr "由于未知原因，注册失败！"
 
@@ -173,8 +165,6 @@ msgid "What is This Website"
 msgstr "这是什么网站"
 
 #: .\Templates\index_about.html:10
-#, fuzzy
-#| msgid "This is a website maintained by PKU Piano Club"
 msgid "This is a website maintained by Peking University Piano Club."
 msgstr "该网站由北京大学钢琴社运营"
 
@@ -185,8 +175,6 @@ msgstr ""
 "乐在毕业之后的数十年仍能被人聆听。"
 
 #: .\Templates\index_about.html:13
-#, fuzzy
-#| msgid "What is This Website"
 msgid "How to Use This Website"
 msgstr "这是什么网站？"
 
