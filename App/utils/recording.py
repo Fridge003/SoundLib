@@ -56,7 +56,7 @@ def process_recording_change(
 
     # If changing the composer of this recording makes the old composer
     # workless, then remove the old composer from our database
-    models.remove_empty_composers(Suggestions=OldComposerName)
+    # models.remove_empty_composers(Suggestions=OldComposerName)
 
     return
 
@@ -66,4 +66,4 @@ def process_recording_delete(CurRecording: Recording) :
     CurRecording.delete()
     # If changing the composer of this recording makes the old composer
     # workless, then remove the old composer from our database
-    models.remove_empty_composers(Suggestions=OldComposerName)
+    # models.remove_empty_composers(Suggestions=OldComposerName)
